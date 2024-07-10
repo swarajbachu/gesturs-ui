@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { Post } from "#site/content";
+import { Docs } from "#site/content";
 import { Metadata } from "next/types";
 import { env } from "@/app/env";
 
@@ -17,7 +17,7 @@ export function formatDate(input: string | number): string {
   });
 }
 
-export function sortPosts(posts: Array<Post>) {
+export function sortPosts(posts: Array<Docs>) {
   return posts.sort((a, b) => {
     if (a.date > b.date) return -1;
     if (a.date < b.date) return 1;
