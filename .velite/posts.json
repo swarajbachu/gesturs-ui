@@ -1,0 +1,11 @@
+[
+  {
+    "slug": "hello",
+    "title": "hello world",
+    "description": "This is a hello world post",
+    "date": "2020-01-01T00:00:00.000Z",
+    "published": true,
+    "body": "const{jsx:e}=arguments[0];function _createMdxContent(n){const t={a:\"a\",h1:\"h1\",...n.components};return e(t.h1,{id:\"hello-world\",children:e(t.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#hello-world\",children:\"Hello World\"})})}return{default:function(n={}){const{wrapper:t}=n.components||{};return t?e(t,{...n,children:e(_createMdxContent,{...n})}):_createMdxContent(n)}};",
+    "slugAsParams": ""
+  }
+]
