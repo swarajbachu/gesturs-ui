@@ -9,15 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@next/mdx": "^14.2.4",
     "clsx": "^2.1.1",
     "github-slugger": "^2.0.0",
+    "lucide-react": "^0.407.0",
     "next": "14.2.4",
     "react": "^18",
+    "react-aria": "^3.33.1",
+    "react-aria-components": "^1.2.1",
     "react-dom": "^18",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-pretty-code": "^0.13.2",
+    "rehype-shiki": "^0.0.9",
     "rehype-slug": "^6.0.0",
-    "tailwind-merge": "^2.4.0"
+    "remark-gfm": "^4.0.0",
+    "tailwind-merge": "^2.4.0",
+    "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",
