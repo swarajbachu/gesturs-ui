@@ -11,6 +11,7 @@
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
     "@next/mdx": "^14.2.4",
+    "@t3-oss/env-nextjs": "^0.10.1",
     "clsx": "^2.1.1",
     "github-slugger": "^2.0.0",
     "lucide-react": "^0.407.0",
@@ -25,7 +26,8 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.4.0",
-    "tailwind-variants": "^0.2.1"
+    "tailwind-variants": "^0.2.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",

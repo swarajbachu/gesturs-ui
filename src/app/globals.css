@@ -31,3 +31,25 @@ body {
     text-wrap: balance;
   }
 }
+
+.gradient {
+  transform: translate(-50%, 0%);
+	border-radius: 50% 22% 40% 80%;  
+	filter: blur(100px);
+  background: radial-gradient(circle at 50% 50%,rgba(76, 0, 255, 1), rgba(76, 0, 255, 0));
+  opacity: 0.2;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
+  }
+}
