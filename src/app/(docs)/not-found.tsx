@@ -15,8 +15,12 @@ export default function NotFound() {
             <Button onPress={() => router.back()}>
               <span>Go back</span>
             </Button>
-
-            <Link href="/">Take me home</Link>
+            <Link
+              href="/"
+              className="text-primary-foreground px-6 font-medium bg-primary py-1.5 rounded-sm"
+            >
+              Take me home
+            </Link>
           </div>
         </div>
       </div>

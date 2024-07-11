@@ -4,7 +4,7 @@ export default async function LandingLayout({
   children,
 }: {children: React.ReactNode}) {
   return (
-    <div className="relative">
+    <div className="relative min-h-screen">
       <SiteHeader />
       <main className="flex-1">{children}</main>
     </div>

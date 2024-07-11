@@ -8,7 +8,26 @@ import { build } from "velite";
 const nextConfig = {
   // Configure `pageExtensions` to include MDX files
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-
+  async redirects() {
+    return [
+     
+      {
+        source: "/components",
+        destination: "/docs/components/button",
+        permanent: true,
+      },
+      {
+        source: "/docs/components",
+        destination: "/docs/components/button",
+        permanent: true,
+      },
+      {
+        source: '/docs',
+        destination: '/docs/introduction',
+        permanent: true,
+      }
+    ];
+  },
   images: {
     remotePatterns: [
       {
