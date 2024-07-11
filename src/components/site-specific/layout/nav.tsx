@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 
 export function MainNav() {
     const pathname = usePathname();
-  
     return (
       <div className="mr-4 hidden md:flex">
         <Link href="/" className="relative mr-6 flex items-center space-x-2">

@@ -1,6 +1,9 @@
 import Image from "next/image";
 import * as runtime from "react/jsx-runtime";
 import { cn } from "@/lib/utils";
+import { ComponentPreview } from "./site-specific/docs/component-preview";
+import * as React from "react";
+
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -9,6 +12,7 @@ const useMDXComponent = (code: string) => {
 
 const components = {
   Image,
+  ComponentPreview,
 };
 
 interface MdxProps {

@@ -17,13 +17,13 @@ export function formatDate(input: string | number): string {
   });
 }
 
-export function sortPosts(posts: Array<Docs>) {
-  return posts.sort((a, b) => {
-    if (a.date > b.date) return -1;
-    if (a.date < b.date) return 1;
-    return 0;
-  });
-}
+// export function sortPosts(posts: Array<Docs>) {
+//   return posts.sort((a, b) => {
+//     if (a.date > b.date) return -1;
+//     if (a.date < b.date) return 1;
+//     return 0;
+//   });
+// }
 
 export function baseUrl(path: string) {
   return `${env.NEXT_PUBLIC_APP_URL}${path}`;

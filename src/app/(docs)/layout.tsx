@@ -1,4 +1,4 @@
-import { SiteHeader } from "@/components/site-specific/header";
+import { SiteHeader } from "@/components/site-specific/layout/header";
 
 export default async function LandingLayout({
   children,

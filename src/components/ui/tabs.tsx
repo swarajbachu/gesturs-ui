@@ -11,7 +11,6 @@ import {
   composeRenderProps
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { focusRing } from '@/lib/focus-ring';
 
 const tabsStyles = tv({
   base: 'flex gap-4',
@@ -56,7 +55,6 @@ export function TabList<T extends object>(props: TabListProps<T>) {
 }
 
 const tabProps = tv({
-  extend: focusRing,
   base: 'flex items-center cursor-default rounded-full px-4 py-1.5 text-sm font-medium transition forced-color-adjust-none',
   variants: {
     isSelected: {
@@ -81,7 +79,6 @@ export function Tab(props: TabProps) {
 }
 
 const tabPanelStyles = tv({
-  extend: focusRing,
   base: 'flex-1 p-4 text-sm text-gray-900 dark:text-zinc-100'
 });
 

@@ -1,5 +1,5 @@
 import { docsConfig } from "@/lib/docs";
-import { DocsSidebarNav } from "@/components/site-specific/sidebar";
+import { DocsSidebarNav } from "@/components/site-specific/layout/sidebar";
 
 
 
