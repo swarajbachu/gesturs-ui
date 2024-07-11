@@ -19,7 +19,7 @@ function Breadcrumbs<T extends object>({ ...props }: BreadcrumbsProps<T>) {
     <AriaBreadcrumbs
       {...props}
       className={cn(
-        "flex flex-wrap items-center gap-2 break-words text-sm text-foreground-muted [&_svg]:size-4 ",
+        "flex flex-wrap items-center mx-0 px-0 gap-2 break-words text-sm text-foreground-muted [&_svg]:size-4 ",
         props.className
       )}
     />

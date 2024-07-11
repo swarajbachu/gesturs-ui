@@ -85,6 +85,8 @@ export default async function PostPage({ params }: PostPageProps) {
           </Breadcrumb>
         ))}
       </Breadcrumbs>
+      <h1 className="capitalize my-2">{post.title}</h1>
+      <h4 className="text-muted-foreground my-0">{post.description}</h4>
       <br />
       <MDXContent  code={post.body} />
     </article>
