@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
+import { Breadcrumb, Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { Link } from "@/components/ui/link";
 // import { Tag } from "@/components/tags";
 interface PostPageProps {
   params: {
@@ -13,7 +15,7 @@ interface PostPageProps {
 }
 
 async function getPostFromParams(params: PostPageProps["params"]) {
-  const slug = params?.slug?.join("/")
+  const slug = params?.slug?.join("/");
   const doc = docs.find((doc) => doc.slugAsParams === slug);
   return doc;
 }
@@ -72,17 +74,19 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
-      <h1 className="mb-2">{post.title}</h1>
-      <div className="flex gap-2 mb-2">
-        {/* {post.tags?.map((tag) => (
-          <Tag tag={tag} key={tag} />
-        ))} */}
-      </div>
-      {post.description ? (
-        <p className="text-xl mt-0 text-muted-foreground">{post.description}</p>
-      ) : null}
-      <hr className="my-4" />
-      <MDXContent code={post.body} />
+      <Breadcrumbs>
+        {post.slug.split("/").map((slug, index, arr) => (
+          <Breadcrumb
+            key={slug}
+            href={`/${arr.slice(0, index + 1).join("/")}`}
+            className="capitalize"
+          >
+            {slug}
+          </Breadcrumb>
+        ))}
+      </Breadcrumbs>
+      <br />
+      <MDXContent  code={post.body} />
     </article>
   );
 }
