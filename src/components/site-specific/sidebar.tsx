@@ -16,7 +16,7 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
     <ul className="w-full pb-20">
       {items.map((item, index) => (
         <li key={index} className={cn("pb-4 h-fit")}>
-          <h4 className="mb-1 rounded-md py-1 text-base font-semibold">
+          <h4 className="mb-1 rounded-md py-1 text-base font-semibold text-foreground">
             {item.title}
           </h4>
           {item?.items && (
@@ -57,7 +57,7 @@ export function DocsSidebarNavItems({
               target={item.external ? "_blank" : ""}
               rel={item.external ? "noreferrer" : ""}
             >
-              <span className="shrink-0 hover:text-blue-700 dark:hover:text-zinc-100 hover:ml-1 transition-all duration-200 ease-in-out">{item.title}</span>
+              <span className="shrink-0 hover:text-zinc-950 dark:hover:text-zinc-100 hover:ml-1 transition-all duration-200 ease-in-out">{item.title}</span>
               {item.label && (
                 <span className="whitespace-nowrap rounded-lg bg-sky-400/20 px-2 text-xs/6 font-semibold text-sky-700 dark:bg-sky-400/20 dark:text-sky-300">
                   {item.label}

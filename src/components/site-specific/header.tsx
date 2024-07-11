@@ -11,7 +11,7 @@ export async function SiteHeader() {
       <div className="container flex h-16 items-center w-full">
         <MainNav />
       </div>
-      <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0" />
+      <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-zinc-900/10 via-zinc-900/30 to-zinc-900/10" />
     </header>
   );
 }

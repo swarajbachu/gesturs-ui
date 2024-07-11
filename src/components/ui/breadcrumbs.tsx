@@ -38,12 +38,12 @@ function Breadcrumb({
   return (
     <AriaBreadcrumb
       {...props}
-      className={cn("flex items-center gap-1 group", className)}
+      className={cn("flex items-center gap-1 group px-0", className)}
     >
       {iconLeft}
       <Link
-        variant="secondary"
-        className="no-underline font-semibold"
+        variant="muted"
+        className="no-underline font-semibold px-0 inline-flex items-center gap-1.5 hover:text-foreground transition-colors group-last-of-type:text-foreground"
         {...props}
       />
       {iconRight ? (

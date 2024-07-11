@@ -6,7 +6,7 @@ export default async function LandingLayout({
   return (
     <div className="relative">
       <SiteHeader />
-      <main className="flex-1 mt-7">{children}</main>
+      <main className="flex-1">{children}</main>
     </div>
   );
 }
