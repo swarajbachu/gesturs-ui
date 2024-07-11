@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <section className="max-h-screen h-[calc(100dvh-200px)] grid place-content-center relative">
+    <section className="max-h-screen h-screen grid place-content-center relative">
       <div className="gradient absolute left-[10%] top-[-100px] h-[400px] w-[100vw] md:h-[500px] " />
       <div className="gradient absolute left-[100%] bottom-[-100px] h-[400px] w-[100vw] md:h-[500px] " />{" "}
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
