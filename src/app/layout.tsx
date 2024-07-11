@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { baseMetaData } from "@/lib/utils";
+import { baseMetaData, cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = baseMetaData({
-  
-});
+export const metadata: Metadata = baseMetaData({});
 
 export default function RootLayout({
   children,
@@ -16,7 +14,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          "relative flex min-h-screen w-full flex-col justify-center overflow-x-hidden scroll-smooth bg-background font-sans antialiased",
+          inter.className
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
