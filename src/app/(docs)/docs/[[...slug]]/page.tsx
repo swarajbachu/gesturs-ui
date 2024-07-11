@@ -71,7 +71,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
+    <article className="container py-6  prose dark:prose-invert max-w-3xl mx-auto">
       <Breadcrumbs>
         {post.slug.split("/").map((slug, index, arr) => (
           <Breadcrumb

@@ -62,7 +62,7 @@ const CodeBlock = async ({
   return (
     <div {...props}>
       {preview}
-      {files.map(({ fileName, code, lang }) => (
+      {files.map(({ fileName, code,codeStr, lang }) => (
         <div key={fileName} className="my-4">
           <h3 className="text-lg font-semibold">{fileName}</h3>
           {code}

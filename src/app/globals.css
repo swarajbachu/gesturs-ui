@@ -63,13 +63,26 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .step {
+    counter-increment: step;
+  }
+
+  .step:before {
+    @apply absolute inline-flex h-9 w-9 items-center justify-center rounded-full border-4 border-background dark:border-zinc-900 bg-muted text-center -indent-px font-mono text-base font-medium;
+    @apply ml-[-50px] mt-[-4px];
+    content: counter(step);
+  }
 }
 
 .gradient {
   transform: translate(-50%, 0%);
-	border-radius: 50% 22% 40% 80%;  
-	filter: blur(100px);
-  background: radial-gradient(circle at 50% 50%,rgba(76, 0, 255, 1), rgba(76, 0, 255, 0));
+  border-radius: 50% 22% 40% 80%;
+  filter: blur(100px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(76, 0, 255, 1),
+    rgba(76, 0, 255, 0)
+  );
   opacity: 0.2;
 }
 
@@ -77,11 +90,11 @@ body {
   from {
     rotate: 0deg;
   }
-  
+
   50% {
     scale: 1 1.5;
   }
-  
+
   to {
     rotate: 360deg;
   }

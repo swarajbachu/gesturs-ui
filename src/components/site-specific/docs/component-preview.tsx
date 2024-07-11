@@ -7,7 +7,7 @@ import { Tabs, TabList, TabPanel, Tab } from "@/components/ui/tabs";
 import ComponentWrapper from "./component-wrapper";
 import { Icons } from "@/components/site-specific/icons";
 import { previews } from "@/registry/previews";
-import { CodeBlock } from "@/components/ui/code-block";
+import { CodeBlock } from "@/components/site-specific/docs/code-block";
 
 type PreviewsKeys = keyof typeof previews;
 
