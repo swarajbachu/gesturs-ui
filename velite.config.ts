@@ -16,7 +16,7 @@ const docs = defineCollection({
       slug: s.path(),
       title: s.string().max(99),
       description: s.string().max(999).optional(),
-      date: s.isodate(),
+      date: s.isodate().optional(),
       published: s.boolean().default(true),
       tags: s.array(s.string()).optional(),
       body: s.mdx(),
