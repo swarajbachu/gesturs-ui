@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import {
   Tab as RACTab,
@@ -22,7 +24,7 @@ const tabsStyles = tv({
   }
 });
 
-export function Tabs(props: TabsProps) {
+function Tabs(props: TabsProps) {
   return (
     <RACTabs
       {...props}
@@ -43,7 +45,7 @@ const tabListStyles = tv({
   }
 });
 
-export function TabList<T extends object>(props: TabListProps<T>) {
+function TabList<T extends object>(props: TabListProps<T>) {
   return (
     <RACTabList
       {...props}
@@ -67,7 +69,7 @@ const tabProps = tv({
   }
 });
 
-export function Tab(props: TabProps) {
+function Tab(props: TabProps) {
   return (
     <RACTab
       {...props}
@@ -82,7 +84,7 @@ const tabPanelStyles = tv({
   base: 'flex-1 p-4 text-sm text-gray-900 dark:text-zinc-100'
 });
 
-export function TabPanel(props: TabPanelProps) {
+function TabPanel(props: TabPanelProps) {
   return (
     <RACTabPanel
       {...props}
@@ -92,3 +94,6 @@ export function TabPanel(props: TabPanelProps) {
       )} />
   );
 }
+
+
+export { TabList, TabPanel, Tab, Tabs ,type TabsProps};

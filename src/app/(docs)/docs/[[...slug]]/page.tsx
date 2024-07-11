@@ -6,8 +6,6 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import { Breadcrumb, Breadcrumbs } from "@/components/ui/breadcrumbs";
-import { Link } from "@/components/ui/link";
-// import { Tag } from "@/components/tags";
 interface PostPageProps {
   params: {
     slug: string[];
