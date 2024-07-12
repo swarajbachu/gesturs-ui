@@ -56,7 +56,6 @@ export function parseChildren(
       code += file.code;
       codeString += file.code;
     });
-    console.log(codeString, "codeString");
     return {
       code: codeString,
       lang: lang || "tsx",

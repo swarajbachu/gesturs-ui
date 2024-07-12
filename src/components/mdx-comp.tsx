@@ -165,7 +165,6 @@ const components = {
     __name__?: string;
   }) => {
     const value = parseChildren(props.children as CodeText);
-    console.log(value, "value");
     return (
       <div className="relative">
         <pre
