@@ -1,41 +1,91 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { LoaderIcon } from "lucide-react";
 import React from "react";
 import {
-  composeRenderProps,
   Button as RACButton,
   ButtonProps as RACButtonProps,
+  type LinkProps as RACLinkProps,
+  Link as RACLink,
 } from "react-aria-components";
 import { tv, type VariantProps } from "tailwind-variants";
 
 let button = tv({
-  base: "px-5 py-2 text-sm text-center transition rounded-sm border border-black/10 dark:border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] dark:shadow-none",
+  base: "relative isolate inline-flex items-center justify-center gap-x-2 rounded-sm border text-base/6 font-semibold px-5 py-2 text-base/6 text-center transition",
   variants: {
     variant: {
-      primary: "bg-blue-600 hover:bg-blue-700 pressed:bg-blue-800 text-white",
-      secondary:
-        "bg-gray-100 hover:bg-gray-200 pressed:bg-gray-300 text-gray-800 dark:bg-zinc-600 dark:hover:bg-zinc-500 dark:pressed:bg-zinc-400 dark:text-zinc-100",
-      destructive: "bg-red-700 hover:bg-red-800 pressed:bg-red-900 text-white",
-      icon: "border-0 p-1 flex items-center justify-center text-gray-600 hover:bg-black/[5%] pressed:bg-black/10 dark:text-zinc-400 dark:hover:bg-white/10 dark:pressed:bg-white/20 disabled:bg-transparent",
+      primary:
+        "bg-foreground hover:bg-foreground/90 pressed:bg-foreground/70 text-primary-foreground",
+      secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 pressed:bg-secondary/70",
+      destructive:
+        "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+      accent: "hover:bg-accent text-accent-foreground border-none",
+      outline: "bg-transparent border hover:bg-foreground/5",
+      ghost: "bg-transparent border-none hover:bg-foreground/5",
+    },
+    size: {
+      sm: "text-sm/6 px-3 py-1 [&_svg]:size-4",
+      md: "text-base/6 px-5 py-2 [&_svg]:size-5",
+      lg: "text-lg/6 px-7 py-3 [&_svg]:size-6",
+      icon: "p-2 rounded-sm size-9 border-none",
+    },
+    shadow: {
+      true: "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] dark:shadow-none",
+    },
+    border: {
+      true: "border border-black/10 dark:border-white/10",
+      false: "border-none",
+    },
+    fullWidth: {
+      true: "w-full",
     },
     isDisabled: {
-      true: "bg-gray-100 dark:bg-zinc-800 text-gray-300 dark:text-zinc-600 forced-colors:text-[GrayText] border-black/5 dark:border-white/5",
+      true: "bg-gray-100 dark:bg-zinc-800 text-gray-300 dark:text-zinc-600 forced-colors:text-[GrayText] border-black/5 dark:border-white/5 hover:bg-gray-100 dark:hover:bg-zinc-800 cursor-not-allowed",
     },
   },
   defaultVariants: {
     variant: "primary",
+    border: true,
+    shadow: true,
+    size: "md",
   },
 });
 
-type ButtonProps = RACButtonProps & VariantProps<typeof button>;
+type ButtonProps = RACButtonProps &
+  Omit<RACLinkProps, "className" | "style" | "children"> &
+  VariantProps<typeof button> & {
+    isLoading?: boolean;
+    leftIcon?: React.ReactNode;
+    rightIcon?: React.ReactNode;
+  };
 
-function Button({ className, isDisabled, variant, ...props }: ButtonProps) {
+function Button({
+  children,
+  className,
+  isDisabled,
+  size,
+  variant,
+  border,
+  shadow,
+  href,
+  ...props
+}: ButtonProps) {
+  const ButtonElement: React.ElementType = href ? RACLink : RACButton;
+
   return (
-    <RACButton
+    <ButtonElement
       {...props}
-      className={cn(button({ variant, isDisabled }), className)}
-    />
+      className={cn(
+        button({ size, variant, isDisabled, border, shadow }),
+        className
+      )}
+    >
+      {props.isLoading && <LoaderIcon className="h-4 w-4 animate-spin" />}
+      {props.leftIcon}
+      {children}
+      {props.rightIcon}
+    </ButtonElement>
   );
 }
 
