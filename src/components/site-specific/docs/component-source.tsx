@@ -1,6 +1,7 @@
 import React from "react";
 import { CodeBlock } from "@/components/site-specific/docs/code-block";
 import { getComponentSource } from "@/server/component-source";
+import { CodeBlockWrapper } from "./collapsible-wrapper";
 
 export const ComponentSource = ({
   name,
@@ -24,9 +25,15 @@ export const ComponentSource = ({
   }
 
   return (
-    <CodeBlock
-      files={code.map((file) => ({ fileName: file.title, code: file.code, lang: "tsx" }))}
-      expandable
-    />
+    <CodeBlockWrapper className={className}>
+      <CodeBlock
+        files={code.map((file) => ({
+          fileName: file.title,
+          code: file.code,
+          lang: "tsx",
+        }))}
+        expandable
+      />
+    </CodeBlockWrapper>
   );
 };

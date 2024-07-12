@@ -1,5 +1,6 @@
 import { codeToHtml } from "shiki";
 import type { BundledLanguage } from "shiki";
+import { CopyButton } from "./copy-button";
 
 interface CodeBlockProps {
   files: {
@@ -49,10 +50,13 @@ const CodeBlock = async ({
         fileName,
         codeStr: code,
         code: (
-          <div
-            className="code-block dark:[&_pre]:bg-[#0d1117] dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e]"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <div className="relative">
+            <div
+              className="code-block dark:[&_pre]:bg-[#0d1117] dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e]"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+            <CopyButton value={code} className="absolute right-4 top-4" />
+          </div>
         ),
         lang,
       };
@@ -62,9 +66,9 @@ const CodeBlock = async ({
   return (
     <div {...props}>
       {preview}
-      {files.map(({ fileName, code,codeStr, lang }) => (
-        <div key={fileName} className="my-4">
-          <h3 className="text-lg font-semibold">{fileName}</h3>
+      {files.map(({ fileName, code, codeStr, lang }) => (
+        <div key={fileName} className="relative">
+          {/* <h3 className="text-lg font-semibold">{fileName}</h3> */}
           {code}
         </div>
       ))}

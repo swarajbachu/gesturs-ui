@@ -88,13 +88,6 @@ export function ComponentPreview({
         )}
         <TabPanel id="preview" className="relative rounded-md">
           <ComponentWrapper>
-            {/* <Button
-              className="absolute   right-0 top-0 z-10 ml-4 flex items-center rounded-lg px-3 py-1"
-              variant="icon"
-            >
-              <RotateCcw size={16} />
-            </Button> */}
-
             {Preview}
           </ComponentWrapper>
         </TabPanel>

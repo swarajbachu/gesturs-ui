@@ -4,8 +4,32 @@
     "title": "Introduction",
     "description": "Create Super Accessible and Scalable Application using Gesturs UI",
     "date": "2020-01-01T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
     "published": true,
     "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(i){const s={a:\"a\",em:\"em\",h1:\"h1\",h2:\"h2\",li:\"li\",p:\"p\",strong:\"strong\",ul:\"ul\",...i.components};return t(e,{children:[n(s.h1,{id:\"gesturs-ui\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#gesturs-ui\",children:\"Gesturs UI\"})}),\"\\n\",n(s.p,{children:\"Gesturs UI is a collection of reusable components that you can copy and paste into your web apps. It primarily features components, blocks, and templates geared towards creating landing pages and user-facing marketing materials.\"}),\"\\n\",n(s.h2,{id:\"philosophy\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#philosophy\",children:\"Philosophy\"})}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"I personally believe that good design contributes significant value to software. It's one of the main methods of establishing trust between you and an internet stranger.\"}),\" Trust is important for internet businesses because it is the first thing a visitor evaluates before pulling out their credit card and becoming a customer.\"]}),\"\\n\",n(s.p,{children:\"Some questions visitors might ask themselves are:\"}),\"\\n\",t(s.ul,{children:[\"\\n\",n(s.li,{children:'\"Is this company legit?\"'}),\"\\n\",n(s.li,{children:'\"Who else is using it?\"'}),\"\\n\",n(s.li,{children:'\"Can I trust them with my personal data?\"'}),\"\\n\"]}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"Poor design reflects poorly on your team.\"}),\" It comes off as lazy, unfinished, and unstable. It shows that the team doesn't care about user experience.\"]}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"Good design indicates that the team behind has their shit together.\"}),\" I can probably expect good things from them in the future.\"]}),\"\\n\",n(s.p,{children:'It makes me think, \"If they care so much about these tiny details, they must care a lot about other things in the company, including their customers!\"'}),\"\\n\",t(s.p,{children:[\"A great example of this in play is the \",n(s.a,{href:\"https://linear.app\",children:\"Linear\"}),\" landing page which I first came across in 2020. I didn't even need to try the product but I already knew that it \",n(s.em,{children:\"must\"}),\" be good.\"]}),\"\\n\",t(s.p,{children:[\"This library is heavily inspired by \",n(s.a,{href:\"https://ui.shadcn.com\",children:\"shadcn\"}),\".\"]}),\"\\n\",n(s.h2,{id:\"features\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#features\",children:\"Features\"})}),\"\\n\",n(s.p,{children:\"Gesturs UI components are built upon React Aria, making them super accessible and scalable.\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "toc": [
+      {
+        "title": "Gesturs UI",
+        "url": "#gesturs-ui",
+        "items": [
+          {
+            "title": "Philosophy",
+            "url": "#philosophy",
+            "items": []
+          },
+          {
+            "title": "Features",
+            "url": "#features",
+            "items": []
+          }
+        ]
+      }
+    ],
     "slugAsParams": ""
   },
   {
@@ -13,24 +37,59 @@
     "title": "Introduction",
     "description": "Create Super Accessible and Scalable Application using Gesturs UI",
     "date": "2020-01-01T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
     "published": true,
     "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(i){const s={a:\"a\",em:\"em\",h1:\"h1\",h2:\"h2\",li:\"li\",p:\"p\",strong:\"strong\",ul:\"ul\",...i.components};return t(e,{children:[n(s.h1,{id:\"gesturs-ui\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#gesturs-ui\",children:\"Gesturs UI\"})}),\"\\n\",n(s.p,{children:\"Gesturs UI is a collection of reusable components that you can copy and paste into your web apps. It primarily features components, blocks, and templates geared towards creating landing pages and user-facing marketing materials.\"}),\"\\n\",n(s.h2,{id:\"philosophy\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#philosophy\",children:\"Philosophy\"})}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"I personally believe that good design contributes significant value to software. It's one of the main methods of establishing trust between you and an internet stranger.\"}),\" Trust is important for internet businesses because it is the first thing a visitor evaluates before pulling out their credit card and becoming a customer.\"]}),\"\\n\",n(s.p,{children:\"Some questions visitors might ask themselves are:\"}),\"\\n\",t(s.ul,{children:[\"\\n\",n(s.li,{children:'\"Is this company legit?\"'}),\"\\n\",n(s.li,{children:'\"Who else is using it?\"'}),\"\\n\",n(s.li,{children:'\"Can I trust them with my personal data?\"'}),\"\\n\"]}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"Poor design reflects poorly on your team.\"}),\" It comes off as lazy, unfinished, and unstable. It shows that the team doesn't care about user experience.\"]}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"Good design indicates that the team behind has their shit together.\"}),\" I can probably expect good things from them in the future.\"]}),\"\\n\",n(s.p,{children:'It makes me think, \"If they care so much about these tiny details, they must care a lot about other things in the company, including their customers!\"'}),\"\\n\",t(s.p,{children:[\"A great example of this in play is the \",n(s.a,{href:\"https://linear.app\",children:\"Linear\"}),\" landing page which I first came across in 2020. I didn't even need to try the product but I already knew that it \",n(s.em,{children:\"must\"}),\" be good.\"]}),\"\\n\",t(s.p,{children:[\"This library is heavily inspired by \",n(s.a,{href:\"https://ui.shadcn.com\",children:\"shadcn\"}),\".\"]}),\"\\n\",n(s.h2,{id:\"features\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#features\",children:\"Features\"})}),\"\\n\",n(s.p,{children:\"Gesturs UI components are built upon React Aria, making them super accessible and scalable.\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "toc": [
+      {
+        "title": "Gesturs UI",
+        "url": "#gesturs-ui",
+        "items": [
+          {
+            "title": "Philosophy",
+            "url": "#philosophy",
+            "items": []
+          },
+          {
+            "title": "Features",
+            "url": "#features",
+            "items": []
+          }
+        ]
+      }
+    ],
     "slugAsParams": "introduction"
-  },
-  {
-    "slug": "docs/components/breadcrumbs",
-    "title": "Bread Crumbs",
-    "description": "This is a hello world post",
-    "published": true,
-    "body": "const{jsx:e}=arguments[0];function _createMdxContent(n){const t={a:\"a\",h4:\"h4\",...n.components};return e(t.h4,{id:\"hello-world\",children:e(t.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#hello-world\",children:\"Hello World\"})})}return{default:function(n={}){const{wrapper:t}=n.components||{};return t?e(t,{...n,children:e(_createMdxContent,{...n})}):_createMdxContent(n)}};",
-    "slugAsParams": "components/breadcrumbs"
   },
   {
     "slug": "docs/components/button",
     "title": "Button",
-    "description": "This is a hello world post",
+    "description": "Displays a button or a component that looks like a button.",
+    "date": "2024-07-12T00:00:00.000Z",
+    "references": [
+      {
+        "title": "React Aria Button",
+        "url": "https://react-spectrum.adobe.com/react-spectrum/Button.html#button"
+      }
+    ],
     "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={code:\"code\",figure:\"figure\",pre:\"pre\",span:\"span\",...o.components},{ComponentPreview:i,ComponentSource:c,Step:a,Steps:d}=r;return i||_missingMdxReference(\"ComponentPreview\",!0),c||_missingMdxReference(\"ComponentSource\",!0),a||_missingMdxReference(\"Step\",!0),d||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(i,{name:\"ui/button\"}),\"\\n\",t(d,{children:[n(a,{children:\"Install the following dependencies:\"}),n(r.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(r.pre,{style:{backgroundColor:\"#24292e\",color:\"#e1e4e8\"},tabIndex:\"0\",\"data-language\":\"bash\",\"data-theme\":\"github-dark\",children:n(r.code,{\"data-language\":\"bash\",\"data-theme\":\"github-dark\",style:{display:\"grid\"},children:t(r.span,{\"data-line\":\"\",children:[n(r.span,{style:{color:\"#B392F0\"},children:\"pnpm\"}),n(r.span,{style:{color:\"#9ECBFF\"},children:\" install\"}),n(r.span,{style:{color:\"#9ECBFF\"},children:\" react-aria-components\"})]})})})}),n(a,{children:\"Copy and paste the following code into your project.\"}),n(c,{name:\"ui/button\"}),n(a,{children:\"Update the import paths to match your project setup.\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(r){const o={a:\"a\",code:\"code\",figure:\"figure\",h2:\"h2\",pre:\"pre\",span:\"span\",...r.components},{ComponentPreview:a,ComponentSource:i,Step:c,Steps:s}=o;return a||_missingMdxReference(\"ComponentPreview\",!0),i||_missingMdxReference(\"ComponentSource\",!0),c||_missingMdxReference(\"Step\",!0),s||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(a,{name:\"ui/button\"}),\"\\n\",n(o.h2,{id:\"installation\",children:n(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(s,{children:[n(c,{children:\"Install the following dependencies:\"}),n(o.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(o.pre,{style:{backgroundColor:\"#24292e\",color:\"#e1e4e8\"},tabIndex:\"0\",\"data-language\":\"bash\",\"data-theme\":\"github-dark\",children:n(o.code,{\"data-language\":\"bash\",\"data-theme\":\"github-dark\",style:{display:\"grid\"},children:t(o.span,{\"data-line\":\"\",children:[n(o.span,{style:{color:\"#B392F0\"},children:\"pnpm\"}),n(o.span,{style:{color:\"#9ECBFF\"},children:\" install\"}),n(o.span,{style:{color:\"#9ECBFF\"},children:\" react-aria-components\"})]})})})}),n(c,{children:\"Copy and paste the following code into your project.\"}),n(i,{name:\"ui/button\"}),n(c,{children:\"Update the import paths to match your project setup.\"})]}),\"\\n\",n(o.h2,{id:\"usage\",children:n(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#usage\",children:\"Usage\"})})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      },
+      {
+        "title": "Usage",
+        "url": "#usage",
+        "items": []
+      }
+    ],
     "slugAsParams": "components/button"
   }
 ]

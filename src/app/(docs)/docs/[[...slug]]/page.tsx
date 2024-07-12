@@ -6,6 +6,9 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import { Breadcrumb, Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { getTableOfContents } from "@/lib/toc";
+import { TableOfContents } from "@/components/site-specific/docs/toc";
+import { ScrollArea } from "@/components/site-specific/ui/scroll-area";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -64,29 +67,40 @@ export async function generateStaticParams(): Promise<
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const post = await getPostFromParams(params);
+  const doc = await getPostFromParams(params);
 
-  if (!post || !post.published) {
+  if (!doc || !doc.published) {
     notFound();
   }
 
   return (
-    <article className="container py-6  prose dark:prose-invert max-w-3xl mx-auto">
-      <Breadcrumbs>
-        {post.slug.split("/").map((slug, index, arr) => (
-          <Breadcrumb
-            key={slug}
-            href={`/${arr.slice(0, index + 1).join("/")}`}
-            className="capitalize"
-          >
-            {slug}
-          </Breadcrumb>
-        ))}
-      </Breadcrumbs>
-      <h1 className="capitalize my-2">{post.title}</h1>
-      <h4 className="text-muted-foreground my-0">{post.description}</h4>
-      <br />
-      <MDXContent  code={post.body} />
+    <article className="relative py-6 max-w-7xl lg:gap-10 lg:py-8 xl:grid prose dark:prose-invert xl:grid-cols-[1fr_300px]">
+      <div className="w-full min-w-0 mx-auto">
+        <Breadcrumbs>
+          {doc.slug.split("/").map((slug, index, arr) => (
+            <Breadcrumb
+              key={slug}
+              href={`/${arr.slice(0, index + 1).join("/")}`}
+              className="capitalize"
+            >
+              {slug}
+            </Breadcrumb>
+          ))}
+        </Breadcrumbs>
+        <h1 className="capitalize my-2">{doc.title}</h1>
+        <h4 className="text-muted-foreground my-0">{doc.description}</h4>
+        <br />
+        <MDXContent code={doc.body} />
+      </div>
+      <div className="hidden text-sm xl:block">
+        <div className="sticky top-16 -mt-10 pt-4">
+          <ScrollArea className="pb-10">
+            <div className="space-y-4 sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
+              <TableOfContents toc={doc.toc} />
+            </div>
+          </ScrollArea>
+        </div>
+      </div>
     </article>
   );
 }

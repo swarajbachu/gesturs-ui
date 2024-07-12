@@ -16,10 +16,24 @@ const docs = defineCollection({
       slug: s.path(),
       title: s.string().max(99),
       description: s.string().max(999).optional(),
-      date: s.isodate().optional(),
+      date: s.isodate(),
+      references: s
+        .array(
+          s.object({
+            title: s.string(),
+            url: s.string().url(),
+          })
+        )
+        .default([
+          {
+            title: "Report Issue",
+            url: "https://github.com/swarajbachu/gesturs-ui/issues/new",
+          },
+        ]),
       published: s.boolean().default(true),
       tags: s.array(s.string()).optional(),
       body: s.mdx(),
+      toc: s.toc(),
     })
     .transform(computedFields),
 });
