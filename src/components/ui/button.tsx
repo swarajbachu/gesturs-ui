@@ -12,17 +12,17 @@ import {
 import { tv, type VariantProps } from "tailwind-variants";
 
 let button = tv({
-  base: "relative isolate inline-flex items-center justify-center gap-x-2 rounded-sm border text-base/6 font-semibold px-5 py-2 text-base/6 text-center transition",
+  base: "relative isolate pressed:ring-none inline-flex items-center justify-center gap-x-2 rounded-sm border text-base/6 font-semibold px-5 py-2 text-base/6 text-center transition border outline-none ring-offset-background ring-0 ring-border-focus focus-visible:ring-offset-[2px] focus-visible:ring-offset-background ring-primary focus-visible:ring-2",
   variants: {
     variant: {
       primary:
-        "bg-foreground hover:bg-foreground/90 pressed:bg-foreground/70 text-primary-foreground",
-      secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 pressed:bg-secondary/70",
+        "bg-foreground hover:bg-foreground/90 pressed:bg-foreground/70 text-primary-foreground  border-black/10 dark:border-white/10 ",
+      secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 pressed:bg-secondary/70 border-secondary/10",
       destructive:
-        "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        "bg-destructive text-destructive-foreground hover:bg-destructive/90 border-destructive/10",
       accent: "hover:bg-accent text-accent-foreground border-none",
       outline: "bg-transparent border hover:bg-foreground/5",
-      ghost: "bg-transparent border-none hover:bg-foreground/5",
+      ghost: "bg-transparent border-none hover:bg-foreground/5 !shadow-none",
     },
     size: {
       sm: "text-sm/6 px-3 py-1 [&_svg]:size-4",
@@ -34,7 +34,6 @@ let button = tv({
       true: "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] dark:shadow-none",
     },
     border: {
-      true: "border border-black/10 dark:border-white/10",
       false: "border-none",
     },
     fullWidth: {
@@ -76,6 +75,7 @@ function Button({
   return (
     <ButtonElement
       {...props}
+      href={href}
       className={cn(
         button({ size, variant, isDisabled, border, shadow }),
         className

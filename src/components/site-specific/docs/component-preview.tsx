@@ -7,7 +7,7 @@ import { Tabs, TabList, TabPanel, Tab } from "@/components/ui/tabs";
 import ComponentWrapper from "./component-wrapper";
 import { Icons } from "@/components/site-specific/icons";
 import { previews } from "@/registry/previews";
-import { CodeBlock } from "@/components/site-specific/docs/code-block";
+import { CodeWrapper } from "./code-wrapper";
 
 type PreviewsKeys = keyof typeof previews;
 
@@ -97,7 +97,7 @@ export function ComponentPreview({
               {code}
             </div>
           </div> */}
-          <CodeBlock
+          <CodeWrapper
             files={code.map((file) => ({
               fileName: file.title,
               code: file.code,

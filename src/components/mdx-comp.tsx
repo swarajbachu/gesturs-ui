@@ -3,9 +3,9 @@ import * as runtime from "react/jsx-runtime";
 import { cn } from "@/lib/utils";
 import { ComponentPreview } from "./site-specific/docs/component-preview";
 import * as React from "react";
-import { CopyButton } from "./site-specific/docs/copy-button";
 import { ComponentSource } from "./site-specific/docs/component-source";
-import Link from "next/link";
+import { CopyButton } from "./site-specific/docs/copy-button";
+import { CodeText, parseChildren } from "@/lib/extract-code";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -20,7 +20,7 @@ const components = {
     <h1
       className={cn(
         "font-heading mt-2 scroll-m-20 text-4xl font-bold",
-        className,
+        className
       )}
       {...props}
     />
@@ -29,7 +29,7 @@ const components = {
     <h2
       className={cn(
         "mt-12 scroll-m-20 border-b dark:border-zinc-800 border-zinc-200 pb-2 text-2xl font-black first:mt-0",
-        className,
+        className
       )}
       {...props}
     />
@@ -38,7 +38,7 @@ const components = {
     <h3
       className={cn(
         "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-        className,
+        className
       )}
       {...props}
     />
@@ -47,7 +47,7 @@ const components = {
     <h4
       className={cn(
         "font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className,
+        className
       )}
       {...props}
     />
@@ -56,7 +56,7 @@ const components = {
     <h5
       className={cn(
         "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className,
+        className
       )}
       {...props}
     />
@@ -65,14 +65,17 @@ const components = {
     <h6
       className={cn(
         "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
-        className,
+        className
       )}
       {...props}
     />
   ),
   a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a
-      className={cn("font-semibold no-underline hover:!no-underline", className)}
+      className={cn(
+        "font-semibold no-underline hover:!no-underline",
+        className
+      )}
       {...props}
     />
   ),
@@ -109,7 +112,7 @@ const components = {
     <th
       className={cn(
         "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
-        className,
+        className
       )}
       {...props}
     />
@@ -118,7 +121,7 @@ const components = {
     <td
       className={cn(
         "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
-        className,
+        className
       )}
       {...props}
     />
@@ -161,38 +164,32 @@ const components = {
     __src__?: string;
     __name__?: string;
   }) => {
+    const value = parseChildren(props.children as CodeText);
+    console.log(value, "value");
     return (
-      <>
+      <div className="relative">
         <pre
           className={cn(
-            "text-sm mb-4 mt-6 max-h-[650px] relative overflow-x-auto rounded-md border border-zinc-200 dark:border-zinc-700 bg-zinc-950  dark:bg-zinc-900",
+            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-muted",
             className
           )}
           {...props}
         />
-        {(__rawString__ ||
-          __pnpmCommand__ ||
-          __npmCommand__ ||
-          __yarnCommand__) && (
-          <CopyButton
-            value={
-              __rawString__ ||
-              __pnpmCommand__ ||
-              __npmCommand__ ||
-              __yarnCommand__ ||
-              ""
-            }
-            src={__src__}
-            className={cn("absolute right-2 top-2", __withMeta__ && "top-16")}
-          />
-        )}
-      </>
+        <CopyButton
+          value={value.code}
+          src={__src__}
+          className={cn(
+            "absolute right-4 top-3 size-8",
+            __withMeta__ && "top-16"
+          )}
+        />
+      </div>
     );
   },
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded-md px-[0.3rem] py-[0.2rem] font-mono text-sm  border border-zinc-200 dark:border-zinc-700",
+        "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
         className
       )}
       {...props}

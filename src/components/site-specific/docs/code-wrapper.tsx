@@ -12,7 +12,7 @@ interface CodeBlockProps {
   expandable?: boolean;
 }
 
-const CodeBlock = async ({
+const CodeWrapper = async ({
   files: _files,
   preview: _preview,
   ...props
@@ -55,7 +55,7 @@ const CodeBlock = async ({
               className="code-block dark:[&_pre]:bg-[#0d1117] dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e]"
               dangerouslySetInnerHTML={{ __html: html }}
             />
-            <CopyButton value={code} className="absolute right-4 top-4" />
+            <CopyButton value={code} className="absolute right-4 top-4 size-8" />
           </div>
         ),
         lang,
@@ -76,4 +76,4 @@ const CodeBlock = async ({
   );
 };
 
-export { CodeBlock };
+export { CodeWrapper };

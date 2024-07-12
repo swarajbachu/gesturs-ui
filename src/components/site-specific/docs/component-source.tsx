@@ -1,5 +1,5 @@
 import React from "react";
-import { CodeBlock } from "@/components/site-specific/docs/code-block";
+import { CodeWrapper } from "@/components/site-specific/docs/code-wrapper";
 import { getComponentSource } from "@/server/component-source";
 import { CodeBlockWrapper } from "./collapsible-wrapper";
 
@@ -26,7 +26,7 @@ export const ComponentSource = ({
 
   return (
     <CodeBlockWrapper className={className}>
-      <CodeBlock
+      <CodeWrapper
         files={code.map((file) => ({
           fileName: file.title,
           code: file.code,
