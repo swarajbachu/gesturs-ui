@@ -74,7 +74,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="relative py-6 max-w-7xl lg:gap-10 lg:py-8 xl:grid prose dark:prose-invert xl:grid-cols-[1fr_300px] ">
+    <article className="relative py-6 max-w-7xl lg:gap-10 lg:py-8 xl:grid prose dark:prose-invert xl:grid-cols-[1fr_300px]">
       <div className="w-full min-w-0 mx-auto">
         <Breadcrumbs>
           {doc.slug.split("/").map((slug, index, arr) => (

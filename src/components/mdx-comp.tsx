@@ -19,7 +19,7 @@ const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
-        "font-heading mt-2 scroll-m-20 text-4xl font-bold",
+        "font-heading mt-2 scroll-m-20 text-4xl font-bold text-foreground",
         className
       )}
       {...props}
@@ -28,7 +28,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "mt-12 scroll-m-20 border-b dark:border-zinc-800 border-zinc-200 pb-2 text-2xl font-black first:mt-0",
+        "mt-12 text-foreground scroll-m-20 border-b dark:border-zinc-800 border-zinc-200 pb-2 text-2xl font-black first:mt-0",
         className
       )}
       {...props}
@@ -46,7 +46,7 @@ const components = {
   h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h4
       className={cn(
-        "font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
+        "font-heading text-foreground mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
         className
       )}
       {...props}
@@ -55,7 +55,7 @@ const components = {
   h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h5
       className={cn(
-        "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
+        "mt-8 scroll-m-20  text-lg font-semibold tracking-tight",
         className
       )}
       {...props}
@@ -101,17 +101,22 @@ const components = {
     />
   ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-    <div className="my-6 w-full overflow-y-auto">
+    <div className="my-6 w-full overflow-y-auto rounded-md ">
       <table className={cn("w-full", className)} {...props} />
     </div>
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
-    <tr className={cn("m-0 border-t p-0", className)} {...props} />
+    <tr
+      className={cn("m-0  p-0  even:bg-muted  group", className)}
+      {...props}
+    >
+      {props.children}
+    </tr>
   ),
   th: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <th
       className={cn(
-        "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "first:rounded-tl-md  last:rounded-tr-md  border-r last:border-none dark:border-zinc-700 border-zinc-200 bg-accent px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...props}
@@ -120,7 +125,7 @@ const components = {
   td: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <td
       className={cn(
-        "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        " px-4 py-2 text-left [&[align=center]]:text-center border-r group-last:last:rounded-br-md group-last:first:rounded-bl-md last:border-none [&[align=right]]:text-right dark:border-zinc-700 border-zinc-200",
         className
       )}
       {...props}
