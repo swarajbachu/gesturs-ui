@@ -4,8 +4,28 @@
 import React from "react";
 
 export const previews = {
-  "ui/button": {
-      component: React.lazy<React.FC>(() => import("@/registry/components/ui/button")),
+  "ui/breadcrumbs-demos/breadcrumbs": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/breadcrumbs-demos/breadcrumbs")),
+      code : [{"title":"breadcrumbs.tsx","code":"import React from \"react\";\nimport { Breadcrumbs, Breadcrumb } from \"@/components/ui/breadcrumbs\";\n\nexport default function BreadCrumbsDemo() {\n  return (\n    <Breadcrumbs>\n      <Breadcrumb href=\"#\">Home</Breadcrumb>\n      <Breadcrumb href=\"#\">Components</Breadcrumb>\n      <Breadcrumb href=\"#\">Breadcrumbs</Breadcrumb>\n    </Breadcrumbs>\n  );\n}\n"}]
+    },
+    "ui/breadcrumbs-demos/breadcrumbs-disabled": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/breadcrumbs-demos/breadcrumbs-disabled")),
+      code : [{"title":"breadcrumbs-disabled.tsx","code":"import React from \"react\";\nimport { Breadcrumbs, Breadcrumb } from \"@/components/ui/breadcrumbs\";\n\nexport default function BreadCrumbsDemo() {\n  return (\n    <Breadcrumbs isDisabled>\n      <Breadcrumb href=\"#\">Home</Breadcrumb>\n      <Breadcrumb href=\"#\">Components</Breadcrumb>\n      <Breadcrumb href=\"#\">Breadcrumbs</Breadcrumb>\n    </Breadcrumbs>\n  );\n}\n"}]
+    },
+    "ui/breadcrumbs-demos/breadcrumbs-seperator": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/breadcrumbs-demos/breadcrumbs-seperator")),
+      code : [{"title":"breadcrumbs-seperator.tsx","code":"import React from \"react\";\nimport { Breadcrumbs, Breadcrumb } from \"@/components/ui/breadcrumbs\";\nimport { ArrowRight, ComponentIcon, HomeIcon } from \"lucide-react\";\n\nexport default function BreadCrumbsDemo() {\n  return (\n    <Breadcrumbs>\n      <Breadcrumb href=\"#\" separator={<ArrowRight />}>\n        Home\n      </Breadcrumb>\n      <Breadcrumb href=\"#\" separator={<ArrowRight />}>\n        Components\n      </Breadcrumb>\n      <Breadcrumb href=\"#\">Breadcrumbs</Breadcrumb>\n    </Breadcrumbs>\n  );\n}\n"}]
+    },
+    "ui/breadcrumbs-demos/breadcrumbs-sections": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/breadcrumbs-demos/breadcrumbs-sections")),
+      code : [{"title":"breadcrumbs-sections.tsx","code":"import React from \"react\";\nimport { Breadcrumbs, Breadcrumb } from \"@/components/ui/breadcrumbs\";\nimport { ComponentIcon, HomeIcon } from \"lucide-react\";\n\nexport default function BreadCrumbsDemo() {\n  return (\n    <Breadcrumbs>\n      <Breadcrumb href=\"#\" leftSection={<HomeIcon />}>\n        Home\n      </Breadcrumb>\n      <Breadcrumb href=\"#\" leftSection={<ComponentIcon />}>\n        Components\n      </Breadcrumb>\n      <Breadcrumb href=\"#\">Breadcrumbs</Breadcrumb>\n    </Breadcrumbs>\n  );\n}\n"}]
+    },
+    "ui/breadcrumbs-demos/breadcrumbs-example": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/breadcrumbs-demos/breadcrumbs-example")),
+      code : [{"title":"breadcrumbs-example.tsx","code":"'use client';\n\nimport React from \"react\";\nimport { Breadcrumbs, Breadcrumb } from \"@/components/ui/breadcrumbs\";\nimport { usePathname } from \"next/navigation\";\n\nexport default function BreadCrumbsDemo() {\n  const pathname = usePathname();\n\n  const items = pathname.split(\"/\").filter(Boolean);\n\n  return (\n    <Breadcrumbs>\n      {items.map((item, i) => (\n        <Breadcrumb key={item} href={`/${items.slice(0, i + 1).join(\"/\")}`}>\n          {item}\n        </Breadcrumb>\n      ))}\n    </Breadcrumbs>\n  );\n}\n"}]
+    },
+    "ui/button-demos/button": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button")),
       code : [{"title":"button.tsx","code":"import { Button } from \"@/components/ui/button\";\nimport React from \"react\";\n\nexport default function Demo() {\n  return <Button>Click me</Button>;\n}\n"}]
     },
     "ui/button-demos/button-variants": {
@@ -15,6 +35,10 @@ export const previews = {
     "ui/button-demos/button-sizes": {
       component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-sizes")),
       code : [{"title":"button-sizes.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { KeyIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button size=\"icon\">\n        <KeyIcon />\n      </Button>\n      <Button size=\"sm\">Click Me</Button>\n      <Button>Click Me</Button>\n      <Button size=\"lg\">Click Me</Button>\n    </div>\n  );\n}\n"}]
+    },
+    "ui/button-demos/button-link": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-link")),
+      code : [{"title":"button-link.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { KeyIcon, PhoneIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button href=\"/contact-us\" leftSection={<PhoneIcon />}>\n        Contact Us\n      </Button>\n    </div>\n  );\n}\n"}]
     },
     "ui/button-demos/button-disabled": {
       component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-disabled")),
@@ -27,9 +51,5 @@ export const previews = {
     "ui/button-demos/button-sections": {
       component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-sections")),
       code : [{"title":"button-sections.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { KeyIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button rightSection={<KeyIcon />}>Open Lock</Button>\n      <Button leftSection={<KeyIcon />}>Open Lock</Button>\n    </div>\n  );\n}\n"}]
-    },
-    "ui/button-demos/button-link": {
-      component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-link")),
-      code : [{"title":"button-link.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { KeyIcon, PhoneIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button href=\"/contact-us\" leftSection={<PhoneIcon />}>\n        Contact Us\n      </Button>\n    </div>\n  );\n}\n"}]
     },
   }

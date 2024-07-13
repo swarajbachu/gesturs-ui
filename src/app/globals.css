@@ -49,7 +49,14 @@
   }
 }
 
+
+.shiki,
+.shiki span {
+  background-color: transparent !important;
+}
+
 body {
+  /* --tw-prose-pre-bg: #000 !important; */
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

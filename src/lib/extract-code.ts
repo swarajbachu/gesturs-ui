@@ -1,24 +1,7 @@
 import React from "react";
 
-type MdCodeText = {
-  type: "code";
-  props: {
-    className?: string;
-    children: MdCodeText[];
-  };
-};
-
-type MdMultiCodeText = {
-  type: Function;
-  props: {
-    children: MdCodeText;
-  };
-};
-
-export type CodeText = string | MdCodeText | MdMultiCodeText;
-
 export function parseChildren(
-  children: CodeText,
+  children: any,
   lang?: string,
   code?: string
 ): { lang: string; code: string; title?: string } {
@@ -36,30 +19,13 @@ export function parseChildren(
   ) {
     return {
       code: children.props?.children,
-      ...getLanguageAndTitle((children as MdCodeText).props?.className),
+      ...getLanguageAndTitle((children as any).props?.className),
     };
   }
 
   if (typeof children === "object") {
-    let code = "";
-    const files = React.Children.toArray(
-      (children.props.children as MdCodeText).props.children as any
-    ).map((file: any) => {
-      const code = file.props?.children;
-      const className = file.props?.className;
-      return {
-        code: code as string,
-        ...getLanguageAndTitle(className as string),
-      };
-    });
-    files.forEach((file) => {
-      code += file.code;
-      codeString += file.code;
-    });
-    return {
-      code: codeString,
-      lang: lang || "tsx",
-    };
+    const result = getCodeFromChildrenArray(children);
+    return result;
   }
 
   return {
@@ -79,4 +45,51 @@ function getLanguageAndTitle(className: string | undefined) {
     return { lang, title: metastring };
   }
   return { lang };
+}
+
+function getCodeFromChildrenArray(children: any) {
+  let code = "";
+  if (typeof children.props.children === "object") {
+    // return getCodeFromChildrenArray(children.props.children);
+    const lines = React.Children.toArray(children.props.children).map(
+      (line: any) => {
+        if (typeof line === "string") {
+          return line;
+        }
+        if (typeof line === "object") {
+          const result = getCodeFromChildrenArray(line);
+          code += result.code;
+        }
+        return line;
+      }
+    );
+    return {
+      code: code,
+      lang: "tsx",
+    };
+  }
+  if (typeof children.props.children === "string") {
+    return {
+      code: children.props.children,
+      ...getLanguageAndTitle(children.props.className),
+    };
+  } else {
+    const files = React.Children.toArray(
+      children.props?.children?.props?.children as any
+    ).map((file: any) => {
+      const code = file.props?.children;
+      const className = file.props?.className;
+      return {
+        code: code as string,
+        ...getLanguageAndTitle(className as string),
+      };
+    });
+    files.forEach((file) => {
+      code += file.code;
+    });
+    return {
+      code: code,
+      lang: "tsx",
+    };
+  }
 }

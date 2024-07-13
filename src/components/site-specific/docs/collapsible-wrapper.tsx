@@ -9,12 +9,13 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/site-specific/ui/collapsible";
+import { ScrollArea } from "../ui/scroll-area";
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   expandButtonTitle?: string;
 }
 
-export function CodeBlockWrapper({
+export function CodeBlockCollapsible({
   expandButtonTitle = "View Code",
   className,
   children,
@@ -27,7 +28,7 @@ export function CodeBlockWrapper({
       <div className={cn("relative overflow-hidden", className)} {...props}>
         <CollapsibleContent
           forceMount
-          className={cn("overflow-hidden", !isOpened && "max-h-72")}
+          className={cn("overflow-hidden", !isOpened && "max-h-72 ")}
         >
           <div
             className={cn(
@@ -35,7 +36,7 @@ export function CodeBlockWrapper({
               !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto]"
             )}
           >
-            {children}
+            <ScrollArea className="max-h-[650px] bg-black rounded-md">{children}</ScrollArea>
           </div>
         </CollapsibleContent>
         <div

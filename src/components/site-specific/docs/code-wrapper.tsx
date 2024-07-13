@@ -52,7 +52,7 @@ const CodeWrapper = async ({
         code: (
           <div className="relative">
             <div
-              className="code-block dark:[&_pre]:bg-[#0d1117] dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e]"
+              className="code-block dark:bg-zinc-950 bg-zinc-950 dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e] p-4 rounded-md"
               dangerouslySetInnerHTML={{ __html: html }}
             />
             <CopyButton value={code} className="absolute right-4 top-4 size-8" />
