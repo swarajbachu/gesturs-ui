@@ -10,6 +10,26 @@ export const previews = {
     },
     "ui/button-demos/button-variants": {
       component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-variants")),
-      code : [{"title":"button-variants.tsx","code":"import { Button } from \"@/components/ui/button\";\nimport { KeyIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center\">\n      <Button>Primary</Button>\n      <Button variant=\"secondary\">Secondary</Button>\n      <Button variant=\"destructive\">Destructive</Button>\n      <Button variant=\"icon\">\n        <KeyIcon />\n      </Button>\n    </div>\n  );\n}\n"}]
+      code : [{"title":"button-variants.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button>Primary</Button>\n      <Button variant=\"secondary\" border={false}>\n        Secondary\n      </Button>\n      <Button variant=\"destructive\">Destructive</Button>\n      <Button variant=\"outline\">Outline</Button>\n      <Button variant=\"ghost\">Ghost</Button>\n    </div>\n  );\n}\n"}]
+    },
+    "ui/button-demos/button-sizes": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-sizes")),
+      code : [{"title":"button-sizes.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { KeyIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button size=\"icon\">\n        <KeyIcon />\n      </Button>\n      <Button size=\"sm\">Click Me</Button>\n      <Button>Click Me</Button>\n      <Button size=\"lg\">Click Me</Button>\n    </div>\n  );\n}\n"}]
+    },
+    "ui/button-demos/button-disabled": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-disabled")),
+      code : [{"title":"button-disabled.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { KeyIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button isDisabled>Disabled</Button>\n    </div>\n  );\n}\n"}]
+    },
+    "ui/button-demos/button-loading": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-loading")),
+      code : [{"title":"button-loading.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { KeyIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button isLoading>loading</Button>\n    </div>\n  );\n}\n"}]
+    },
+    "ui/button-demos/button-sections": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-sections")),
+      code : [{"title":"button-sections.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { KeyIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button rightSection={<KeyIcon />}>Open Lock</Button>\n      <Button leftSection={<KeyIcon />}>Open Lock</Button>\n    </div>\n  );\n}\n"}]
+    },
+    "ui/button-demos/button-link": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/button-demos/button-link")),
+      code : [{"title":"button-link.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { KeyIcon, PhoneIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function ButtonVariants() {\n  return (\n    <div className=\"flex gap-2 items-center flex-wrap\">\n      <Button href=\"/contact-us\" leftSection={<PhoneIcon />}>\n        Contact Us\n      </Button>\n    </div>\n  );\n}\n"}]
     },
   }

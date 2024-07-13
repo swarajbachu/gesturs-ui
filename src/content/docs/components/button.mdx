@@ -30,7 +30,63 @@ import { Button } from "@/components/Button";
 ```
 
 ```jsx
-<Button variant="primary">Primary</Button>
+<Button>Primary</Button>
 ```
 
+There is a small difference between this button and your good old button element.
+To get same functionality of `onClick` you have to use `onPress` prop.
+
+```jsx
+<Button onPress={() => console.log("Hello World")}>Primary</Button>
+```
+
+
+## Props
+
+### Button Variants
+
+Use the `variant` prop to change the appearance of the button.
+
+Default variant is `primary`.
+
 <ComponentPreview name="ui/button-demos/button-variants" />
+
+### Button Sizes
+
+Use the `size` prop to change the size of the button.
+
+Default size is `md`.
+
+<ComponentPreview name="ui/button-demos/button-sizes" />
+
+### Button with Link
+
+Now you dont have to use `a` or `Link` tag to make a button look like a link.
+
+<ComponentPreview name="ui/button-demos/button-link" />
+
+
+### Button Disabled
+
+Use the `isDisabled` prop to disable the button.
+
+<ComponentPreview name="ui/button-demos/button-disabled" />
+
+### Button Loading
+
+Well unlike shadcn you dont have to adjust button styles and keep looking for the right spinner. 
+Just use the `isLoading` prop to show a loading spinner.
+
+<ComponentPreview name="ui/button-demos/button-loading" />
+
+### Button with Icon
+
+
+Use the `rightSection` or `leftSection` prop to add an icon to the button.
+
+type of `rightSection` or `leftSection` is `ReactNode`.
+
+<ComponentPreview name="ui/button-demos/button-sections" />
+
+
+

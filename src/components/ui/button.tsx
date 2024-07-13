@@ -1,5 +1,6 @@
 "use client";
 
+import { focusRing } from "@/lib/focus-ring";
 import { cn } from "@/lib/utils";
 import { LoaderIcon } from "lucide-react";
 import React from "react";
@@ -12,12 +13,20 @@ import {
 import { tv, type VariantProps } from "tailwind-variants";
 
 let button = tv({
-  base: "relative isolate pressed:ring-none inline-flex items-center justify-center gap-x-2 rounded-sm border text-base/6 font-semibold px-5 py-2 text-base/6 text-center transition border outline-none ring-offset-background ring-0 ring-border-focus focus-visible:ring-offset-[2px] focus-visible:ring-offset-background ring-primary focus-visible:ring-2",
+  extend: focusRing,
+  base: `relative isolate pressed:ring-none inline-flex items-center justify-center 
+  gap-x-2 rounded-sm border text-base/6 font-semibold px-5 py-2 text-base/6 text-center 
+  transition no-underline  border 
+  disabled:bg-gray-100 disabled:dark:bg-zinc-800 
+  disabled:text-gray-300 disabled:dark:text-zinc-600 forced-colors:text-[GrayText] 
+  disabled:border-black/5 disabled:dark:border-white/5 disabled:hover:bg-gray-100 
+  disabled:dark:hover:bg-zinc-800 disabled:cursor-not-allowed`,
   variants: {
     variant: {
       primary:
         "bg-foreground hover:bg-foreground/90 pressed:bg-foreground/70 text-primary-foreground  border-black/10 dark:border-white/10 ",
-      secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 pressed:bg-secondary/70 border-secondary/10",
+      secondary:
+        "bg-secondary text-secondary-foreground hover:bg-secondary/80 pressed:bg-secondary/70 border-secondary/10",
       destructive:
         "bg-destructive text-destructive-foreground hover:bg-destructive/90 border-destructive/10",
       accent: "hover:bg-accent text-accent-foreground border-none",
@@ -39,9 +48,6 @@ let button = tv({
     fullWidth: {
       true: "w-full",
     },
-    isDisabled: {
-      true: "bg-gray-100 dark:bg-zinc-800 text-gray-300 dark:text-zinc-600 forced-colors:text-[GrayText] border-black/5 dark:border-white/5 hover:bg-gray-100 dark:hover:bg-zinc-800 cursor-not-allowed",
-    },
   },
   defaultVariants: {
     variant: "primary",
@@ -55,8 +61,8 @@ type ButtonProps = RACButtonProps &
   Omit<RACLinkProps, "className" | "style" | "children"> &
   VariantProps<typeof button> & {
     isLoading?: boolean;
-    leftIcon?: React.ReactNode;
-    rightIcon?: React.ReactNode;
+    leftSection?: React.ReactNode;
+    rightSection?: React.ReactNode;
   };
 
 function Button({
@@ -68,6 +74,7 @@ function Button({
   border,
   shadow,
   href,
+  isLoading,
   ...props
 }: ButtonProps) {
   const ButtonElement: React.ElementType = href ? RACLink : RACButton;
@@ -76,15 +83,13 @@ function Button({
     <ButtonElement
       {...props}
       href={href}
-      className={cn(
-        button({ size, variant, isDisabled, border, shadow }),
-        className
-      )}
+      isDisabled={isLoading || isDisabled}
+      className={cn(button({ size, variant, border, shadow }), className)}
     >
-      {props.isLoading && <LoaderIcon className="h-4 w-4 animate-spin" />}
-      {props.leftIcon}
+      {isLoading && <LoaderIcon className="h-4 w-4 animate-spin" />}
+      {props.leftSection}
       {children}
-      {props.rightIcon}
+      {props.rightSection}
     </ButtonElement>
   );
 }
