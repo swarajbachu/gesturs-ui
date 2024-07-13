@@ -1,0 +1,40 @@
+---
+title: Introduction
+description: This page discusses why React Aria exists, and the problems it solves.
+date: 2020-01-01
+---
+
+
+## Motivation
+
+Design systems are now more popular than ever, and many companies both large and small are implementing their own component libraries from scratch. Modern view libraries like React allow teams to build and maintain these components more easily than ever before, but it is still extraordinarily difficult to do so in a fully accessible way with interactions that work across many types of devices.
+
+The web is a very unique platform. It runs across a very wide variety of devices and interaction models, and because there is no well-defined platform aesthetic, every company usually needs to style each component in their design system to match their brand. There are very few built-in UI controls in the browser, and those that do exist are very hard to style. This leads to web developers at every company needing to rebuild every control from scratch. This represents millions of dollars of investment for each company to duplicate work that many other companies are also doing.
+
+The fully styleable primitives that the web offers (e.g. `<div>`) are quite powerful, but they lack semantic meaning. This means that accessibility is often missing because assistive technology cannot make sense of the div soup that we use to implement our components. Even if you use ARIA to provide semantics, you still need to implement all of the behavior for each component from scratch using JavaScript, and this can be tricky to do across many devices and interaction models.
+
+Unfortunately, many companies and teams don't have the resources or time to prioritize features like accessibility, internationalization, full keyboard navigation, touch interactions, and more. This leads to many web apps having sub-par accessibility and interactions, and contributes to the perception of the web as an inferior app platform compared to native apps.
+
+## React Aria
+
+React Aria separates the behavior and accessibility implementation for many common UI components out into unstyled React components and hooks, which enables them to be reused easily between design systems and applications. You remain in complete control over the rendering and styling aspects of your components, but get most of the behavior, accessibility, internationalization, and much more for free.
+
+Rather than starting with only divs and building everything yourself, you start with elements that have semantic meaning, behavior, and interactions built in. This allows you to build components more quickly, and ensures that they work well across mouse, touch, and keyboard interactions, as well as with screen readers and other assistive technology.
+
+## Customization
+
+The main reason developers need to create their own component libraries from scratch is styling. Built-in browser UI controls are not customizable enough, and in many cases do not exist at all. React Aria does not include any styles by default, allowing you to build custom designs to fit your application or design system using any styling solution. React Aria components include built-in CSS class names, states, and render props to make styling a breeze. See our styling guide to learn more.
+
+Most components have behavior that is consistent even across design systems. The ARIA Authoring Practices Guide published by the W3C specifies the expected keyboard and accessibility behavior for most common components. In addition, touch and mouse behavior is usually quite consistent regardless of the design. A button is still a button, even if it looks a little different.
+
+React Aria offers a unique combination of high-level components that provide an easy-to-use API, and low-level hooks that enable advanced customization use cases. This allows you to customize the DOM structure, intercept events to implement custom behavior, override internal state management, and much more when you need to, while keeping things simple when you don't. Check out our advanced customization guide to learn more.
+
+## Gesturs UI: Simplifying the Complex
+
+Here at Gesturs UI, we understand the challenges that come with styling React Aria components. React Aria provides the foundational accessibility and behavior, but it leaves the styling up to you. This can be a daunting task, especially when aiming for a polished, production-ready design system. 
+
+Gesturs UI takes on the complexity of styling React Aria components, providing you with beautifully styled components out of the box while still allowing you to tweak basic styles to match your brand. We ensure that all components are semantically correct and accessible, adhering to the highest standards of web development.
+
+By using React Aria for its unstyled yet accessible components, we free you from the burden of implementing complex interactions and accessibility features. Gesturs UI builds on this solid foundation, offering you the flexibility to customize while taking care of the intricate styling work. This synergy allows your team to focus on creating unique and compelling user experiences without compromising on accessibility or design quality.
+
+In summary, React Aria is indispensable for any production-ready team that values accessibility and semantic correctness. With Gesturs UI, you get the best of both worlds: robust, accessible components from React Aria, and beautifully styled, customizable components from Gesturs UI. Together, we make building accessible and stylish design systems a breeze.

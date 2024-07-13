@@ -26,13 +26,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Installation",
-          href: "/docs/installation",
-          items: [],
+          title: "Why React Aria Components?",
+          href: "/docs/why-react-aria-components",
         },
         {
-          title: "Changelog",
-          href: "/docs/changelog",
+          title: "Installation",
+          href: "/docs/installation",
           items: [],
         },
       ],
