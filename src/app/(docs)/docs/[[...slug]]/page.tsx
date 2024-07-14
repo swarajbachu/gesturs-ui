@@ -15,6 +15,7 @@ interface PostPageProps {
   };
 }
 
+
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
   const doc = docs.find((doc) => doc.slugAsParams === slug);
@@ -74,7 +75,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="relative py-6 max-w-7xl lg:gap-10 lg:py-8 xl:grid prose dark:prose-invert xl:grid-cols-[1fr_300px]">
+    <article className="relative py-6 max-w-7xl lg:gap-10 lg:py-8 xl:grid text-foreground  xl:grid-cols-[1fr_300px]">
       <div className="w-full min-w-0 mx-auto">
         <Breadcrumbs>
           {doc.slug.split("/").map((slug, index, arr) => (
@@ -87,7 +88,7 @@ export default async function PostPage({ params }: PostPageProps) {
             </Breadcrumb>
           ))}
         </Breadcrumbs>
-        <h1 className="capitalize my-2">{doc.title}</h1>
+        <h1 className="capitalize my-2 text-3xl font-semibold mt-4 mb-0">{doc.title}</h1>
         <h4 className="text-muted-foreground my-0">{doc.description}</h4>
         <br />
         <MDXContent code={doc.body} />

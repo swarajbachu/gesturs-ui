@@ -55,6 +55,13 @@
   background-color: transparent !important;
 }
 
+
+
+.section > :first-child {
+  margin-top: 0;
+  width: 100%;
+}
+
 body {
   /* --tw-prose-pre-bg: #000 !important; */
   color: rgb(var(--foreground-rgb));

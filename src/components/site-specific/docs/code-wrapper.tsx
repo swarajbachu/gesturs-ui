@@ -52,10 +52,13 @@ const CodeWrapper = async ({
         code: (
           <div className="relative">
             <div
-              className="code-block dark:bg-zinc-950 bg-zinc-950 dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e] p-4 rounded-md"
+              className=" overflow-scroll"
               dangerouslySetInnerHTML={{ __html: html }}
             />
-            <CopyButton value={code} className="absolute right-4 top-4 size-8" />
+            <CopyButton
+              value={code}
+              className="absolute right-4 top-4 size-8"
+            />
           </div>
         ),
         lang,
@@ -67,7 +70,10 @@ const CodeWrapper = async ({
     <div {...props}>
       {preview}
       {files.map(({ fileName, code, codeStr, lang }) => (
-        <div key={fileName} className="relative">
+        <div
+          key={fileName}
+          className="relative dark:bg-zinc-950 bg-zinc-950 dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e] p-4 rounded-md"
+        >
           {/* <h3 className="text-lg font-semibold">{fileName}</h3> */}
           {code}
         </div>

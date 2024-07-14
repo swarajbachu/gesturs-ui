@@ -24,7 +24,7 @@ let button = tv({
   variants: {
     variant: {
       primary:
-        "bg-foreground hover:bg-foreground/90 pressed:bg-foreground/70 text-primary-foreground  border-black/10 dark:border-white/10 ",
+        "bg-primary hover:bg-primary/90 pressed:bg-primary/70 text-primary-foreground  border-black/10 dark:border-white/10 ",
       secondary:
         "bg-secondary text-secondary-foreground hover:bg-secondary/80 pressed:bg-secondary/70 border-secondary/10",
       destructive:
@@ -74,6 +74,7 @@ function Button({
   border,
   shadow,
   href,
+  fullWidth,
   isLoading,
   ...props
 }: ButtonProps) {
@@ -84,7 +85,10 @@ function Button({
       {...props}
       href={href}
       isDisabled={isLoading || isDisabled}
-      className={cn(button({ size, variant, border, shadow }), className)}
+      className={cn(
+        button({ size, variant, border, shadow, fullWidth }),
+        className
+      )}
     >
       {isLoading && <LoaderIcon className="h-4 w-4 animate-spin" />}
       {props.leftSection}

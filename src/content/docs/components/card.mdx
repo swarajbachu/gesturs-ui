@@ -1,0 +1,116 @@
+---
+title: Card
+description: Displays a card with section, header, content, and footer.
+date: 2024-07-12
+---
+
+## Preview
+
+<ComponentPreview name="/ui/card-demos/card" />
+
+## Installation
+
+<Steps>
+  <Step>Copy and paste the following code into your project.</Step>
+  <ComponentSource name="ui/card" />
+  <Step>Update the import paths to match your project setup.</Step>
+</Steps>
+
+## Usage
+
+The `Card` component is a container that displays a card with a section, header and content
+
+### CardSection
+
+CardSection is a special component that is used to remove Card padding, margin and sets width to 100% for its children while other elements still have horizontal spacing.
+
+<ComponentPreview name="/ui/card-demos/card-section" />
+
+### CardHeader
+
+CardHeader is a special component that is used to display a header in the card. and has negative margin to remove the top padding of the card and push the header to the top and give cool design
+
+<ComponentPreview name="/ui/card-demos/card-header" />
+
+### CardContent and CardFooter
+
+CardContent is a simple component that is used to display content in the card, it has basic padding and margin to give a good look
+
+CardFooter is a simple component that is used to display footer in the card, it has same padding as CardContent, but doesnt have top padding ( because the card content have `p-6`, it will give enough `white-space` for footer), so it can be used to display footer in the card
+
+Here is a demo of a simple `card with content`
+
+<ComponentPreview name="/ui/card-demos/card-content" />
+
+## Options
+
+The `Card` can also have be horizontal
+
+Set the `horizontal` prop to `true` to make the card horizontal
+
+<ComponentPreview name="/ui/card-demos/card-horizontal" />
+
+## Examples
+
+### Profile Card
+
+This card template is perfect for showcasing individuals, including team members, employees, or event speakers, on a company website, event page, or within an app.
+
+<ComponentPreview name="/ui/card-demos/card-examples/profile-card" />
+
+### Pricing Card
+
+This card template is perfect for showcasing pricing plans, including features, benefits, and pricing details, on a company website, event page, or within an app.
+
+<ComponentPreview name="/ui/card-demos/card-examples/pricing-card" />
+
+### Blog Card
+
+This card template is perfect for showcasing blog posts, including titles, authors, dates, and summaries, on a company website, event page, or within an app.
+
+<ComponentPreview name="/ui/card-demos/card-examples/blog-card" />
+
+### Api Reference
+
+### Card Props
+
+| Name       | Type                        | Description                                           |
+| ---------- | --------------------------- | ----------------------------------------------------- |
+| horizontal | `boolean`                   | Determines if the card layout is horizontal.          |
+| className  | `string`                    | The CSS class name for the card component.            |
+| children   | `ReactNode`                 | The children elements to be rendered inside the card. |
+| ref        | `React.Ref<HTMLDivElement>` | Ref to attach to the card element.                    |
+
+### CardContent Props
+
+| Name      | Type                        | Description                                                   |
+| --------- | --------------------------- | ------------------------------------------------------------- |
+| shadow    | `boolean`                   | Applies shadow styling to the card content.                   |
+| className | `string`                    | The CSS class name for the card content component.            |
+| children  | `ReactNode`                 | The children elements to be rendered inside the card content. |
+| ref       | `React.Ref<HTMLDivElement>` | Ref to attach to the card content element.                    |
+
+### CardSection Props
+
+| Name       | Type                        | Description                                                                                                                   |
+| ---------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| horizontal | `boolean`                   | Determines if the card section layout is horizontal. ( this is direclty passed down from Card so, no need to specify it here) |
+| className  | `string`                    | The CSS class name for the card section component.                                                                            |
+| children   | `ReactNode`                 | The children elements to be rendered inside the card section.                                                                 |
+| ref        | `React.Ref<HTMLDivElement>` | Ref to attach to the card section element.                                                                                    |
+
+### CardHeader Props
+
+| Name      | Type                        | Description                                                  |
+| --------- | --------------------------- | ------------------------------------------------------------ |
+| className | `string`                    | The CSS class name for the card header component.            |
+| children  | `ReactNode`                 | The children elements to be rendered inside the card header. |
+| ref       | `React.Ref<HTMLDivElement>` | Ref to attach to the card header element.                    |
+
+### CardFooter Props
+
+| Name      | Type                        | Description                                                  |
+| --------- | --------------------------- | ------------------------------------------------------------ |
+| className | `string`                    | The CSS class name for the card footer component.            |
+| children  | `ReactNode`                 | The children elements to be rendered inside the card footer. |
+| ref       | `React.Ref<HTMLDivElement>` | Ref to attach to the card footer element.                    |

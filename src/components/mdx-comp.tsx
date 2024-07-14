@@ -19,7 +19,7 @@ const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
-        "font-heading mt-2 scroll-m-20 text-4xl font-bold text-foreground",
+        "font-heading mt-2 scroll-m-20 text-3xl font-bold text-foreground",
         className
       )}
       {...props}
@@ -37,7 +37,7 @@ const components = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+        "font-heading mt-8  text-foreground scroll-m-20 text-xl font-semibold tracking-tight",
         className
       )}
       {...props}
@@ -55,7 +55,7 @@ const components = {
   h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h5
       className={cn(
-        "mt-8 scroll-m-20  text-lg font-semibold tracking-tight",
+        "mt-8 scroll-m-20  text-foreground text-lg font-semibold tracking-tight",
         className
       )}
       {...props}
@@ -64,7 +64,7 @@ const components = {
   h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h6
       className={cn(
-        "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
+        "mt-8 scroll-m-20 text-base   text-foreground font-semibold tracking-tight",
         className
       )}
       {...props}
@@ -73,7 +73,7 @@ const components = {
   a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a
       className={cn(
-        "font-semibold no-underline hover:!no-underline",
+        "font-semibold no-underline  text-foreground hover:!no-underline",
         className
       )}
       {...props}
@@ -81,12 +81,12 @@ const components = {
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cn("leading-7  text-foreground [&:not(:first-child)]:mt-6", className)}
       {...props}
     />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-    <ul className={cn("my-6 ml-6 list-disc", className)} {...props} />
+    <ul className={cn("my-6  text-foreground ml-6 list-disc", className)} {...props} />
   ),
   ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
     <ol className={cn("my-6 ml-6 list-decimal", className)} {...props} />
@@ -96,12 +96,12 @@ const components = {
   ),
   blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <blockquote
-      className={cn("mt-6 border-l-2 pl-6 italic", className)}
+      className={cn("mt-6  text-foreground border-l-2 pl-6 italic", className)}
       {...props}
     />
   ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-    <div className="my-6 w-full overflow-y-auto rounded-md ">
+    <div className="my-6 w-full overflow-y-auto rounded-md  border-collapse text-base text-foreground/90">
       <table className={cn("w-full", className)} {...props} />
     </div>
   ),
@@ -174,7 +174,7 @@ const components = {
       <div className="relative">
         <pre
           className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-muted py-3 bg-zinc-950   text-zinc-200",
+            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-muted py-3 bg-zinc-950 text-zinc-100  ",
             className
           )}
           {...props}
@@ -193,7 +193,7 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded bg-transparent  text-zinc-200 px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative rounded dark:bg-transparent  px-[0.3rem] py-[0.2rem] font-mono text-sm bg-zinc-800/10",
         className
       )}
       {...props}

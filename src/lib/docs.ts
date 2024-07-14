@@ -49,6 +49,11 @@ export const docsConfig: DocsConfig = {
           title: "Breadcrumb",
           href: "/docs/components/breadcrumbs",
           items: [],
+        },
+        {
+          title: "Card",
+          href: "/docs/components/card",
+          items: [],
         }
       ],
       href: "/docs/components",

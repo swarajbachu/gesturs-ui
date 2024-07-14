@@ -36,7 +36,7 @@ export function CodeBlockCollapsible({
               !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto]"
             )}
           >
-            <ScrollArea className="max-h-[650px] bg-black rounded-md">{children}</ScrollArea>
+            <ScrollArea  className="max-h-[650px] bg-black rounded-md">{children}</ScrollArea>
           </div>
         </CollapsibleContent>
         <div
