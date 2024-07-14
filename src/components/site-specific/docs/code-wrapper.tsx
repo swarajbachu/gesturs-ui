@@ -57,7 +57,7 @@ const CodeWrapper = async ({
             />
             <CopyButton
               value={code}
-              className="absolute right-4 top-4 size-8"
+              className="absolute z-10 right-4 top-1 size-8"
             />
           </div>
         ),
@@ -74,7 +74,6 @@ const CodeWrapper = async ({
           key={fileName}
           className="relative dark:bg-zinc-950 bg-zinc-950 dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e] p-4 rounded-md"
         >
-          {/* <h3 className="text-lg font-semibold">{fileName}</h3> */}
           {code}
         </div>
       ))}
