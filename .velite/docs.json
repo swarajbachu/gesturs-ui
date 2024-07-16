@@ -238,7 +238,7 @@
     "slug": "docs/components/button",
     "title": "Button",
     "description": "Displays a button or a component that looks like a button.",
-    "date": "2024-07-12T00:00:00.000Z",
+    "date": "2024-07-13T00:00:00.000Z",
     "references": [
       {
         "title": "React Aria Button",
@@ -316,7 +316,7 @@
     "slug": "docs/components/card",
     "title": "Card",
     "description": "Displays a card with section, header, content, and footer.",
-    "date": "2024-07-12T00:00:00.000Z",
+    "date": "2024-07-14T00:00:00.000Z",
     "references": [
       {
         "title": "Report Issue",
@@ -415,5 +415,27 @@
       }
     ],
     "slugAsParams": "components/card"
+  },
+  {
+    "slug": "docs/components/input",
+    "title": "Input",
+    "description": "Inputs are used to collect data from the user. They can be used to collect text, numbers, dates, and more.",
+    "date": "2024-07-15T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:i}=r;return i||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(i,{name:\"/ui/input-demos/input\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "toc": [
+      {
+        "title": "Preview",
+        "url": "#preview",
+        "items": []
+      }
+    ],
+    "slugAsParams": "components/input"
   }
 ]

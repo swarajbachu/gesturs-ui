@@ -15,13 +15,13 @@ import Link from "next/link";
 export default function CardDemo() {
   return (
     <Card>
-      <CardContent shadow>
+      <CardContent>
         <Image
           src="https://images.unsplash.com/photo-1564463836146-4e30522c2984"
           height={160}
           width={300}
           alt="Norway"
-          className="w-full rounded-md"
+          className="w-full rounded-md shadow-md"
         />
       </CardContent>
       <CardContent className="w-full pt-0">

@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" 
-    className="dark"
+    // className="dark"
     >
       <body
         className={cn(

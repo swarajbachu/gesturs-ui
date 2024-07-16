@@ -1,6 +1,6 @@
 "use client";
 
-import { focusRing } from "@/lib/focus-ring";
+import { focusRing } from "@/lib/aria-utils";
 import { cn } from "@/lib/utils";
 import { LoaderIcon } from "lucide-react";
 import React from "react";

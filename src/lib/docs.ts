@@ -54,6 +54,10 @@ export const docsConfig: DocsConfig = {
           title: "Card",
           href: "/docs/components/card",
           items: [],
+        },
+        {
+          title: "Input",
+          href: "/docs/components/input",
         }
       ],
       href: "/docs/components",
