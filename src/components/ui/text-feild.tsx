@@ -36,7 +36,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
       rightSection,
       isLoading,
       loaderPosition = "right",
-      necessityIndicator,
+      withAsterisk,
       contextualHelp,
       ...props
     },
@@ -50,7 +50,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
             description={description}
             errorMessage={errorMessage}
             isRequired={isRequired}
-            necessityIndicator={necessityIndicator}
+            withAsterisk={withAsterisk}
             contextualHelp={contextualHelp}
           >
             <Input
@@ -60,6 +60,9 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
               isLoading={isLoading}
               loaderPosition={loaderPosition}
               ref={ref}
+              placeholder={placeholder}
+              disabled={props.isDisabled}
+              aria-invalid={props.isInvalid}
             />
           </Field>
         )}

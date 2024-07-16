@@ -61,7 +61,7 @@ const tabProps = tv({
   variants: {
     isSelected: {
       false: 'text-muted-foreground',
-      true: '!text-foreground border-b-2 !border-b-foreground !font-semibold'
+      true: 'text-foreground border-b-2 border-b-foreground !font-semibold'
     },
     isDisabled: {
       true: 'text-gray-200 dark:text-zinc-600 forced-colors:text-[GrayText] selected:text-gray-300 dark:selected:text-zinc-500 forced-colors:selected:text-[HighlightText] selected:bg-gray-200 dark:selected:bg-zinc-600 forced-colors:selected:bg-[GrayText]'

@@ -73,13 +73,13 @@ export function ComponentPreview({
             <TabList className="w-full justify-start rounded-none border-b bg-transparent p-0">
               <Tab
                 id="preview"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[selected=true]:!border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
               >
                 Preview
               </Tab>
               <Tab
                 id="code"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[selected=true]:!border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
               >
                 Code
               </Tab>

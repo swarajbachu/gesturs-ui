@@ -14,17 +14,18 @@ import {
 import { tv, type VariantProps } from "tailwind-variants";
 import { LoaderIcon } from "lucide-react";
 import { focusInput } from "@/lib/aria-utils";
+import { cn } from "@/lib/utils";
 
 const inputStyles = tv({
   slots: {
     root: [
       focusInput(),
-      "inline-flex justify-start items-center gap-2 px-2 transition-colors rounded-[7px] w-full shadow-sm cursor-text  text-base sm:text-sm [&_svg]:size-4 peer w-full h-full bg-transparent font-sans font-normal  disabled:border-0 transition-all placeholder-shown:border  border focus-within:border-2 text-sm border-gray-200 focus-within:border-gray-700",
+      "inline-flex justify-start items-center gap-2 px-2 transition-colors rounded-[7px] w-full shadow-sm cursor-text  text-base sm:text-sm [&_svg]:size-4 [&_svg]:fill-muted-foreground peer w-full h-full bg-transparent font-sans font-normal  disabled:border-0 transition-all placeholder-shown:border  border focus-within:border-2 text-sm border-gray-200 focus-within:border-gray-700",
       "disabled:cursor-not-allowed  disabled:bg-muted disabled:text-muted",
-      "invalid:border-red-400 focus-within:invalid:border-border disabled:opacity-50",
+      "invalid:border-red-300 focus-within:invalid:border-red-300 disabled:opacity-50",
     ],
     input: [
-      "bg-transparent outline-none w-full h-full text-fg placeholder:text-fg-muted disabled:text-fg-disabled disabled:cursor-default",
+      "bg-transparent disabled:cursor-not-allowed outline-none w-full h-full text-foreground placeholder:text-muted-foreground disabled:text-disabled ",
     ],
   },
   variants: {
@@ -103,8 +104,7 @@ const TextAreaInput = React.forwardRef<HTMLTextAreaElement, TextAreaInputProps>(
 );
 TextAreaInput.displayName = "TextAreaInput";
 
-interface SimpleInputProps
-  extends Omit<RACInputProps, "className" | "size"> {
+interface SimpleInputProps extends Omit<RACInputProps, "className" | "size"> {
   className?: string;
 }
 const SimpleInput = React.forwardRef<HTMLInputElement, SimpleInputProps>(
@@ -117,7 +117,7 @@ const SimpleInput = React.forwardRef<HTMLInputElement, SimpleInputProps>(
 SimpleInput.displayName = "Input";
 
 interface InputProps
-  extends Omit<SimpleInputProps, "className" | "prefix">,
+  extends Omit<SimpleInputProps, "className">,
     VariantProps<typeof inputStyles> {
   leftSection?: React.ReactNode;
   rightSection?: React.ReactNode;
@@ -140,9 +140,22 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     const { root } = inputStyles({ size, multiline });
+    const isDisabled = props.disabled;
+    const isInvalid =
+      props["aria-invalid"] === true ||
+      props["aria-invalid"] === "true" ||
+      props["aria-invalid"] === "grammar" ||
+      props["aria-invalid"] === "spelling";
+
+    console.log(isInvalid, isDisabled, "invalid");
 
     return (
-      <RACGroup role="presentation" className={root({ className })}>
+      <RACGroup
+        role="presentation"
+        className={cn(root({ className }), className)}
+        isDisabled={isDisabled}
+        isInvalid={isInvalid}
+      >
         {isLoading && loaderPosition === "left" ? (
           <LoaderIcon className="animate-spin" />
         ) : (
