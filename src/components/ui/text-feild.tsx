@@ -10,7 +10,7 @@ import { Input, type inputStyles } from "./input";
 import { Field, FieldProps } from "./feild";
 
 const textFieldStyles = tv({
-  base: "flex flex-col gap-2 items-start w-48",
+  base: "flex flex-col gap-2 items-start",
 });
 
 type TextFieldProps = TextFieldRootProps &
