@@ -18,7 +18,7 @@ const fieldStyles = tv({
     root: "flex flex-col gap-2 items-start",
     label:
       "text-sm inline-flex items-center gap-px font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:text-muted [&_svg]:size-3",
-    description: "text-xs text-muted",
+    description: "text-xs text-muted-foreground",
     fieldError: "text-xs text-destructive",
   },
 });
@@ -106,7 +106,7 @@ const Field = (props: FieldProps) => {
       ) : (
         descriptionPosition === "bottom" &&
         description && (
-          <Description className="text-muted-foreground text-xs break-words">
+          <Description>
             {description}
           </Description>
         )
