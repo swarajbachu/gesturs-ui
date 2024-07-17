@@ -4,7 +4,7 @@ import { Breadcrumb, Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { TextField } from "@/components/ui/text-feild";
+import { TextField } from "@/components/ui/text-field";
 import { ArrowRight, ArrowRightIcon, Search } from "lucide-react";
 import React from "react";
 

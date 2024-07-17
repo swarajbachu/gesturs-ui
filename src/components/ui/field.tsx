@@ -40,7 +40,7 @@ const Label = ({
       {children}
       {isRequired && <span aria-hidden>{withAsterisk ? <></> : <></>}</span>}
       {withAsterisk && " \u200b"}
-      {withAsterisk && <AsteriskIcon />}
+      {withAsterisk && <AsteriskIcon className="text-red-500" />}
     </RACLabel>
   );
 };
@@ -96,14 +96,20 @@ const Field = (props: FieldProps) => {
         {contextualHelp}
       </span>
       {descriptionPosition === "top" && description && (
-        <Description>{description}</Description>
+        <Description className="text-muted-foreground  text-xs">
+          {description}
+        </Description>
       )}
       {children}
       {errorMessage ? (
         <FieldError>{errorMessage}</FieldError>
       ) : (
         descriptionPosition === "bottom" &&
-        description && <Description>{description}</Description>
+        description && (
+          <Description className="text-muted-foreground text-xs break-words">
+            {description}
+          </Description>
+        )
       )}
     </>
   );

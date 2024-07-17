@@ -14,7 +14,7 @@ export default function MarketingHeader() {
               alt="Logo"
               width={32}
               height={32}
-              className="rounded-full fill-white"
+              className="rounded-full dark:invert "
             />
             <h2 className="text-xl font-bold text-zinc-950 dark:text-white">
               Gesturs UI

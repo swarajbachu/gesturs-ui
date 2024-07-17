@@ -5,8 +5,12 @@ import React from "react";
 
 export default function InputDemo() {
   return (
-    <div>
-      <TextField label="Name" placeholder="Enter your name" />
+    <div className="grid">
+      <TextField
+        placeholder="website url"
+        type="url"
+        isDisabled
+      />
     </div>
   );
 }

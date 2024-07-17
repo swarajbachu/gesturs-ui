@@ -7,7 +7,7 @@ import {
 } from "react-aria-components";
 import { tv, type VariantProps } from "tailwind-variants";
 import { Input, type inputStyles } from "./input";
-import { Field, FieldProps } from "./feild";
+import { Field, FieldProps } from "./field";
 
 const textFieldStyles = tv({
   base: "flex flex-col gap-2 items-start",
@@ -52,6 +52,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
             isRequired={isRequired}
             withAsterisk={withAsterisk}
             contextualHelp={contextualHelp}
+            descriptionPosition={props.descriptionPosition}
           >
             <Input
               size={size}

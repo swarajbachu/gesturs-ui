@@ -86,6 +86,42 @@ export const previews = {
     },
     "/ui/input-demos/input": {
       component: React.lazy<React.FC>(() => import("@/registry/components//ui/input-demos/input")),
-      code : [{"title":"input.tsx","code":"import { TextField } from \"@/components/ui/text-feild\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div>\n      <TextField label=\"Name\" placeholder=\"Enter your name\" />\n    </div>\n  );\n}\n"}]
+      code : [{"title":"input.tsx","code":"\"use client\";\n\nimport { TextField } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div>\n      <TextField label=\"Name\" placeholder=\"Enter your name\" />\n    </div>\n  );\n}\n"}]
+    },
+    "ui/input-demos/input-label": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-label")),
+      code : [{"title":"input-label.tsx","code":"\"use client\";\n\nimport { TextField } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-4\">\n      <TextField\n        label=\"Enter website url\"\n        placeholder=\"website url\"\n        leftSection={<span>https://</span>}\n      />\n      <TextField\n        aria-label=\"Enter website url\"\n        placeholder=\"Enter website url\"\n        leftSection={<span>https://</span>}\n      />\n    </div>\n  );\n}\n"}]
+    },
+    "ui/input-demos/input-description": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-description")),
+      code : [{"title":"input-description.tsx","code":"\"use client\";\n\nimport { TextField } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-4\">\n      <TextField\n        label=\"Website Url\"\n        placeholder=\"website url\"\n        type=\"url\"\n        description=\"Enter the website url of your portfolio\"\n        leftSection={<span>https://</span>}\n      />\n      <TextField\n        label=\"Password\"\n        description=\"your password must be 8 characters long\"\n        descriptionPosition=\"bottom\"\n        type=\"password\"\n      />\n    </div>\n  );\n}\n"}]
+    },
+    "ui/input-demos/input-required": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-required")),
+      code : [{"title":"input-required.tsx","code":"\"use client\";\n\nimport { TextField } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-4\">\n      <TextField\n        label=\"Website Url (required)\"\n        placeholder=\"website url\"\n        type=\"url\"\n        isRequired\n      />\n      <TextField\n        label=\"Website Url\"\n        placeholder=\"website url\"\n        type=\"url\"\n        isRequired\n        withAsterisk\n      />\n    </div>\n  );\n}\n"}]
+    },
+    "ui/input-demos/input-error": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-error")),
+      code : [{"title":"input-error.tsx","code":"\"use client\";\n\nimport { TextField } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div >\n      <TextField\n        label=\"Password\"\n        isInvalid\n        errorMessage=\"your password must be 8 characters long\"\n        type=\"password\"\n      />\n    </div>\n  );\n}\n"}]
+    },
+    "ui/input-demos/input-loading": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-loading")),
+      code : [{"title":"input-loading.tsx","code":"\"use client\";\n\nimport { TextField } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-4\">\n      <TextField\n        placeholder=\"loaderPosition 'right'(default)\"\n        type=\"url\"\n        isLoading\n      />\n      <TextField\n        placeholder=\"loader position 'left'\"\n        type=\"url\"\n        isLoading\n        loaderPosition=\"left\"\n      />\n    </div>\n  );\n}\n"}]
+    },
+    "ui/input-demos/input-disabled": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-disabled")),
+      code : [{"title":"input-disabled.tsx","code":"\"use client\";\n\nimport { TextField } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"grid\">\n      <TextField\n        placeholder=\"website url\"\n        type=\"url\"\n        isDisabled\n      />\n    </div>\n  );\n}\n"}]
+    },
+    "ui/input-demos/input-read": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-read")),
+      code : [{"title":"input-read.tsx","code":"\"use client\";\n\nimport { TextField } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-4\">\n      <TextField\n        label=\"Website Url\"\n        placeholder=\"website url\"\n        type=\"url\"\n        description=\"Enter the website url of your portfolio\"\n        isReadOnly\n      />\n    </div>\n  );\n}\n"}]
+    },
+    "ui/input-demos/input-sections": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-sections")),
+      code : [{"title":"input-sections.tsx","code":"\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { TextField } from \"@/components/ui/text-field\";\nimport { CrossIcon, SearchIcon, XIcon } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  const [value, setValue] = React.useState(\"\");\n  return (\n    <div className=\"grid grid-cols-2 gap-4\">\n      <TextField\n        placeholder=\"website url\"\n        leftSection={<span>https://</span>}\n      />\n      <TextField\n        placeholder=\"email\"\n        rightSection={<span>@gesturs.com</span>}\n      />\n      <TextField\n        label=\"Search\"\n        placeholder=\"Search in the App\"\n        leftSection={<SearchIcon />}\n      />\n      <TextField\n        label=\"Search\"\n        placeholder=\"Search in the App\"\n        rightSection={\n          <Button variant=\"ghost\" size=\"icon\" onPress={() => setValue(\"\")}>\n            <XIcon />\n          </Button>\n        }\n      />\n    </div>\n  );\n}\n"}]
+    },
+    "ui/input-demos/input-size": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-size")),
+      code : [{"title":"input-size.tsx","code":"\"use client\";\n\nimport { TextField } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-4\">\n      <TextField placeholder=\"sm\" size=\"sm\" />\n      <TextField placeholder=\"md ( default )\" />\n      <TextField placeholder=\"lg\" size=\"lg\" />\n      <TextField placeholder=\"xl\" size=\"xl\" />\n    </div>\n  );\n}\n"}]
     },
   }

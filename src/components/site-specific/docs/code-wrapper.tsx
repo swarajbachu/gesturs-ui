@@ -64,8 +64,8 @@ const CodeWrapper = async ({
   return (
     <div {...props}>
       {preview}
-      <Tabs className="rounded-md bg-zinc-950 p-2 relative">
-        <TabList className="flex justify-between">
+      <Tabs className="rounded-md bg-zinc-800 p-2 relative">
+        <TabList>
           {files.map(({ fileName, codeStr }) => {
             currentCodeString = codeStr;
 
@@ -73,7 +73,7 @@ const CodeWrapper = async ({
               <Tab
                 key={fileName}
                 id={fileName}
-                className="relative h-9 justify-between rounded-sm border-b-2 border-b-transparent bg-transparent px-4  font-semibold text-foreground flex items-center  shadow-none transition-none data-[selected]:!bg-sky-100 data-[state=active]:shadow-none"
+                className="relative h-9 justify-between rounded-sm border-b-2 border-b-transparent bg-transparent px-4  font-semibold text-foreground  flex items-center  shadow-none transition-none data-[selected]:!bg-sky-100 dark:data-[selected]:!bg-sky-900 data-[state=active]:shadow-none"
               >
                 {fileName}
               </Tab>
@@ -88,7 +88,7 @@ const CodeWrapper = async ({
           <TabPanel
             id={fileName}
             key={fileName}
-            className="relative  bg-[#202125] dark:[&_span]:text-[#c9d1d9] [&_pre]:bg-transparent light:[&_span]:text-[#24292e] p-4 rounded-md"
+            className="relative  bg-zinc-900 dark:[&_span]:text-[#c9d1d9] [&_pre]:bg-transparent light:[&_span]:text-[#24292e] p-4 rounded-md"
           >
             {code}
           </TabPanel>

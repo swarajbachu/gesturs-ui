@@ -20,6 +20,7 @@ export const ComponentSource = ({
   if (Array.isArray(name)) {
     code = name.flatMap((n) => getComponentSource(n));
   }
+  console.log(code);
 
   if (code.length === 0) {
     return <p>Source code not found</p>;

@@ -428,12 +428,73 @@
       }
     ],
     "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:i}=r;return i||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(i,{name:\"/ui/input-demos/input\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "body": "const{Fragment:e,jsx:i,jsxs:n}=arguments[0];function _createMdxContent(t){const o={a:\"a\",code:\"code\",h2:\"h2\",h3:\"h3\",p:\"p\",...t.components},{ComponentPreview:r,ComponentSource:d,Step:a,Steps:s}=o;return r||_missingMdxReference(\"ComponentPreview\",!0),d||_missingMdxReference(\"ComponentSource\",!0),a||_missingMdxReference(\"Step\",!0),s||_missingMdxReference(\"Steps\",!0),n(e,{children:[i(o.h2,{id:\"preview\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",i(r,{name:\"/ui/input-demos/input\"}),\"\\n\",i(o.h2,{id:\"installation\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",n(s,{children:[i(a,{children:\"Copy and paste the following code into your project.\"}),i(d,{name:[\"ui/text-field\",\"ui/field\",\"ui/input\",\"ui/lib/aria-utils\"]}),i(a,{children:\"Update the import paths to match your project setup.\"})]}),\"\\n\",i(o.h2,{id:\"usage\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#usage\",children:\"Usage\"})}),\"\\n\",n(o.p,{children:[\"Text fields consist of an input element and a label. TextField automatically manages the relationship between the two elements using the for attribute on the \",i(o.code,{children:\"<label>\"}),\" element and the aria-labelledby attribute on the \",i(o.code,{children:\"<input>\"}),\" element.\"]}),\"\\n\",i(o.p,{children:\"TextField also supports optional description and error message elements, which can be used to provide more context about the field, and any validation messages. These are linked with the input via the aria-describedby attribute.\"}),\"\\n\",i(o.h2,{id:\"props\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#props\",children:\"Props\"})}),\"\\n\",i(o.h3,{id:\"label\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#label\",children:\"Label\"})}),\"\\n\",n(o.p,{children:[\"The \",i(o.code,{children:\"label\"}),\" prop is used to set the label of the input field.\"]}),\"\\n\",n(o.p,{children:[\"and you can use \",i(o.code,{children:\"aria-label\"}),\" to set label but it will be not visible to the user.\"]}),\"\\n\",i(r,{name:\"ui/input-demos/input-label\"}),\"\\n\",i(o.h3,{id:\"description\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#description\",children:\"Description\"})}),\"\\n\",n(o.p,{children:[\"The \",i(o.code,{children:\"description\"}),\" prop is used to set the description of the input field.\"]}),\"\\n\",n(o.p,{children:[\"and you can set \",i(o.code,{children:\"descriptionPosition\"}),\" to \",i(o.code,{children:\"top\"}),\" or \",i(o.code,{children:\"bottom\"}),\" to set the position of the description, the default position is \",i(o.code,{children:\"top\"}),\".\"]}),\"\\n\",i(r,{name:\"ui/input-demos/input-description\"}),\"\\n\",i(o.h3,{id:\"required\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#required\",children:\"Required\"})}),\"\\n\",n(o.p,{children:[\"The \",i(o.code,{children:\"isRequired\"}),\" prop is used to set the input field as required.\\nUse \",i(o.code,{children:\"withAsterisk\"}),\" to show an asterisk next to the label.\"]}),\"\\n\",i(r,{name:\"ui/input-demos/input-required\"}),\"\\n\",i(o.h3,{id:\"error\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#error\",children:\"Error\"})}),\"\\n\",n(o.p,{children:[\"The \",i(o.code,{children:\"error\"}),\" prop is used to set the error message of the input field.\\nuse \",i(o.code,{children:\"errorDescription\"}),\" to set the error description.\"]}),\"\\n\",i(r,{name:\"ui/input-demos/input-error\"}),\"\\n\",i(o.h3,{id:\"loading\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#loading\",children:\"Loading\"})}),\"\\n\",n(o.p,{children:[\"Use the \",i(o.code,{children:\"isLoading\"}),\" prop to show a loading spinner inside the input field.\"]}),\"\\n\",n(o.p,{children:[\"use \",i(o.code,{children:\"loadingPosition\"}),\" to set the position of the loading spinner, the default position is \",i(o.code,{children:\"right\"}),\".\"]}),\"\\n\",i(r,{name:\"ui/input-demos/input-loading\"}),\"\\n\",i(o.h3,{id:\"disabled\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#disabled\",children:\"Disabled\"})}),\"\\n\",n(o.p,{children:[\"Use the \",i(o.code,{children:\"isDisabled\"}),\" prop to disable the input field.\"]}),\"\\n\",i(r,{name:\"ui/input-demos/input-disabled\"}),\"\\n\",i(o.h3,{id:\"readonly\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#readonly\",children:\"Readonly\"})}),\"\\n\",n(o.p,{children:[\"Use the \",i(o.code,{children:\"isReadonly\"}),\" prop to set the input field as readonly. Unlike disabled, readonly fields can still be selected and copied.\"]}),\"\\n\",i(r,{name:\"ui/input-demos/input-read\"}),\"\\n\",i(o.h3,{id:\"sections\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#sections\",children:\"Sections\"})}),\"\\n\",n(o.p,{children:[\"Use the \",i(o.code,{children:\"rightSection\"}),\" or \",i(o.code,{children:\"leftSection\"}),\" prop to add an icon to the button.\"]}),\"\\n\",n(o.p,{children:[\"type of \",i(o.code,{children:\"rightSection\"}),\" or \",i(o.code,{children:\"leftSection\"}),\" is \",i(o.code,{children:\"ReactNode\"}),\".\"]}),\"\\n\",i(r,{name:\"ui/input-demos/input-sections\"}),\"\\n\",i(o.h3,{id:\"sizes\",children:i(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#sizes\",children:\"Sizes\"})}),\"\\n\",n(o.p,{children:[\"Use the \",i(o.code,{children:\"size\"}),\" prop to change the size of the input field. The default size is \",i(o.code,{children:\"md\"}),\".\"]}),\"\\n\",i(r,{name:\"ui/input-demos/input-size\"})]})}return{default:function(e={}){const{wrapper:n}=e.components||{};return n?i(n,{...e,children:i(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,i){throw new Error(\"Expected \"+(i?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
     "toc": [
       {
         "title": "Preview",
         "url": "#preview",
         "items": []
+      },
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      },
+      {
+        "title": "Usage",
+        "url": "#usage",
+        "items": []
+      },
+      {
+        "title": "Props",
+        "url": "#props",
+        "items": [
+          {
+            "title": "Label",
+            "url": "#label",
+            "items": []
+          },
+          {
+            "title": "Description",
+            "url": "#description",
+            "items": []
+          },
+          {
+            "title": "Required",
+            "url": "#required",
+            "items": []
+          },
+          {
+            "title": "Error",
+            "url": "#error",
+            "items": []
+          },
+          {
+            "title": "Loading",
+            "url": "#loading",
+            "items": []
+          },
+          {
+            "title": "Disabled",
+            "url": "#disabled",
+            "items": []
+          },
+          {
+            "title": "Readonly",
+            "url": "#readonly",
+            "items": []
+          },
+          {
+            "title": "Sections",
+            "url": "#sections",
+            "items": []
+          },
+          {
+            "title": "Sizes",
+            "url": "#sizes",
+            "items": []
+          }
+        ]
       }
     ],
     "slugAsParams": "components/input"

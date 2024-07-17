@@ -7,3 +7,87 @@ date: 2024-07-15
 ## Preview
 
 <ComponentPreview name="/ui/input-demos/input" />
+
+## Installation
+
+<Steps>
+  <Step>Copy and paste the following code into your project.</Step>
+  <ComponentSource
+    name={["ui/text-field", "ui/field", "ui/input", "ui/lib/aria-utils"]}
+  />
+  <Step>Update the import paths to match your project setup.</Step>
+</Steps>
+
+## Usage
+
+Text fields consist of an input element and a label. TextField automatically manages the relationship between the two elements using the for attribute on the `<label>` element and the aria-labelledby attribute on the `<input>` element.
+
+TextField also supports optional description and error message elements, which can be used to provide more context about the field, and any validation messages. These are linked with the input via the aria-describedby attribute.
+
+## Props
+
+### Label
+
+The `label` prop is used to set the label of the input field.
+
+and you can use `aria-label` to set label but it will be not visible to the user.
+
+<ComponentPreview name="ui/input-demos/input-label" />
+
+### Description
+
+The `description` prop is used to set the description of the input field.
+
+and you can set `descriptionPosition` to `top` or `bottom` to set the position of the description, the default position is `top`.
+
+<ComponentPreview name="ui/input-demos/input-description" />
+
+### Required
+
+The `isRequired` prop is used to set the input field as required.
+Use `withAsterisk` to show an asterisk next to the label.
+
+<ComponentPreview name="ui/input-demos/input-required" />
+
+### Error
+
+The `error` prop is used to set the error message of the input field.
+use `errorDescription` to set the error description.
+
+<ComponentPreview name="ui/input-demos/input-error" />
+
+
+### Loading
+
+Use the `isLoading` prop to show a loading spinner inside the input field.
+
+use `loadingPosition` to set the position of the loading spinner, the default position is `right`.
+
+<ComponentPreview name="ui/input-demos/input-loading" />
+
+### Disabled
+
+Use the `isDisabled` prop to disable the input field.
+
+<ComponentPreview name="ui/input-demos/input-disabled" />
+
+### Readonly
+
+Use the `isReadonly` prop to set the input field as readonly. Unlike disabled, readonly fields can still be selected and copied.
+
+<ComponentPreview name="ui/input-demos/input-read" />
+
+
+### Sections
+
+Use the `rightSection` or `leftSection` prop to add an icon to the button.
+
+type of `rightSection` or `leftSection` is `ReactNode`.
+
+<ComponentPreview name="ui/input-demos/input-sections" />
+
+### Sizes
+
+Use the `size` prop to change the size of the input field. The default size is `md`.
+
+<ComponentPreview name="ui/input-demos/input-size" />
