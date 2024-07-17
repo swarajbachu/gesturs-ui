@@ -5,7 +5,7 @@ import { ComponentPreview } from "./site-specific/docs/component-preview";
 import * as React from "react";
 import { ComponentSource } from "./site-specific/docs/component-source";
 import { CopyButton } from "./site-specific/docs/copy-button";
-import {  parseChildren } from "@/lib/extract-code";
+import { parseChildren } from "@/lib/extract-code";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -81,12 +81,18 @@ const components = {
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className={cn("leading-7  text-foreground [&:not(:first-child)]:mt-6", className)}
+      className={cn(
+        "leading-7  text-foreground [&:not(:first-child)]:mt-6",
+        className
+      )}
       {...props}
     />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-    <ul className={cn("my-6  text-foreground ml-6 list-disc", className)} {...props} />
+    <ul
+      className={cn("my-6  text-foreground ml-6 list-disc", className)}
+      {...props}
+    />
   ),
   ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
     <ol className={cn("my-6 ml-6 list-decimal", className)} {...props} />
@@ -107,7 +113,10 @@ const components = {
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr
-      className={cn("m-0  p-0  even:bg-zinc-50 dark:even:bg-muted  odd:bg-zinc-200 dark:odd:bg-zinc-950  group", className)}
+      className={cn(
+        "m-0  p-0  even:bg-zinc-50 dark:even:bg-muted  odd:bg-zinc-200 dark:odd:bg-zinc-950  group",
+        className
+      )}
       {...props}
     >
       {props.children}
@@ -174,7 +183,7 @@ const components = {
       <div className="relative">
         <pre
           className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-muted py-3 bg-zinc-950 text-zinc-100  ",
+            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-muted py-3 bg-zinc-950 text-zinc-100 dark:bg-zinc-800  ",
             className
           )}
           {...props}
@@ -193,7 +202,7 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded dark:bg-transparent  px-[0.3rem] py-[0.2rem] font-mono text-sm bg-zinc-800/10",
+        "relative rounded dark:bg-transparent  px-[0.3rem] py-[0.2rem] font-mono text-sm bg-zinc-800/10  dark:bg-zinc-800",
         className
       )}
       {...props}

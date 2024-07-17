@@ -73,7 +73,7 @@ const CodeWrapper = async ({
               <Tab
                 key={fileName}
                 id={fileName}
-                className="relative h-9 justify-between rounded-sm border-b-2 border-b-transparent bg-transparent px-4  font-semibold text-foreground  flex items-center  shadow-none transition-none data-[selected]:!bg-sky-100 dark:data-[selected]:!bg-sky-900 data-[state=active]:shadow-none"
+                className="relative h-9 justify-between rounded-sm border-b-2 border-b-transparent bg-transparent px-4  font-semibold text-sky-200  flex items-center  shadow-none transition-none data-[selected]:!bg-sky-700/50  data-[state=active]:shadow-none"
               >
                 {fileName}
               </Tab>
