@@ -7,7 +7,7 @@ export default async function LandingLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative">
+    <div className="relative bg-zinc-950">
       <MarketingHeader />
       <div className="px-4 relative mx-auto lg:max-w-7xl">
         <main className="flex-1 pb-40 pt-2">{children}</main>

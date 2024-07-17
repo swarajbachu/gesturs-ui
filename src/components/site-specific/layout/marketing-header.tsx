@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { ModeToggle } from "./toggle";
 
 export default function MarketingHeader() {
   return (
@@ -13,7 +14,7 @@ export default function MarketingHeader() {
               alt="Logo"
               width={32}
               height={32}
-              className="rounded-full"
+              className="rounded-full fill-white"
             />
             <h2 className="text-xl font-bold text-zinc-950 dark:text-white">
               Gesturs UI
@@ -27,39 +28,7 @@ export default function MarketingHeader() {
           >
             Docs
           </Link>
-          <button
-            type="button"
-            className="inline-flex text-zinc-300 outline-blue-500 hover:text-zinc-400 dark:text-zinc-500 dark:hover:text-zinc-400"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-              data-slot="icon"
-              className="size-5 dark:hidden"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-              data-slot="icon"
-              className="hidden size-5 text-zinc-300 hover:text-zinc-200 dark:inline"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
+          <ModeToggle />
         </div>
       </div>
     </div>

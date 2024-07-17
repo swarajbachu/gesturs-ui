@@ -13,7 +13,7 @@ export const focusRingGroup = tv({
 });
 
 export const focusInput = tv({
-  base: "ring-0 focus-within:ring-gray-500/30 focus-within:ring-2",
+  base: "ring-0 focus-within:ring-gray-500/30 dark:focus-within:ring-gray-400 focus-within:ring-2",
 });
 
 export function composeTailwindRenderProps<T>(
