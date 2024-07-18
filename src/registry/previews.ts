@@ -4,7 +4,11 @@
 import React from "react";
 
 export const previews = {
-  "ui/breadcrumbs-demos/breadcrumbs": {
+  "/ui/badge-demos/badge": {
+      component: React.lazy<React.FC>(() => import("@/registry/components//ui/badge-demos/badge")),
+      code : [{"title":"badge.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div>\n      <Badge>Default</Badge>\n    </div>\n  );\n}\n"}]
+    },
+    "ui/breadcrumbs-demos/breadcrumbs": {
       component: React.lazy<React.FC>(() => import("@/registry/components/ui/breadcrumbs-demos/breadcrumbs")),
       code : [{"title":"breadcrumbs.tsx","code":"import React from \"react\";\nimport { Breadcrumbs, Breadcrumb } from \"@/components/ui/breadcrumbs\";\n\nexport default function BreadCrumbsDemo() {\n  return (\n    <Breadcrumbs>\n      <Breadcrumb href=\"#\">Home</Breadcrumb>\n      <Breadcrumb href=\"#\">Components</Breadcrumb>\n      <Breadcrumb href=\"#\">Breadcrumbs</Breadcrumb>\n    </Breadcrumbs>\n  );\n}\n"}]
     },

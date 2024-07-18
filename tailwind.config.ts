@@ -7,7 +7,22 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ".src/content/**/*.mdx",
     ".src/registry/**/*.{ts,tsx}",
-
+  ],
+  safelist: [
+    {
+      pattern:
+        /bg-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|700\/10|300|500\/15|800|200|500|700)/,
+      variants: ["dark", "hover", "focus", "dark:hover", "dark:focus"],
+    },
+    {
+      pattern:
+        /text-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|700|300|800)/,
+      variants: ["dark", "hover", "focus", "dark:hover", "dark:focus"],
+    },
+    {
+      pattern: /bg-(primary|secondary|destructive|accent)-\d{1,3}(\/\d{1,2})?/,
+      variants: ["dark", "hover", "focus", "dark:hover", "dark:focus"],
+    },
   ],
   darkMode: "class",
   theme: {
@@ -31,13 +46,14 @@ const config: Config = {
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
         sm: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-        DEFAULT: "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        DEFAULT:
+          "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
         md: "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
         lg: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
         xl: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
         "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
         inner: "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
-        none: "0 0 rgb(0, 0 / 0, 0)",      
+        none: "0 0 rgb(0, 0 / 0, 0)",
       },
       colors: {
         border: "hsl(var(--border))",

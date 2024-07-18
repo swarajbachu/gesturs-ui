@@ -58,6 +58,10 @@ export const docsConfig: DocsConfig = {
         {
           title: "Input",
           href: "/docs/components/input",
+        },
+        {
+          title: "Badge",
+          href: "/docs/components/badge",
         }
       ],
       href: "/docs/components",
