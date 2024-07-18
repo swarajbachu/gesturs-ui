@@ -81,3 +81,15 @@ default size is `md`
 The `Badge` component has 2 sections: `leftSection` and `rightSection`.
 
 <ComponentPreview name="/ui/badge-demos/badge-sections" />
+
+### Props
+
+| Name           | Type        | Default   | Description                     |
+| -------------- | ----------- | --------- | ------------------------------- |
+| `variant`      | `string`    | `filled`  | The variant of the badge.       |
+| `color`        | `string`    | `primary` | The color of the badge.         |
+| `size`         | `string`    | `md`      | The size of the badge.          |
+| `leftSection`  | `ReactNode` | `null`    | The left section of the badge.  |
+| `rightSection` | `ReactNode` | `null`    | The right section of the badge. |
+
+rest of the props are passed to the `span` element
