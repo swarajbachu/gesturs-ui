@@ -13,14 +13,10 @@ date: 2024-07-17
 <Steps>
   <Step> Update your `tailwind.config.js` file to include the following configuration:</Step>
 
-```ts {9-24}
+```ts {5-20}
 const config: Config = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    ".src/content/**/*.mdx",
-    ".src/registry/**/*.{ts,tsx}",
+        ....
   ],
   safelist: [
     {
@@ -39,6 +35,7 @@ const config: Config = {
     },
   ],
   darkMode: "class",
+  ...
 };
 ```
 
@@ -46,3 +43,41 @@ const config: Config = {
   <ComponentSource name="ui/badge" />
   <Step>Update the import paths to match your project setup.</Step>
 </Steps>
+
+## Usage
+
+The `Badge` component is a container that displays a badge with a text and color.
+
+## Props
+
+### Variants
+
+The `Badge` component 2 variants: `filled` and `light`.
+
+default variant is `filled`
+
+<ComponentPreview name="/ui/badge-demos/badge-variants" />
+
+### Color
+
+The `Badge` component has multiple color variants: `primary`, `secondary`, `destructive`, and `accent`.
+
+also along with them you can use your regular tailwind colors like `red`, `blue`, `green` etc.
+
+default color is `primary`
+
+<ComponentPreview name="/ui/badge-demos/badge-colors" />
+
+### Size
+
+The `Badge` component has 3 sizes: `sm`, `md`, and `lg`.
+
+default size is `md`
+
+<ComponentPreview name="/ui/badge-demos/badge-sizes" />
+
+### Sections
+
+The `Badge` component has 2 sections: `leftSection` and `rightSection`.
+
+<ComponentPreview name="/ui/badge-demos/badge-sections" />

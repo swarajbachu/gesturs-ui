@@ -6,7 +6,23 @@ import React from "react";
 export const previews = {
   "/ui/badge-demos/badge": {
       component: React.lazy<React.FC>(() => import("@/registry/components//ui/badge-demos/badge")),
-      code : [{"title":"badge.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div>\n      <Badge>Default</Badge>\n    </div>\n  );\n}\n"}]
+      code : [{"title":"badge.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div>\n      <Badge>\n        documentation\n      </Badge>\n    </div>\n  );\n}\n"}]
+    },
+    "/ui/badge-demos/badge-variants": {
+      component: React.lazy<React.FC>(() => import("@/registry/components//ui/badge-demos/badge-variants")),
+      code : [{"title":"badge-variants.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-2\">\n      <Badge>documentation</Badge>\n      <Badge variant=\"filled\">documentation</Badge>\n    </div>\n  );\n}\n"}]
+    },
+    "/ui/badge-demos/badge-colors": {
+      component: React.lazy<React.FC>(() => import("@/registry/components//ui/badge-demos/badge-colors")),
+      code : [{"title":"badge-colors.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport { BanIcon, DollarSign } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div className=\"grid grid-cols-4 gap-2\">\n      <Badge color=\"primary\">Primary</Badge>\n      <Badge color=\"amber\">Amber</Badge>\n      <Badge color=\"emerald\">Emerald</Badge>\n      <Badge color=\"red\">Red</Badge>\n      <Badge color=\"blue\">Blue</Badge>\n      <Badge color=\"green\">Green</Badge>\n      <Badge color=\"yellow\">Yellow</Badge>\n      <Badge color=\"gray\">Gray</Badge>\n      <Badge color=\"indigo\">Indigo</Badge>\n      <Badge color=\"pink\">Pink</Badge>\n      <Badge color=\"purple\">Purple</Badge>\n      <Badge color=\"teal\">Teal</Badge>\n      <Badge color=\"orange\">Orange</Badge>\n      <Badge color=\"cyan\">Cyan</Badge>\n      <Badge color=\"sky\">Light Blue</Badge>\n      <Badge color=\"lime\">Lime</Badge>\n      <Badge color=\"rose\">Rose</Badge>\n    </div>\n  );\n}\n"}]
+    },
+    "/ui/badge-demos/badge-sizes": {
+      component: React.lazy<React.FC>(() => import("@/registry/components//ui/badge-demos/badge-sizes")),
+      code : [{"title":"badge-sizes.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div className=\"grid grid-cols-3 gap-2\">\n      <Badge size=\"sm\">size sm</Badge>\n      <Badge>sime md(default)</Badge>\n      <Badge size=\"lg\">sime md(default)</Badge>\n    </div>\n  );\n}\n"}]
+    },
+    "/ui/badge-demos/badge-sections": {
+      component: React.lazy<React.FC>(() => import("@/registry/components//ui/badge-demos/badge-sections")),
+      code : [{"title":"badge-sections.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport { BanIcon, DollarSign } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-2\">\n      <Badge leftSection={<DollarSign />}>$15</Badge>\n      <Badge rightSection={<BanIcon />}>Ban</Badge>\n    </div>\n  );\n}\n"}]
     },
     "ui/breadcrumbs-demos/breadcrumbs": {
       component: React.lazy<React.FC>(() => import("@/registry/components/ui/breadcrumbs-demos/breadcrumbs")),

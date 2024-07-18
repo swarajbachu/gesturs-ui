@@ -20,7 +20,7 @@ const config: Config = {
       variants: ["dark", "hover", "focus", "dark:hover", "dark:focus"],
     },
     {
-      pattern: /bg-(primary|secondary|destructive|accent)-\d{1,3}(\/\d{1,2})?/,
+      pattern: /bg-(primary|secondary|destructive|accent)\/10/,
       variants: ["dark", "hover", "focus", "dark:hover", "dark:focus"],
     },
   ],
