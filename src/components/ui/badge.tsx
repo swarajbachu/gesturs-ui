@@ -88,7 +88,7 @@ const badgeVariants = tv({
   },
 });
 
-export type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
+type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
   VariantProps<typeof badgeVariants> & {
     leftSection?: React.ReactNode;
     rightSection?: React.ReactNode;
@@ -116,5 +116,7 @@ function Badge({
     </span>
   );
 }
+
+export type { BadgeProps };
 
 export { Badge, badgeVariants };

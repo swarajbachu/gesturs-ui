@@ -33,7 +33,7 @@ export const ComponentSource = ({
           code: file.code,
           lang: "tsx",
         }))}
-        expandable
+        expandable={true}
       />
     </CodeBlockCollapsible>
   );

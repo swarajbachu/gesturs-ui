@@ -15,10 +15,10 @@ export default function LineSvg({className}: {className: string}) {
             x2="16"
             y1="0.5"
             y2="0.5"
-            stroke-dasharray="2 2"
-            stroke-width="1.5"
-            stroke-opacity="0.1"
-            stroke-linejoin="round"
+            strokeDasharray="2 2"
+            strokeWidth="1.5"
+            strokeOpacity="0.1"
+            strokeLinejoin="round"
           ></line>
         </pattern>
       </defs>
