@@ -581,5 +581,49 @@
       }
     ],
     "slugAsParams": "components/input"
+  },
+  {
+    "slug": "docs/components/kbd",
+    "title": "KBD",
+    "description": "Display keyboard key",
+    "date": "2024-07-15T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:i,jsx:e,jsxs:n}=arguments[0];function _createMdxContent(s){const h={a:\"a\",code:\"code\",figure:\"figure\",h1:\"h1\",h2:\"h2\",h3:\"h3\",p:\"p\",pre:\"pre\",span:\"span\",...s.components},{ComponentPreview:a,ComponentSource:t,Step:r,Steps:l}=h;return a||_missingMdxReference(\"ComponentPreview\",!0),t||_missingMdxReference(\"ComponentSource\",!0),r||_missingMdxReference(\"Step\",!0),l||_missingMdxReference(\"Steps\",!0),n(i,{children:[e(h.h1,{id:\"kbd\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#kbd\",children:\"KBD\"})}),\"\\n\",n(h.p,{children:[\"The \",e(h.code,{children:\"<kbd>\"}),\" element represents user input and output, typically used for keyboard input.\"]}),\"\\n\",e(a,{name:\"/ui/kbd/kbd\"}),\"\\n\",e(h.h2,{id:\"installation\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",n(l,{children:[e(r,{children:\"Copy and paste the following code into your project.\"}),e(t,{name:\"ui/kbd\"}),e(r,{children:\"Update the import paths to match your project setup.\"})]}),\"\\n\",e(h.h2,{id:\"usage\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#usage\",children:\"Usage\"})}),\"\\n\",n(h.p,{children:[\"The \",e(h.code,{children:\"KBD\"}),\" component is a container that displays a keyboard key.\"]}),\"\\n\",e(h.figure,{\"data-rehype-pretty-code-figure\":\"\",children:e(h.pre,{style:{\"--shiki-light\":\"#24292e\",\"--shiki-dark\":\"#e1e4e8\",\"--shiki-light-bg\":\"#fff\",\"--shiki-dark-bg\":\"#24292e\"},tabIndex:\"0\",\"data-language\":\"jsx\",\"data-theme\":\"github-light github-dark\",children:e(h.code,{\"data-language\":\"jsx\",\"data-theme\":\"github-light github-dark\",style:{display:\"grid\"},children:n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"<\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"Kbd\"}),e(h.span,{style:{\"--shiki-light\":\"#6F42C1\",\"--shiki-dark\":\"#B392F0\"},children:\" variant\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\"=\"}),e(h.span,{style:{\"--shiki-light\":\"#032F62\",\"--shiki-dark\":\"#9ECBFF\"},children:'\"outline\"'}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">⌘</\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"Kbd\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"> \"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\"+\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\" <\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"Kbd\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\">\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"Shift\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\"</\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"Kbd\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\">\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\" +\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\" <\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"Kbd\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\">\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"M\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\"</\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"Kbd\"}),e(h.span,{style:{\"--shiki-light\":\"#D73A49\",\"--shiki-dark\":\"#F97583\"},children:\">\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\";\"})]})})})}),\"\\n\",e(h.h2,{id:\"props\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#props\",children:\"Props\"})}),\"\\n\",e(h.h3,{id:\"variants\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#variants\",children:\"Variants\"})}),\"\\n\",n(h.p,{children:[\"The \",e(h.code,{children:\"KBD\"}),\" component supports the following variants: \",e(h.code,{children:\"outline\"}),\" and \",e(h.code,{children:\"filled\"}),\"\\nThe default variant is \",e(h.code,{children:\"filled\"})]}),\"\\n\",e(a,{name:\"/ui/kbd/kbd-variants\"})]})}return{default:function(i={}){const{wrapper:n}=i.components||{};return n?e(n,{...i,children:e(_createMdxContent,{...i})}):_createMdxContent(i)}};function _missingMdxReference(i,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+i+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "KBD",
+        "url": "#kbd",
+        "items": [
+          {
+            "title": "Installation",
+            "url": "#installation",
+            "items": []
+          },
+          {
+            "title": "Usage",
+            "url": "#usage",
+            "items": []
+          },
+          {
+            "title": "Props",
+            "url": "#props",
+            "items": [
+              {
+                "title": "Variants",
+                "url": "#variants",
+                "items": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "slugAsParams": "components/kbd"
   }
 ]

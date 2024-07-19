@@ -62,6 +62,10 @@ export const docsConfig: DocsConfig = {
         {
           title: "Badge",
           href: "/docs/components/badge",
+        },
+        {
+          title: "Kbd",
+          href: "/docs/components/kbd",
         }
       ],
       href: "/docs/components",

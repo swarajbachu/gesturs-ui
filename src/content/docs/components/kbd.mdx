@@ -1,0 +1,36 @@
+---
+title: KBD
+description: Display keyboard key
+date: 2024-07-15
+---
+
+# KBD
+
+The `<kbd>` element represents user input and output, typically used for keyboard input.
+
+<ComponentPreview name="/ui/kbd/kbd" />
+
+## Installation
+
+<Steps>
+  <Step>Copy and paste the following code into your project.</Step>
+  <ComponentSource name="ui/kbd" />
+  <Step>Update the import paths to match your project setup.</Step>
+</Steps>
+
+## Usage
+
+The `KBD` component is a container that displays a keyboard key.
+
+```jsx
+<Kbd variant="outline">⌘</Kbd> + <Kbd>Shift</Kbd> + <Kbd>M</Kbd>;
+```
+
+## Props
+
+### Variants
+
+The `KBD` component supports the following variants: `outline` and `filled`
+The default variant is `filled`
+
+<ComponentPreview name="/ui/kbd/kbd-variants" />

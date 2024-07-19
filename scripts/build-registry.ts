@@ -9,7 +9,7 @@ interface Preview {
 export const parseMDXFiles = (
   directory: string,
   rootDirectory: string,
-  filesArray: Preview[] = []
+  filesArray: Preview[] = [],
 ): Preview[] => {
   const files = fs.readdirSync(directory);
 
@@ -40,7 +40,7 @@ export const parseMDXFiles = (
 };
 
 const getAllPreviews = () => {
-  const directoryPath = path.join(process.cwd(), "src","content");
+  const directoryPath = path.join(process.cwd(), "src", "content");
   return parseMDXFiles(directoryPath, directoryPath);
 };
 
@@ -56,7 +56,13 @@ export const previews = {
 `;
 
 allPreviews.forEach(({ relativePath }) => {
-  const fullPath = path.join(process.cwd(), "src", "registry","components", relativePath);
+  const fullPath = path.join(
+    process.cwd(),
+    "src",
+    "registry",
+    "components",
+    relativePath,
+  );
   let code: { title: string; code: string }[] = [];
 
   // if directory, get all files
@@ -96,7 +102,10 @@ index += `}`;
 
 if (!error) {
   rimraf.sync(path.join(process.cwd(), "src", "registry", "previews.ts"));
-  fs.writeFileSync(path.join(process.cwd(), "src", "registry", "previews.ts"), index);
+  fs.writeFileSync(
+    path.join(process.cwd(), "src", "registry", "previews.ts"),
+    index,
+  );
 
   console.log("\x1b[32m✓\x1b[0m Generated previews.ts file.");
 }

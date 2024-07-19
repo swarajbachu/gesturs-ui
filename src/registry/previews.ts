@@ -14,7 +14,7 @@ export const previews = {
     },
     "/ui/badge-demos/badge-colors": {
       component: React.lazy<React.FC>(() => import("@/registry/components//ui/badge-demos/badge-colors")),
-      code : [{"title":"badge-colors.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport { BanIcon, DollarSign } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div className=\"grid grid-cols-4 gap-2\">\n      <Badge color=\"primary\">Primary</Badge>\n      <Badge color=\"amber\">Amber</Badge>\n      <Badge color=\"emerald\">Emerald</Badge>\n      <Badge color=\"red\">Red</Badge>\n      <Badge color=\"blue\">Blue</Badge>\n      <Badge color=\"green\">Green</Badge>\n      <Badge color=\"yellow\">Yellow</Badge>\n      <Badge color=\"gray\">Gray</Badge>\n      <Badge color=\"indigo\">Indigo</Badge>\n      <Badge color=\"pink\">Pink</Badge>\n      <Badge color=\"purple\">Purple</Badge>\n      <Badge color=\"teal\">Teal</Badge>\n      <Badge color=\"orange\">Orange</Badge>\n      <Badge color=\"cyan\">Cyan</Badge>\n      <Badge color=\"sky\">Light Blue</Badge>\n      <Badge color=\"lime\">Lime</Badge>\n      <Badge color=\"rose\">Rose</Badge>\n    </div>\n  );\n}\n"}]
+      code : [{"title":"badge-colors.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport { BanIcon, DollarSign } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div className=\"grid grid-cols-4 gap-2\">\n      <Badge color=\"primary\">Primary</Badge>\n      <Badge color=\"amber\">Amber</Badge>\n      <Badge color=\"emerald\">Emerald</Badge>\n      <Badge color=\"red\">Red</Badge>\n      <Badge color=\"blue\">Blue</Badge>\n      <Badge color=\"green\">Green</Badge>\n      <Badge color=\"yellow\">Yellow</Badge>\n      <Badge color=\"gray\">Gray</Badge>\n      <Badge color=\"indigo\">Indigo</Badge>\n      <Badge color=\"pink\">Pink</Badge>\n      <Badge color=\"purple\">Purple</Badge>\n      <Badge color=\"teal\">Teal</Badge>\n      <Badge color=\"orange\">Orange</Badge>\n      <Badge color=\"cyan\">Cyan</Badge>\n      <Badge color=\"sky\">Sky Blue</Badge>\n      <Badge color=\"lime\">Lime</Badge>\n      <Badge color=\"rose\">Rose</Badge>\n      <Badge color=\"fuchsia\">Fuchsia</Badge>\n      <Badge color=\"neutral\">Neutral</Badge>\n      <Badge color=\"slate\">Slate</Badge>\n      <Badge color=\"stone\">Stone</Badge>\n      <Badge color=\"zinc\">Zinc</Badge>\n      <Badge color=\"accent\">Accent</Badge>\n      <Badge color=\"destructive\">Destructive</Badge>\n    </div>\n  );\n}\n"}]
     },
     "/ui/badge-demos/badge-sizes": {
       component: React.lazy<React.FC>(() => import("@/registry/components//ui/badge-demos/badge-sizes")),
@@ -22,7 +22,7 @@ export const previews = {
     },
     "/ui/badge-demos/badge-sections": {
       component: React.lazy<React.FC>(() => import("@/registry/components//ui/badge-demos/badge-sections")),
-      code : [{"title":"badge-sections.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport { BanIcon, DollarSign } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-2\">\n      <Badge leftSection={<DollarSign />}>$15</Badge>\n      <Badge rightSection={<BanIcon />}>Ban</Badge>\n    </div>\n  );\n}\n"}]
+      code : [{"title":"badge-sections.tsx","code":"import { Badge } from \"@/components/ui/badge\";\nimport { BanIcon, DollarSign } from \"lucide-react\";\nimport React from \"react\";\n\nexport default function BadgeDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-2\">\n      <Badge color=\"green\" leftSection={<DollarSign />}>\n        15\n      </Badge>\n      <Badge rightSection={<BanIcon />} color=\"red\">\n        Ban\n      </Badge>\n    </div>\n  );\n}\n"}]
     },
     "ui/breadcrumbs-demos/breadcrumbs": {
       component: React.lazy<React.FC>(() => import("@/registry/components/ui/breadcrumbs-demos/breadcrumbs")),
@@ -147,5 +147,13 @@ export const previews = {
     "ui/input-demos/input-composition": {
       component: React.lazy<React.FC>(() => import("@/registry/components/ui/input-demos/input-composition")),
       code : [{"title":"input-composition.tsx","code":"import { Description, Label } from \"@/components/ui/field\";\nimport { Input } from \"@/components/ui/input\";\nimport { TextFieldRoot } from \"@/components/ui/text-field\";\nimport React from \"react\";\n\nexport default function InputComposition() {\n  return (\n    <div>\n      <TextFieldRoot>\n        <Label>Website Url</Label>\n        <Description>Enter the website url</Description>\n        <Input placeholder=\"website url\" type=\"url\" />\n      </TextFieldRoot>\n    </div>\n  );\n}\n"}]
+    },
+    "/ui/kbd/kbd": {
+      component: React.lazy<React.FC>(() => import("@/registry/components//ui/kbd/kbd")),
+      code : [{"title":"kbd.tsx","code":"import { Kbd } from \"@/components/ui/kbd\";\n\nexport default function KbdDemo() {\n  return (\n    <div>\n      <Kbd>⌘</Kbd> + <Kbd>Shift</Kbd> + <Kbd>M</Kbd>\n    </div>\n  );\n}\n"}]
+    },
+    "/ui/kbd/kbd-variants": {
+      component: React.lazy<React.FC>(() => import("@/registry/components//ui/kbd/kbd-variants")),
+      code : [{"title":"kbd-variants.tsx","code":"import { Kbd } from \"@/components/ui/kbd\";\n\nexport default function KbdDemo() {\n  return (\n    <div className=\"flex flex-col gap-1\">\n      <div>\n        <Kbd>⌘</Kbd> + <Kbd>Shift</Kbd>\n      </div>\n      <div>\n        <Kbd variant=\"outline\">⌘</Kbd> + <Kbd variant=\"outline\">Shift</Kbd>\n      </div>\n    </div>\n  );\n}\n"}]
     },
   }
