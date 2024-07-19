@@ -24,9 +24,9 @@ let button = tv({
   variants: {
     variant: {
       primary:
-        "bg-primary hover:bg-primary/90 pressed:bg-primary/70 text-primary-foreground  border-black/10 dark:border-white/10 ",
+        "bg-primary hover:bg-primary/90 pressed:bg-primary/90 text-primary-foreground  border-black/10 dark:border-white/10 ",
       secondary:
-        "bg-secondary text-secondary-foreground hover:bg-secondary/80 pressed:bg-secondary/70 border-secondary/10",
+        "bg-secondary text-secondary-foreground hover:bg-secondary/80 pressed:bg-secondary/90 border-secondary/10",
       destructive:
         "bg-destructive text-destructive-foreground hover:bg-destructive/90 border-destructive/10",
       accent: "hover:bg-accent text-accent-foreground border-none",

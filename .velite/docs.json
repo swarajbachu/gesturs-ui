@@ -120,7 +120,7 @@
   },
   {
     "slug": "docs/components/badge",
-    "title": "Card",
+    "title": "Badge",
     "description": "Displays a Badge.",
     "date": "2024-07-17T00:00:00.000Z",
     "references": [
@@ -625,5 +625,27 @@
       }
     ],
     "slugAsParams": "components/kbd"
+  },
+  {
+    "slug": "docs/components/popover",
+    "title": "Popover",
+    "description": "Displays a Popover.",
+    "date": "2024-07-19T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:o}=arguments[0];function _createMdxContent(t){const r={a:\"a\",h2:\"h2\",...t.components},{ComponentPreview:i}=r;return i||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),o(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(i,{name:\"/ui/popover-demos/popover\"})]})}return{default:function(e={}){const{wrapper:o}=e.components||{};return o?n(o,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "toc": [
+      {
+        "title": "Preview",
+        "url": "#preview",
+        "items": []
+      }
+    ],
+    "slugAsParams": "components/popover"
   }
 ]

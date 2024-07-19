@@ -66,6 +66,10 @@ export const docsConfig: DocsConfig = {
         {
           title: "Kbd",
           href: "/docs/components/kbd",
+        },
+        {
+          title: "Popover",
+          href: "/docs/components/popover",
         }
       ],
       href: "/docs/components",

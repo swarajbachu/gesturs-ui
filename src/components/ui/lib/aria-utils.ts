@@ -4,7 +4,7 @@ import { tv } from "tailwind-variants";
 
 export const focusRing = tv({
   base: `outline-none ring-offset-background 
-  ring-0 ring-border-focus focus-visible:ring-offset-[2px] focus-visible:ring-offset-background 
+  ring-0 rounded-md ring-border-focus focus-visible:ring-offset-[2px] focus-visible:ring-offset-background 
   ring-primary focus-visible:ring-2 `,
 });
 

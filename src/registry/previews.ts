@@ -154,6 +154,10 @@ export const previews = {
     },
     "/ui/kbd/kbd-variants": {
       component: React.lazy<React.FC>(() => import("@/registry/components//ui/kbd/kbd-variants")),
-      code : [{"title":"kbd-variants.tsx","code":"import { Kbd } from \"@/components/ui/kbd\";\n\nexport default function KbdDemo() {\n  return (\n    <div className=\"flex flex-col gap-1\">\n      <div>\n        <Kbd>⌘</Kbd> + <Kbd>Shift</Kbd>\n      </div>\n      <div>\n        <Kbd variant=\"outline\">⌘</Kbd> + <Kbd variant=\"outline\">Shift</Kbd>\n      </div>\n    </div>\n  );\n}\n"}]
+      code : [{"title":"kbd-variants.tsx","code":"import { Kbd } from \"@/components/ui/kbd\";\n\nexport default function KbdDemo() {\n  return (\n    <div className=\"flex flex-col gap-2\">\n      <div>\n        <Kbd>⌘</Kbd> + <Kbd>Shift</Kbd>\n      </div>\n      <div>\n        <Kbd variant=\"outline\">⌘</Kbd> + <Kbd variant=\"outline\">Shift</Kbd>\n      </div>\n    </div>\n  );\n}\n"}]
+    },
+    "/ui/popover-demos/popover": {
+      component: React.lazy<React.FC>(() => import("@/registry/components//ui/popover-demos/popover")),
+      code : [{"title":"popover.tsx","code":"import { Button } from \"@/components/ui/button\";\nimport { PopoverOverlay } from \"@/components/ui/popover\";\nimport React from \"react\";\nimport { DialogTrigger } from \"react-aria-components\";\n\nexport default function PopoverDemo() {\n  return (\n    <div>\n      <DialogTrigger>\n        <Button>Open Dialog</Button>\n        <PopoverOverlay>\n          <div>\n            <p>Popover content</p>\n          </div>\n        </PopoverOverlay>\n      </DialogTrigger>\n    </div>\n  );\n}\n"}]
     },
   }
