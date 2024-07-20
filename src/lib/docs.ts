@@ -70,6 +70,10 @@ export const docsConfig: DocsConfig = {
         {
           title: "Popover",
           href: "/docs/components/popover",
+        },
+        {
+          title: "Avatar",
+          href: "/docs/components/avatar",
         }
       ],
       href: "/docs/components",

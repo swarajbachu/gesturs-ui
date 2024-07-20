@@ -1,0 +1,51 @@
+---
+title: Avatar
+description: Displays an Avatar.
+date: 2024-07-20
+---
+
+## Preview
+
+<ComponentPreview name="/ui/avatar-demos/avatar" />
+
+## Usage
+
+```jsx
+import { Avatar } from "@/ui/avatar";
+```
+
+```tsx
+<Avatar name="John Doe" src="src" />
+```
+
+### Props
+
+## Size
+
+You can set the size of the avatar by passing the `size` prop. The default size is `md`.
+
+<ComponentPreview name="/ui/avatar-demos/avatar-sizes" />
+
+## Shape
+
+You can set the shape of the avatar by passing the `shape` prop. The default shape is `circle`.
+
+<ComponentPreview name="/ui/avatar-demos/avatar-shape" />
+
+## Border
+
+You can set the border of the avatar by passing the `border` prop.
+You can set it either `ring` or `solid`.
+
+There is no default border.
+
+`ring` border gives you a ring around the avatar, like an instagram story.
+
+<ComponentPreview name="/ui/avatar-demos/avatar-border" />
+
+## Status
+
+You can set the status of the avatar by passing the `dotPlacement` prop.
+You can set it either `top-right` or `bottom-right`.
+
+<ComponentPreview name="/ui/avatar-demos/avatar-dot" />

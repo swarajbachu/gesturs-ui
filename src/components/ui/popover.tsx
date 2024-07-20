@@ -8,13 +8,14 @@ import {
 } from "react-aria-components";
 import React from "react";
 import { tv } from "tailwind-variants";
+import { Dialog } from "./dialog";
 
 export interface PopoverProps extends Omit<RACPopoverProps, "children"> {
   showArrow?: boolean;
   children: React.ReactNode;
 }
 
-const styles = tv({
+const popoverStyles = tv({
   base: "group focus-none bg-popover text-popover-foreground dark:backdrop-blur-2xl dark:backdrop-saturate-200  shadow rounded-xl bg-clip-padding border border-black/10 dark:border-white/[15%]",
   variants: {
     isEntering: {
@@ -41,7 +42,7 @@ export function Popover({
       offset={offset}
       {...props}
       className={composeRenderProps(className, (className, renderProps) =>
-        styles({ ...renderProps, className })
+        popoverStyles({ ...renderProps, className })
       )}
     >
       {showArrow && (
@@ -56,7 +57,7 @@ export function Popover({
           </svg>
         </OverlayArrow>
       )}
-      {children}
+      <Dialog>{children}</Dialog>
     </RACPopover>
   );
 }
