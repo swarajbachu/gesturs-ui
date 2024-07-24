@@ -6,7 +6,7 @@ export default function BadgeDemo() {
     <div className="grid grid-cols-3 gap-2">
       <Badge size="sm">size sm</Badge>
       <Badge>sime md(default)</Badge>
-      <Badge size="lg">sime md(default)</Badge>
+      <Badge size="lg">size lg</Badge>
     </div>
   );
 }

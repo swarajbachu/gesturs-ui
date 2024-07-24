@@ -25,37 +25,37 @@ async function getPostFromParams(params: PostPageProps["params"]) {
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
-  const post = await getPostFromParams(params);
+  const doc = await getPostFromParams(params);
 
-  if (!post) {
+  if (!doc) {
     return {};
   }
 
   const ogSearchParams = new URLSearchParams();
-  ogSearchParams.set("title", post.title);
+  ogSearchParams.set("title", doc.title);
 
   return {
-    title: post.title,
-    description: post.description,
+    title: doc.title,
+    description: doc.description,
     authors: { name: siteConfig.author },
     openGraph: {
-      title: post.title,
-      description: post.description,
+      title: doc.title,
+      description: doc.description,
       type: "article",
-      url: post.slug,
+      url: doc.slug,
       images: [
         {
           url: `/api/og?${ogSearchParams.toString()}`,
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: doc.title,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.description,
+      title: doc.title,
+      description: doc.description,
       images: [`/api/og?${ogSearchParams.toString()}`],
     },
   };
@@ -64,7 +64,7 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
-  return docs.map((post) => ({ slug: post.slugAsParams.split("/") }));
+  return docs.map((doc) => ({ slug: doc.slugAsParams.split("/") }));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
