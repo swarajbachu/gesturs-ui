@@ -6,9 +6,9 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import { Breadcrumb, Breadcrumbs } from "@/components/ui/breadcrumbs";
-import { getTableOfContents } from "@/lib/toc";
 import { TableOfContents } from "@/components/site-specific/docs/toc";
 import { ScrollArea } from "@/components/site-specific/ui/scroll-area";
+
 interface PostPageProps {
   params: {
     slug: string[];
