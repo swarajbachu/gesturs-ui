@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-"use client";
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
