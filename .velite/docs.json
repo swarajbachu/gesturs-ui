@@ -119,6 +119,28 @@
     "slugAsParams": "why-react-aria-components"
   },
   {
+    "slug": "docs/gesturs/compare-image",
+    "title": "Compare Image",
+    "description": "Compare two images side by side.",
+    "date": "2024-07-27T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:i,ComponentSource:c,Step:s,Steps:a}=r;return i||_missingMdxReference(\"ComponentPreview\",!0),c||_missingMdxReference(\"ComponentSource\",!0),s||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(i,{name:\"gesturs/compare-image/preview\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(s,{children:\"Copy and paste the following code into your project.\"}),n(c,{name:\"gesturs/compare-image\"}),n(s,{children:\"Update the import paths to match your project setup.\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      }
+    ],
+    "slugAsParams": "gesturs/compare-image"
+  },
+  {
     "slug": "docs/gesturs/link-image",
     "title": "Link Image",
     "description": "Link preview Images for your anchor tags",
