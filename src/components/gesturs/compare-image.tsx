@@ -47,9 +47,9 @@ function CompareImage({ beforeImage, afterImage }: CompareImageProps) {
       <motion.div
         style={{
           left: `${clip}%`,
-          boxShadow: "-10px 0 20px 5px rgba(135, 206, 235, 0.9)",
+          boxShadow: "-1px 0 20px 5px rgba(135, 206, 235, 0.9)",
         }}
-        className="top-0 overflow-visible absolute bg-gradient-to-b from-zinc-800/30 via-zinc-800 to-zinc-800/30  pointer-events-none w-[2px] shadow-sm h-full"
+        className="top-0 overflow-visible absolute   pointer-events-none  h-full"
         animate={{
           x: `${clip - 50}%`,
         }}
@@ -59,7 +59,7 @@ function CompareImage({ beforeImage, afterImage }: CompareImageProps) {
           damping: 30,
         }}
       >
-        <div className="w-4 h-full top-1/2 -translate-y-1/2 absolute -left-3">
+        <div className="w-5 h-full top-1/2 -translate-y-1/2 absolute -left-6">
           <Sparkles />
         </div>{" "}
       </motion.div>
@@ -73,7 +73,7 @@ const Sparkles = () => {
   const random = () => Math.random();
   return (
     <div className="absolute inset-0">
-      {[...Array(12)].map((_, i) => (
+      {[...Array(25)].map((_, i) => (
         <motion.span
           key={`star-${i}`}
           animate={{
