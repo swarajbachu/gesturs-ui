@@ -57,12 +57,12 @@ function Notification({
   return (
     <Link
       href="#"
-      className="p-2 group rounded-lg hover:bg-blue-400 flex gap-x-2 text-[inherit] no-underline outline-none focus-visible:ring-2 ring-pink-800"
+      className="p-2 group rounded-lg hover:bg-blue-500 dark:hover:bg-blue-800 flex gap-x-2 text-[inherit] no-underline outline-none focus-visible:ring-2 ring-pink-800"
     >
       <Avatar src={avatar} sizes="sm" />
       <div>
         <div className="text-foreground  font-semibold leading-5">{name}</div>
-        <div className="text-sm text-muted-foreground group-hover:text-zinc-900 col-span-2 transition-colors duration-150">
+        <div className="text-sm text-muted-foreground  col-span-2 transition-colors duration-150">
           Commented {time} ago
         </div>
         <p className="text-sm overflow-hidden text-ellipsis line-clamp-2 mt-1 mb-0 col-span-2">
