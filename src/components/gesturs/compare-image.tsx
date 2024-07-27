@@ -47,7 +47,7 @@ function CompareImage({ beforeImage, afterImage }: CompareImageProps) {
       <motion.div
         style={{
           left: `${clip}%`,
-          boxShadow: "-10px 0 20px 5px rgba(0, 0, 0, 0.9)",
+          boxShadow: "-10px 0 20px 5px rgba(135, 206, 235, 0.9)",
         }}
         className="top-0 overflow-visible absolute bg-gradient-to-b from-zinc-800/30 via-zinc-800 to-zinc-800/30  pointer-events-none w-[2px] shadow-sm h-full"
         animate={{
