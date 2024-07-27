@@ -85,6 +85,10 @@ export const docsConfig: DocsConfig = {
           title: "Link Image",
           href: "/docs/gesturs/link-image",
         },
+        {
+          title: "Sticky Mouse",
+          href: "/docs/gesturs/sticky-mouse",
+        },
       ],
       label: "Cool Stuff",
     }

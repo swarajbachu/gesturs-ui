@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useRef, useState, MouseEvent } from "react";
@@ -8,7 +10,7 @@ interface StickyMouseProps {
   className?: string;
 }
 
-export default function Framer({ children,className }: StickyMouseProps) {
+export default function StickyMouseWrapper({ children,className }: StickyMouseProps) {
   
   const ref = useRef<HTMLDivElement | null>(null);
   const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
@@ -26,14 +28,14 @@ export default function Framer({ children,className }: StickyMouseProps) {
   };
 
   const { x, y } = position;
-  
+
   return (
     <motion.div
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       animate={{ x, y }}
-      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+      transition={{ type: "spring", stiffness: 50, damping: 15, mass: 0.5 }}
       className={cn("relative", className)}
     >
       {children}
