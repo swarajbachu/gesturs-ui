@@ -25,7 +25,7 @@ function CompareImage({ beforeImage, afterImage }: CompareImageProps) {
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="w-96 h-96 rounded-md overflow-hidden relative cursor-pointer"
+      className="w-96 h-96 rounded-md overflow-hidden relative cursor-pointer shadow-sm"
     >
       <Image
         src={beforeImage}
