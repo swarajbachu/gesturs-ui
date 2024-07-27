@@ -9,10 +9,7 @@ interface CompareImageProps {
   afterImage: string;
 }
 
-const CompareImage: React.FC<CompareImageProps> = ({
-  beforeImage,
-  afterImage,
-}) => {
+function CompareImage({ beforeImage, afterImage }: CompareImageProps) {
   const [clip, setClip] = useState(50); // Initial clip percentage
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -50,7 +47,7 @@ const CompareImage: React.FC<CompareImageProps> = ({
       <motion.div
         style={{
           left: `${clip}%`,
-          boxShadow: '-10px 0 20px 5px rgba(0, 0, 0, 0.9)',
+          boxShadow: "-10px 0 20px 5px rgba(0, 0, 0, 0.9)",
         }}
         className="top-0 overflow-visible absolute bg-gradient-to-b from-zinc-800/10 via-zinc-800 to-zinc-800/10  pointer-events-none w-[2px] shadow-sm h-full"
         animate={{
@@ -62,13 +59,13 @@ const CompareImage: React.FC<CompareImageProps> = ({
           damping: 30,
         }}
       >
-        <div className="w-10 h-full top-1/2 -translate-y-1/2 absolute -left-10">
+        <div className="w-8 h-full top-1/2 -translate-y-1/2 absolute -left-10">
           <Sparkles />
         </div>{" "}
       </motion.div>
     </div>
   );
-};
+}
 
 const Sparkles = () => {
   const randomMove = () => Math.random() * 2 - 1;
