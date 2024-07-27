@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ModeToggle } from "./toggle";
+import { Badge } from "@/components/ui/badge";
 
 export default function MarketingHeader() {
   return (
@@ -20,6 +21,7 @@ export default function MarketingHeader() {
               Gesturs UI
             </h2>
           </Link>
+          <Badge color="sky">Beta</Badge>
         </div>
         <div className="flex items-center gap-4 sm:gap-8">
           <Link

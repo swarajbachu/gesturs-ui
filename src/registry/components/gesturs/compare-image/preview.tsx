@@ -5,8 +5,8 @@ export default function CompareImageDemo() {
   return (
     <div>
       <CompareImage
-        beforeImage="https://images.unsplash.com/photo-1558655146-d09347e92766"
-        afterImage="https://images.unsplash.com/photo-1602576666092-bf6447a729fc"
+        beforeImage="/components/compare/1.jpg"
+        afterImage="/components/compare/2.jpg"
         />
     </div>
   )
