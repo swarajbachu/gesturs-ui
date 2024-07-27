@@ -2,11 +2,17 @@ import LineSvg from "@/components/site-specific/layout/line-svg";
 import CardWrapper from "@/components/site-specific/pages/hero/card-wrapper";
 import { Breadcrumb, Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { TextField } from "@/components/ui/text-field";
-import { ArrowRight, ArrowRightIcon, Search } from "lucide-react";
+import AvatarDemo3 from "@/registry/components/ui/avatar-demos/avatar-dot";
+import AvatarDemo from "@/registry/components/ui/avatar-demos/avatar-border";
+import AvatarDemo2 from "@/registry/components/ui/avatar-demos/avatar-shape";
+import BadgeDemo from "@/registry/components/ui/badge-demos/badge-colors";
+import { ArrowRightIcon, Search } from "lucide-react";
 import React from "react";
+import PopoverDemo from "@/registry/components/ui/popover-demos/popover";
+import StickyMouseDemo from "@/registry/components/gesturs/sticky-mouse/button";
+import PopImagesParagraph from "@/registry/components/gesturs/pop-images/preview";
 
 export default function Home() {
   return (
@@ -65,64 +71,43 @@ export default function Home() {
       </div>
       <div className="relative xl:col-span-9">
         <CardWrapper>
-          <div className="w-full flex justify-start flex-col gap-4">
-            <h3 className="text-base font-bold">Sign In</h3>
-            <TextField label="Email" placeholder="email" />
-            <TextField label="Password" placeholder="password" />
-            <Button fullWidth rightSection={<ArrowRightIcon />}>
-              Sign In
-            </Button>
+          <div className="w-full flex justify-center flex-col gap-4">
+            <BadgeDemo />
           </div>
         </CardWrapper>
       </div>
       <div className="relative xl:col-span-6">
         <CardWrapper>
-          <div className="w-full flex justify-start flex-col gap-4">
-            <h3 className="text-base font-bold">Sign In</h3>
-            <TextField label="Email" placeholder="email" />
-            <TextField label="Password" placeholder="password" />
-            <Button fullWidth rightSection={<ArrowRightIcon />}>
-              Sign In
-            </Button>
+          <div className="w-full flex justify-center flex-col gap-4 items-center">
+            <div className="flex gap-2">
+              <AvatarDemo2 />
+              <AvatarDemo />
+            </div>
+            <AvatarDemo3 />
           </div>
         </CardWrapper>
       </div>
-      <div className="relative xl:col-span-9">
+      <div className="relative xl:col-span-4">
         <CardWrapper>
-          <div className="w-full flex justify-start flex-col gap-4">
-            <h3 className="text-base font-bold">Sign In</h3>
-            <TextField label="Email" placeholder="email" />
-            <TextField label="Password" placeholder="password" />
-            <Button fullWidth rightSection={<ArrowRightIcon />}>
-              Sign In
-            </Button>
+          <div className="w-full flex justify-center items-center flex-col gap-4">
+            <PopoverDemo />
           </div>
         </CardWrapper>
       </div>
-      <div className="relative xl:col-span-6">
+      <div className="relative xl:col-span-5">
         <CardWrapper>
-          <div className="w-full flex justify-start flex-col gap-4">
-            <h3 className="text-base font-bold">Sign In</h3>
-            <TextField label="Email" placeholder="email" />
-            <TextField label="Password" placeholder="password" />
-            <Button fullWidth rightSection={<ArrowRightIcon />}>
-              Sign In
-            </Button>
+          <div className="w-full flex justify-center items-center flex-col gap-4">
+            <StickyMouseDemo />
           </div>
         </CardWrapper>
       </div>
-      <div className="relative xl:col-span-9">
+      {/* <div className="relative xl:col-span-12">
         <CardWrapper>
-          <div className="w-full flex justify-start flex-col gap-4">
-            <h3 className="text-base font-bold">Sign In</h3>
-            <TextField label="Email" placeholder="email" />
-            <TextField label="Password" placeholder="password" />
-            <Button fullWidth rightSection={<ArrowRightIcon />}>
-              Sign In
-            </Button>
+          <div className="w-full flex justify-center items-center flex-col gap-4">
+            <PopImagesParagraph />
           </div>
         </CardWrapper>
-      </div>
+      </div> */}
     </section>
   );
 }

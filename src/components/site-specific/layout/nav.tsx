@@ -1,5 +1,6 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
 import { docsConfig } from "@/lib/docs";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -22,6 +23,9 @@ export function MainNav() {
         <span className="hidden font-bold md:inline-block text-foreground">
           {siteConfig.name}
         </span>
+        <Badge color="sky">
+          Beta
+        </Badge>
       </Link>
       <nav className="hidden items-center space-x-6 text-sm font-medium xl:flex">
         {docsConfig.mainNav.map((item) => (

@@ -33,7 +33,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
         aria-label="Card"
         ref={ref}
         className={cn(
-          "bg-white dark:bg-zinc-900 text-card-foreground shadow-md rounded-xl w-96 border-none dark:border-[1.5px] border-muted",
+          "bg-white dark:bg-zinc-900 text-card-foreground shadow-md rounded-xl w-96 border-0 dark:border-[1.5px] dark:border-muted",
           cardVariants({ horizontal }),
           className
         )}

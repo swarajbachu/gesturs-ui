@@ -19,7 +19,11 @@ export default function RootLayout({
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <ThemeProvider attribute="class" disableTransitionOnChange>
+      <ThemeProvider
+        attribute="class"
+        disableTransitionOnChange
+        defaultTheme="dark"
+      >
         <body
           className={cn(
             "relative flex min-h-screen w-full flex-col justify-center overflow-x-hidden scroll-smooth bg-background font-sans antialiased dark:bg-zinc-950",
