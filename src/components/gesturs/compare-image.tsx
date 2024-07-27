@@ -1,16 +1,24 @@
 "use client";
 
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface CompareImageProps {
-  beforeImage: string;
-  afterImage: string;
+  beforeImage: ImageProps;
+  afterImage: ImageProps;
+  delimiterClassName?: string;
+  initialPosition?: number;
 }
 
-function CompareImage({ beforeImage, afterImage }: CompareImageProps) {
-  const [clip, setClip] = useState(50); // Initial clip percentage
+function CompareImage({
+  beforeImage,
+  afterImage,
+  initialPosition = 50,
+  delimiterClassName,
+}: CompareImageProps) {
+  const [clip, setClip] = useState(initialPosition); // Initial clip percentage
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -28,20 +36,25 @@ function CompareImage({ beforeImage, afterImage }: CompareImageProps) {
       className="w-96 h-96 rounded-md overflow-hidden relative cursor-pointer shadow-sm"
     >
       <Image
-        src={beforeImage}
+        {...beforeImage}
+        src={beforeImage.src}
         alt="Before"
-        width={500}
-        height={500}
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        width={beforeImage.width ?? 500}
+        height={beforeImage.height ?? 500}
+        className={cn(
+          "absolute top-0 left-0 w-full h-full object-cover",
+          beforeImage.className
+        )}
       />
       <Image
-        src={afterImage}
+        {...afterImage}
+        src={afterImage.src}
         alt="After"
         style={{
           clipPath: `polygon(0 0, ${clip}% 0, ${clip}% 100%, 0% 100%)`,
         }}
-        width={500}
-        height={500}
+        width={afterImage.width ?? 500}
+        height={afterImage.height ?? 500}
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
       <motion.div
@@ -49,7 +62,10 @@ function CompareImage({ beforeImage, afterImage }: CompareImageProps) {
           left: `${clip}%`,
           boxShadow: "-1px 0 20px 5px rgba(135, 206, 235, 0.9)",
         }}
-        className="top-0 overflow-visible absolute   pointer-events-none  h-full"
+        className={cn(
+          "top-0 overflow-visible absolute   pointer-events-none  h-full",
+          delimiterClassName
+        )}
         animate={{
           x: `${clip - 50}%`,
         }}

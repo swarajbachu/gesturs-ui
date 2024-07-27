@@ -182,7 +182,7 @@ export const previews = {
     },
     "gesturs/compare-image/preview": {
       component: React.lazy<React.FC>(() => import("@/registry/components/gesturs/compare-image/preview")),
-      code : [{"title":"preview.tsx","code":"import CompareImage from '@/components/gesturs/compare-image'\r\nimport React from 'react'\r\n\r\nexport default function CompareImageDemo() {\r\n  return (\r\n    <div>\r\n      <CompareImage\r\n        beforeImage=\"https://images.unsplash.com/photo-1558655146-d09347e92766\"\r\n        afterImage=\"https://images.unsplash.com/photo-1602576666092-bf6447a729fc\"\r\n        />\r\n    </div>\r\n  )\r\n}\r\n"}]
+      code : [{"title":"preview.tsx","code":"import CompareImage from \"@/components/gesturs/compare-image\";\r\nimport React from \"react\";\r\n\r\nexport default function CompareImageDemo() {\r\n  return (\r\n    <div>\r\n      <CompareImage\r\n        beforeImage={{\r\n          src: \"/components/compare/1.jpg\",\r\n          alt: \"Before Image\",\r\n        }}\r\n        afterImage={{\r\n          src: \"/components/compare/2.jpg\",\r\n          alt: \"After Image\",\r\n        }}\r\n      />\r\n    </div>\r\n  );\r\n}\r\n"}]
     },
     "/gesturs/pop-images/preview": {
       component: React.lazy<React.FC>(() => import("@/registry/components//gesturs/pop-images/preview")),
