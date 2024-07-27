@@ -78,5 +78,15 @@ export const docsConfig: DocsConfig = {
       ],
       href: "/docs/components",
     },
+    {
+      title: "Gesturs",
+      items: [
+        {
+          title: "Link Image",
+          href: "/docs/gesturs/link-image",
+        },
+      ],
+      label: "Cool Stuff",
+    }
   ],
 }

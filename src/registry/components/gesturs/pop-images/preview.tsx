@@ -1,43 +1,39 @@
-// import  PopImage  from "@/components/gesturs/pop-image";
+import PopImage from "@/components/gesturs/link-image";
 
-
-// export default function RevealImageList() {
-//     const items = [
-//       {
-//         text: "Branding",
-//         images:
-//           {
-//             src: "https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-//             alt: "Image 1",
-//           },
-
-//       },
-//       {
-//         text: "Web design",
-//         images: 
-//           {
-//             src: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-//             alt: "Image 1",
-//           },
-
-//       },
-//       {
-//         text: "Illustration",
-//         images: 
-//           {
-//             src: "https://images.unsplash.com/photo-1575995872537-3793d29d972c?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-//             alt: "Image 1",
-//           },
-
-//       },
-//     ];
-  
-//     return (
-//       <div className="flex flex-col gap-1 rounded-sm bg-background px-8 py-4">
-//         <h3 className="text-sm font-black uppercase text-muted-foreground">Our services</h3>
-//         {items.map((item, index) => (
-//           <PopImage key={index} text={item.text} image={item.images} />
-//         ))}
-//       </div>
-//     );
-//   }
+export default function PopImagesParagraph() {
+  return (
+    <div className="py-12 w-full grid place-content-center ">
+      <p className="text-lg font-semibold text-muted-foreground max-w-3xl text-balance">
+        Hi there! I&apos;m currently working on an exciting React project where
+        I&apos;m using Framer Motion and{" "}
+        <PopImage
+          url="#"
+          image={{
+            alt: "tailwind css",
+            src: "https://img.freepik.com/free-photo/html-css-collage-concept_23-2150061955.jpg",
+          }}
+          className="text-primary/90 group-hover:text-foreground"
+        >
+          Tailwind CSS
+        </PopImage>{" "}
+        to create stunning animations and{" "}
+        <PopImage
+          url="#"
+          image={{
+            alt: "sleek images",
+            src: "https://images.unsplash.com/photo-1602576666092-bf6447a729fc",
+          }}
+          image2={{
+            alt: "sleek images",
+            src: "https://images.unsplash.com/photo-1558655146-d09347e92766",
+          }}
+          className="text-primary/90 group-hover:text-foreground"
+        >
+          Sleek UI Designs.
+        </PopImage>{" "}
+        Right now, I&apos;m focused on creating a reusable component that will
+        display image that pops out when hovered
+      </p>
+    </div>
+  );
+}
