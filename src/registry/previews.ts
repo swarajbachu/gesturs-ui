@@ -192,4 +192,8 @@ export const previews = {
       component: React.lazy<React.FC>(() => import("@/registry/components/gesturs/sticky-mouse/button")),
       code : [{"title":"button.tsx","code":"import StickyMouseWrapper from '@/components/gesturs/sticky-mouse'\r\nimport { Button } from '@/components/ui/button'\r\nimport React from 'react'\r\nimport { FaInstagram } from 'react-icons/fa'\r\n\r\nexport default function StickyMouseDemo() {\r\n  return (\r\n    <div>\r\n      <StickyMouseWrapper>\r\n        <Button size='icon'>\r\n            <FaInstagram  />\r\n        </Button>\r\n      </StickyMouseWrapper>\r\n    </div>\r\n  )\r\n}\r\n"}]
     },
+    "gesturs/swipe-cards/preview": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/gesturs/swipe-cards/preview")),
+      code : [{"title":"preview.tsx","code":"import SwipeableStackCards from '@/components/gesturs/swipe-cards'\r\nimport React from 'react'\r\n\r\nexport default function SwipeCardDemo() {\r\n  return (\r\n    <SwipeableStackCards />\r\n  )\r\n}\r\n"}]
+    },
   }
