@@ -182,7 +182,7 @@ export const previews = {
     },
     "gesturs/compare-image/preview": {
       component: React.lazy<React.FC>(() => import("@/registry/components/gesturs/compare-image/preview")),
-      code : [{"title":"preview.tsx","code":"import CompareImage from '@/components/gesturs/compare-image'\r\nimport React from 'react'\r\n\r\nexport default function CompareImageDemo() {\r\n  return (\r\n    <div>\r\n      <CompareImage\r\n        beforeImage=\"https://images.unsplash.com/photo-1558655146-d09347e92766\"\r\n        afterImage=\"https://images.unsplash.com/photo-1602576666092-bf6447a729fc\"\r\n        />\r\n    </div>\r\n  )\r\n}\r\n"}]
+      code : [{"title":"preview.tsx","code":"import CompareImage from \"@/components/gesturs/compare-image\";\r\nimport React from \"react\";\r\n\r\nexport default function CompareImageDemo() {\r\n  return (\r\n    <div>\r\n      <CompareImage\r\n        beforeImage={{\r\n          src: \"/components/compare/1.jpg\",\r\n          alt: \"Before Image\",\r\n        }}\r\n        afterImage={{\r\n          src: \"/components/compare/2.jpg\",\r\n          alt: \"After Image\",\r\n        }}\r\n      />\r\n    </div>\r\n  );\r\n}\r\n"}]
     },
     "/gesturs/pop-images/preview": {
       component: React.lazy<React.FC>(() => import("@/registry/components//gesturs/pop-images/preview")),
@@ -191,5 +191,9 @@ export const previews = {
     "gesturs/sticky-mouse/button": {
       component: React.lazy<React.FC>(() => import("@/registry/components/gesturs/sticky-mouse/button")),
       code : [{"title":"button.tsx","code":"import StickyMouseWrapper from '@/components/gesturs/sticky-mouse'\r\nimport { Button } from '@/components/ui/button'\r\nimport React from 'react'\r\nimport { FaInstagram } from 'react-icons/fa'\r\n\r\nexport default function StickyMouseDemo() {\r\n  return (\r\n    <div>\r\n      <StickyMouseWrapper>\r\n        <Button size='icon'>\r\n            <FaInstagram  />\r\n        </Button>\r\n      </StickyMouseWrapper>\r\n    </div>\r\n  )\r\n}\r\n"}]
+    },
+    "gesturs/swipe-cards/preview": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/gesturs/swipe-cards/preview")),
+      code : [{"title":"preview.tsx","code":"import SwipeableStackCards from '@/components/gesturs/swipe-cards'\r\nimport React from 'react'\r\n\r\nexport default function SwipeCardDemo() {\r\n  return (\r\n    <SwipeableStackCards />\r\n  )\r\n}\r\n"}]
     },
   }

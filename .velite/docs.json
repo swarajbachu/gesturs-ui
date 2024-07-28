@@ -774,7 +774,7 @@
     "slug": "docs/gesturs/sticky-mouse",
     "title": "Sticky Mouse Wrapper",
     "description": "Sticky Mouse Wrapper kinda makes components sticky to the mouse pointer.",
-    "date": "2024-07-19T00:00:00.000Z",
+    "date": "2024-07-27T00:00:00.000Z",
     "references": [
       {
         "title": "Report Issue",
@@ -791,5 +791,27 @@
       }
     ],
     "slugAsParams": "gesturs/sticky-mouse"
+  },
+  {
+    "slug": "docs/gesturs/swipe-cards",
+    "title": "Swipe Cards",
+    "description": "Swipe Cards is a component that allows you to swipe through a set of cards.",
+    "date": "2024-07-28T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:s,ComponentSource:i,Step:c,Steps:a}=r;return s||_missingMdxReference(\"ComponentPreview\",!0),i||_missingMdxReference(\"ComponentSource\",!0),c||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(s,{name:\"gesturs/swipe-cards/preview\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(c,{children:\"Copy and paste the following code into your project.\"}),n(i,{name:\"gesturs/swipe-cards\"}),n(c,{children:\"Update the import paths to match your project setup.\"}),n(c,{children:\"Also make sure adjust values for your own\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      }
+    ],
+    "slugAsParams": "gesturs/swipe-cards"
   }
 ]

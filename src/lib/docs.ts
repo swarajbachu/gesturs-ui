@@ -93,6 +93,10 @@ export const docsConfig: DocsConfig = {
           title: "Compare Images",
           href: "/docs/gesturs/compare-image",
         },
+        {
+          title: "Swipe Cards",
+          href: "/docs/gesturs/swipe-cards",
+        }
       ],
       label: "Cool Stuff",
     }
