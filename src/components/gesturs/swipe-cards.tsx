@@ -2,7 +2,8 @@
 
 import { motion, useMotionValue, useTransform, PanInfo } from "framer-motion";
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
 
 interface CardRotateProps {
   index: number;
@@ -57,36 +58,63 @@ function SwipeCard({
   );
 }
 
-export default function SwipeableStackCards() {
-  const initialCards = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-    {
-      id: 4,
-    },
-    {
-      id: 5,
-    },
-  ];
+const testimonials = [
+  {
+    testimonial:
+      "Gesturs has revolutionized our development process. Their UI library is incredibly intuitive and easy to use.",
+    personName: "John Doe",
+    image: "https://images.unsplash.com/photo-1524503033411-c9566986fc8f",
+    profession: "Chief Operating Officer",
+    companyName: "Tech Solutions Inc.",
+  },
+  {
+    testimonial:
+      "I can't imagine working without Gesturs. It has streamlined our workflow and increased our team's collaboration.",
+    personName: "Jane Smith",
+    image:
+      "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61",
+    profession: "Project Manager",
+    companyName: "Innovatech Ltd.",
+  },
+  {
+    testimonial:
+      "The support team at Gesturs is outstanding. They were always ready to help and went above and beyond to meet our needs.",
+    personName: "Samuel Green",
+    image:
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy",
+    profession: "Head of Customer Support",
+    companyName: "Customer First Corp.",
+  },
+  {
+    testimonial:
+      "Gesturs has simplified our processes and allowed us to focus on what we do best. It's a fantastic solution.",
+    personName: "Emily Johnson",
+    image: "https://images.unsplash.com/photo-1524503033411-c9566986fc8f",
+    profession: "Operations Manager",
+    companyName: "Business Solutions Co.",
+  },
+  {
+    testimonial:
+      "Gesturs' innovative approach and dedication to quality have truly set them apart in the industry.",
+    personName: "Michael Brown",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    profession: "CEO",
+    companyName: "NextGen Innovations",
+  },
+];
 
+export default function SwipeableStackCards() {
   const [currentCard, setCurrentCard] = useState(0);
 
-  const swipeRight = (index: number) => {
+  const swipeLeft = (index: number) => {
     if (index !== currentCard) {
       setCurrentCard(index);
     }
-    if (currentCard === initialCards.length - 1) return;
+    if (currentCard === testimonials.length - 1) return;
     setCurrentCard((prev) => prev + 1);
   };
 
-  const swipeLeft = (index: number) => {
+  const swipeRight = (index: number) => {
     if (index !== currentCard) {
       setCurrentCard(index);
     }
@@ -95,11 +123,11 @@ export default function SwipeableStackCards() {
   };
 
   return (
-    <div className="relative h-96 w-96" style={{ perspective: 600 }}>
-      {initialCards.map((card, index) => {
+    <div className="relative h-[400px] w-[400px]" style={{ perspective: 600 }}>
+      {testimonials.map((card, index) => {
         return (
           <SwipeCard
-            key={card.id}
+            key={card.personName}
             onSwipeRight={() => swipeRight(index)}
             onSwipeLeft={() => swipeLeft(index)}
             index={index}
@@ -107,20 +135,39 @@ export default function SwipeableStackCards() {
           >
             <motion.div
               animate={{
-                rotateZ: -(index - currentCard) * 2,
-                rotateX: -Math.abs(index - currentCard) * 8,
-                scale: 1 - Math.abs(index - currentCard) * 0.009,
-                transformOrigin: "90% 90%",
-                x: (currentCard - index) * 10,
-                y: -Math.abs(index - currentCard) * 5,
+                rotateZ: (index - currentCard) * 2,
+                rotateX: -Math.abs(index - currentCard) * 3,
+                scale: 1 - Math.abs(index - currentCard) * 0.07,
+                x: -(currentCard - index) * 20,
+                y: -Math.abs(index - currentCard) * 4,
               }}
               initial={false}
-              transition={{ type: "spring", stiffness: 160, damping: 10 }}
+              transition={{ type: "spring", stiffness: 160, damping: 8 }}
             >
-              <Card className="w-96 h-96">
-                <CardContent className="grid place-content-center w-full h-full">
-                  {index}
+              <Card className="h-72 w-72">
+                <CardContent>
+                  <h2 className="text-lg">{card.companyName}</h2>
                 </CardContent>
+                <CardContent>
+                  <p className="text-base">{card.testimonial}</p>
+                </CardContent>
+                <CardFooter>
+                  <div className="flex items-center">
+                    <Image
+                      src={card.image}
+                      alt={card.personName}
+                      className="w-8 h-8 rounded-full object-cover"
+                      width={100}
+                      height={100}
+                    />
+                    <div className="ml-2">
+                      <h3 className="text-sm font-semibold">
+                        {card.personName}
+                      </h3>
+                      <p className="text-xs">{card.profession}</p>
+                    </div>
+                  </div>
+                </CardFooter>
               </Card>
             </motion.div>
           </SwipeCard>
