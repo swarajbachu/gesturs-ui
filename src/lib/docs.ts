@@ -96,7 +96,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Swipe Cards",
           href: "/docs/gesturs/swipe-cards",
-        }
+        },
+        {
+          title: "Gooey Effect",
+          href: "/docs/gesturs/gooey-effects",
+        },
       ],
       label: "Cool Stuff",
     }
