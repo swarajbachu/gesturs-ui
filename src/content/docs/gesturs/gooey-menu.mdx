@@ -6,7 +6,7 @@ date: 2024-07-31
 
 ## Preview
 
-<ComponentPreview name="gesturs/gooey-effect/share"/>
+<ComponentPreview name="gesturs/gooey-effect/share" />
 
 ## Installation
 
@@ -18,11 +18,30 @@ date: 2024-07-31
   <Step>Update the import paths to match your project setup.</Step>
 </Steps>
 
-## Props 
+## Usage
+
+```tsx
+<GooeyMenu>
+  <GooeyMenuBefore>
+    <FaLinkedin />
+    <FaInstagram />
+  </GooeyMenuBefore>
+  <GooeyMenuTrigger>
+    <FaShare />
+  </GooeyMenuTrigger>
+  <GooeyMenuAfter>
+    <FaFacebook />
+    <FaTwitter />
+  </GooeyMenuAfter>
+</GooeyMenu>
+```
+
+## Props
 
 ### Direction
 
 direction can be `vertical` or `horizontal` and it will decide the direction of the menu. default is `horizontal`.
 
+make sure to add `id` to `GooeyTrigger` if you are using multiple `GooeyMenu` in the same page.
 
-<ComponentPreview name="gesturs/gooey-effect/menu"/>
+<ComponentPreview name="gesturs/gooey-effect/menu" />
