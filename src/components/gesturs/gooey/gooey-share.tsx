@@ -3,12 +3,10 @@
 import React, { createContext, useContext } from "react";
 import GooeyMenuFilter from "./gooey-filter";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 type GooeyMenuProps = {
   children: React.ReactNode;
   direction?: "horizontal" | "vertical";
-  className?: string;
 };
 
 type GooeyMenuContextType = {
@@ -17,16 +15,12 @@ type GooeyMenuContextType = {
   setIsChecked: (value: boolean) => void;
 };
 
-const GooeyMenuContext = createContext<GooeyMenuContextType | undefined>(
-  undefined
-);
+const GooeyMenuContext = createContext<GooeyMenuContextType | undefined>(undefined);
 
 export function useGooeyMenuContext() {
   const context = useContext(GooeyMenuContext);
   if (!context) {
-    throw new Error(
-      "useGooeyMenuContext must be used within a GooeyMenu provider"
-    );
+    throw new Error("useGooeyMenuContext must be used within a GooeyMenu provider");
   }
   return context;
 }
@@ -34,19 +28,17 @@ export function useGooeyMenuContext() {
 export function GooeyMenu({
   children,
   direction = "horizontal",
-  className,
 }: GooeyMenuProps) {
   const [isChecked, setIsChecked] = React.useState(false);
   return (
     <GooeyMenuContext.Provider value={{ direction, isChecked, setIsChecked }}>
-      <nav
-        aria-label="Gooey Menu"
-        className={cn("relative w-[400px] h-[200px]", className)}
+      <div
+        className="relative w-[400px] h-[200px]"
         style={{ filter: "url(#goo)" }}
       >
         <GooeyMenuFilter />
         {children}
-      </nav>
+      </div>
     </GooeyMenuContext.Provider>
   );
 }
@@ -63,7 +55,6 @@ export function GooeyMenuTrigger({ children }: { children: React.ReactNode }) {
         id="menu"
         checked={isChecked}
         onChange={() => setIsChecked(!isChecked)}
-        aria-label="Gooey Menu Trigger"
       />
       <label
         className="absolute top-1/2 left-1/2  z-10 flex h-14 w-14 scale-125 cursor-pointer items-center justify-center rounded-full bg-primary text-primary-foreground transition-all duration-1000  spring peer-checked:scale-100"
