@@ -186,7 +186,11 @@ export const previews = {
     },
     "gesturs/gooey-effect/share": {
       component: React.lazy<React.FC>(() => import("@/registry/components/gesturs/gooey-effect/share")),
-      code : [{"title":"share.tsx","code":"import GooeyShare from \"@/components/gesturs/gooey/gooey-share\";\nimport React from \"react\";\nimport {\n  FaFacebook,\n  FaInstagram,\n  FaLinkedin,\n  FaShare,\n  FaTwitter,\n} from \"react-icons/fa\";\n\nexport default function ShareDemo() {\n  return (\n    <div>\n      <GooeyShare\n        leftSections={[<FaFacebook key={0} />, <FaTwitter key={1} />]}\n        rightSections={[<FaInstagram key={0} />, <FaLinkedin key={1} />]}\n        shareIcon={<FaShare />}\n      />\n    </div>\n  );\n}\n"}]
+      code : [{"title":"share.tsx","code":"import {\n  GooeyMenu,\n  GooeyMenuTrigger,\n  GooeyMenuBefore,\n  GooeyMenuAfter,\n} from \"@/components/gesturs/gooey/gooey-menu\";\nimport React from \"react\";\nimport {\n  FaFacebook,\n  FaInstagram,\n  FaLinkedin,\n  FaShare,\n  FaTwitter,\n} from \"react-icons/fa\";\n\nexport default function ShareDemo() {\n  return (\n    <div>\n      <GooeyMenu>\n        <GooeyMenuBefore>\n          <FaLinkedin />\n          <FaInstagram />\n        </GooeyMenuBefore>\n        <GooeyMenuTrigger>\n          <FaShare />\n        </GooeyMenuTrigger>\n        <GooeyMenuAfter>\n          <FaFacebook />\n          <FaTwitter />\n        </GooeyMenuAfter>\n      </GooeyMenu>\n    </div>\n  );\n}\n"}]
+    },
+    "gesturs/gooey-effect/menu": {
+      component: React.lazy<React.FC>(() => import("@/registry/components/gesturs/gooey-effect/menu")),
+      code : [{"title":"menu.tsx","code":"import {\n  GooeyMenu,\n  GooeyMenuTrigger,\n  GooeyMenuBefore,\n  GooeyMenuAfter,\n} from \"@/components/gesturs/gooey/gooey-menu\";\nimport React from \"react\";\nimport {\n  FaLinkedin,\n  FaInstagram,\n  FaShare,\n  FaFacebook,\n  FaTwitter,\n  FaPlus,\n} from \"react-icons/fa\";\nimport { FaGear, FaQuestion } from \"react-icons/fa6\";\n\nexport default function GooeyMenuDemo() {\n  return (\n    <div>\n      <GooeyMenu direction=\"vertical\">\n        <GooeyMenuBefore>\n          <FaGear />\n          <FaQuestion />\n        </GooeyMenuBefore>\n        <GooeyMenuTrigger>\n          <FaPlus />\n        </GooeyMenuTrigger>\n      </GooeyMenu>\n    </div>\n  );\n}\n"}]
     },
     "/gesturs/pop-images/preview": {
       component: React.lazy<React.FC>(() => import("@/registry/components//gesturs/pop-images/preview")),

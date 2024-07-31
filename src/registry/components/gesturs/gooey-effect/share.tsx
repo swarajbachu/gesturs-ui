@@ -3,7 +3,7 @@ import {
   GooeyMenuTrigger,
   GooeyMenuBefore,
   GooeyMenuAfter,
-} from "@/components/gesturs/gooey/gooey-share";
+} from "@/components/gesturs/gooey/gooey-menu";
 import React from "react";
 import {
   FaFacebook,
@@ -16,10 +16,8 @@ import {
 export default function ShareDemo() {
   return (
     <div>
-      <GooeyMenu direction="vertical">
+      <GooeyMenu>
         <GooeyMenuBefore>
-          <FaFacebook />
-          <FaTwitter /> 
           <FaLinkedin />
           <FaInstagram />
         </GooeyMenuBefore>
@@ -29,8 +27,6 @@ export default function ShareDemo() {
         <GooeyMenuAfter>
           <FaFacebook />
           <FaTwitter />
-          <FaLinkedin />
-          <FaInstagram />
         </GooeyMenuAfter>
       </GooeyMenu>
     </div>

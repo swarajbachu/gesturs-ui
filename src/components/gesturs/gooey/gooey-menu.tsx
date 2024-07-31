@@ -3,10 +3,12 @@
 import React, { createContext, useContext } from "react";
 import GooeyMenuFilter from "./gooey-filter";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 type GooeyMenuProps = {
   children: React.ReactNode;
   direction?: "horizontal" | "vertical";
+  className?: string;
 };
 
 type GooeyMenuContextType = {
@@ -15,12 +17,16 @@ type GooeyMenuContextType = {
   setIsChecked: (value: boolean) => void;
 };
 
-const GooeyMenuContext = createContext<GooeyMenuContextType | undefined>(undefined);
+const GooeyMenuContext = createContext<GooeyMenuContextType | undefined>(
+  undefined
+);
 
 export function useGooeyMenuContext() {
   const context = useContext(GooeyMenuContext);
   if (!context) {
-    throw new Error("useGooeyMenuContext must be used within a GooeyMenu provider");
+    throw new Error(
+      "useGooeyMenuContext must be used within a GooeyMenu provider"
+    );
   }
   return context;
 }
@@ -28,12 +34,13 @@ export function useGooeyMenuContext() {
 export function GooeyMenu({
   children,
   direction = "horizontal",
+  className,
 }: GooeyMenuProps) {
   const [isChecked, setIsChecked] = React.useState(false);
   return (
     <GooeyMenuContext.Provider value={{ direction, isChecked, setIsChecked }}>
       <div
-        className="relative w-[400px] h-[200px]"
+        className={cn("relative w-[400px] h-[200px]", className)}
         style={{ filter: "url(#goo)" }}
       >
         <GooeyMenuFilter />
@@ -43,7 +50,15 @@ export function GooeyMenu({
   );
 }
 
-export function GooeyMenuTrigger({ children }: { children: React.ReactNode }) {
+export function GooeyMenuTrigger({
+  children,
+  id,
+  className,
+}: {
+  children: React.ReactNode;
+  id?: string;
+  className?: string;
+}) {
   const { isChecked, setIsChecked } = useGooeyMenuContext();
 
   return (
@@ -51,14 +66,17 @@ export function GooeyMenuTrigger({ children }: { children: React.ReactNode }) {
       <input
         type="checkbox"
         className="peer hidden"
-        name="menu"
-        id="menu"
+        name={id ? id : "menu"}
+        id={id ? id : "menu"}
         checked={isChecked}
         onChange={() => setIsChecked(!isChecked)}
       />
       <label
-        className="absolute top-1/2 left-1/2  z-10 flex h-14 w-14 scale-125 cursor-pointer items-center justify-center rounded-full bg-primary text-primary-foreground transition-all duration-1000  spring peer-checked:scale-100"
-        htmlFor="menu"
+        className={cn(
+          "absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 z-10 grid place-content-center h-14 w-14 scale-125 cursor-pointer  rounded-full bg-primary text-primary-foreground transition-all duration-500  peer-checked:scale-100",
+          className
+        )}
+        htmlFor={id ? id : "menu"}
       >
         {children}
       </label>
@@ -74,8 +92,12 @@ export function GooeyMenuBefore({ children }: { children: React.ReactNode }) {
     <>
       {React.Children.map(children, (child, index) => (
         <motion.button
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground"
+          className="absolute top-1/2 left-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground"
           key={index}
+          style={{
+            translateX: "-50%",
+            translateY: "-50%",
+          }}
           animate={{
             x: isChecked && isHorizontal ? -80 * (index + 1) : 0,
             y: isChecked && !isHorizontal ? -80 * (index + 1) : 0,
@@ -102,8 +124,12 @@ export function GooeyMenuAfter({ children }: { children: React.ReactNode }) {
     <>
       {React.Children.map(children, (child, index) => (
         <motion.button
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid place-content-center h-14 w-14 rounded-full bg-primary text-primary-foreground"
+          className="absolute top-1/2 left-1/2  grid place-content-center h-14 w-14 rounded-full bg-primary text-primary-foreground"
           key={index}
+          style={{
+            translateX: "-50%",
+            translateY: "-50%",
+          }}
           animate={{
             x: isChecked && isHorizontal ? 80 * (index + 1) : 0,
             y: isChecked && !isHorizontal ? 80 * (index + 1) : 0,

@@ -99,7 +99,7 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Gooey Effect",
-          href: "/docs/gesturs/gooey-effects",
+          href: "/docs/gesturs/gooey-menu",
         },
       ],
       label: "Cool Stuff",
