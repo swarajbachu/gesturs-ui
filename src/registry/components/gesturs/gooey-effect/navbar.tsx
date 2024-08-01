@@ -8,6 +8,9 @@ import Image from "next/image";
 export default function Navbar() {
   const [morph, setMorph] = React.useState(0);
   console.log(morph);
+  const [currentLinkIndex, setCurrentLinkIndex] = React.useState<number | null>(
+    null
+  );
 
   return (
     <GooeyFilter>
@@ -56,30 +59,49 @@ export default function Navbar() {
           </motion.div>
         </Wrapper>
         <Wrapper>
-          <motion.div className="flex h-full gap-4 px-1 text-black ">
-            <motion.button
-              className="text-sm font-semibold"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => setMorph(1)}
+          <div className="relative items-center justify-center flex h-full gap-1 px-1 text-black ">
+            <a
+              onClick={() => {
+                setMorph(1);
+                setCurrentLinkIndex(1);
+              }}
+              className="text-sm font-semibold text-center w-16 cursor-pointer"
             >
               Home
-            </motion.button>
-            <motion.button
-              className="text-sm font-semibold"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+            </a>
+            <a
+              onClick={() => {
+                setMorph(1);
+                setCurrentLinkIndex(2);
+              }}
+              className="text-sm font-semibold cursor-pointer text-center w-16"
             >
               About
-            </motion.button>
-            <motion.button
-              className="text-sm font-semibold"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+            </a>
+            <a
+              onClick={() => {
+                setMorph(1);
+                setCurrentLinkIndex(3);
+              }}
+              className="text-sm font-semibold cursor-pointer text-center w-16"
             >
               Contact
-            </motion.button>
-          </motion.div>
+            </a>
+            <motion.span
+              className="absolute size-1 bottom-0 rounded-full bg-black"
+              animate={{
+                left: currentLinkIndex
+                  ? `calc(${(currentLinkIndex / 3) * 100}% - 40px)`
+                  : 0,
+                display: currentLinkIndex ? "block" : "none",
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+              }}
+            />
+          </div>
         </Wrapper>
         <Wrapper>
           <motion.div className="flex h-full gap-1 p-1 mx-3">
