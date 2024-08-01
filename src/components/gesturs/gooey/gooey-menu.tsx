@@ -1,9 +1,9 @@
 "use client";
 
 import React, { createContext, useContext } from "react";
-import GooeyMenuFilter from "./gooey-filter";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import GooeyFilter from "./gooey-filter";
 
 type GooeyMenuProps = {
   children: React.ReactNode;
@@ -39,13 +39,9 @@ export function GooeyMenu({
   const [isChecked, setIsChecked] = React.useState(false);
   return (
     <GooeyMenuContext.Provider value={{ direction, isChecked, setIsChecked }}>
-      <div
-        className={cn("relative w-[400px] h-[200px]", className)}
-        style={{ filter: "url(#goo)" }}
-      >
-        <GooeyMenuFilter />
+      <GooeyFilter className={cn("relative w-[400px] h-[200px]", className)}>
         {children}
-      </div>
+      </GooeyFilter>
     </GooeyMenuContext.Provider>
   );
 }

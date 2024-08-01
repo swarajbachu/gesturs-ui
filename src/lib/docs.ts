@@ -1,8 +1,8 @@
-import { MainNavItem, SidebarNavItem } from "@/types"
+import { MainNavItem, SidebarNavItem } from "@/types";
 
 export interface DocsConfig {
-  mainNav: MainNavItem[]
-  sidebarNav: SidebarNavItem[]
+  mainNav: MainNavItem[];
+  sidebarNav: SidebarNavItem[];
 }
 
 export const docsConfig: DocsConfig = {
@@ -74,7 +74,7 @@ export const docsConfig: DocsConfig = {
         {
           title: "Avatar",
           href: "/docs/components/avatar",
-        }
+        },
       ],
       href: "/docs/components",
     },
@@ -101,8 +101,12 @@ export const docsConfig: DocsConfig = {
           title: "Gooey Effect",
           href: "/docs/gesturs/gooey-menu",
         },
+        // {
+        //   title: "Gooey Button",
+        //   href: "/docs/gesturs/gooey-buttons",
+        // },
       ],
       label: "Cool Stuff",
-    }
+    },
   ],
-}
+};
