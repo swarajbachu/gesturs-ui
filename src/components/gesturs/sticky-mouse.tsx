@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -9,16 +9,21 @@ interface StickyMouseProps {
   className?: string;
 }
 
-export default function StickyMouseWrapper({ children, className }: StickyMouseProps) {
+export default function StickyMouseWrapper({
+  children,
+  className,
+}: StickyMouseProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [position, setPosition] = useState<{ x: number; y: number }>({
+    x: 0,
+    y: 0,
+  });
 
   const handleMouse = (e: MouseEvent<HTMLDivElement>) => {
     const { clientX, clientY } = e;
     const { height, width, left, top } = ref.current!.getBoundingClientRect();
-    const amplificationFactor = 2; // Adjust this factor to extend the boundary
-    const x = (clientX - (left + width / 2)) * amplificationFactor;
-    const y = (clientY - (top + height / 2)) * amplificationFactor;
+    const x = clientX - (left + width / 2);
+    const y = clientY - (top + height / 2);
     setPosition({ x, y });
   };
 
@@ -36,9 +41,8 @@ export default function StickyMouseWrapper({ children, className }: StickyMouseP
       animate={{ x, y }}
       transition={{
         type: "spring",
-        stiffness: 200,
+        stiffness: 250,
         damping: 10,
-        mass: 0.5
       }}
       className={cn("relative", className)}
     >
