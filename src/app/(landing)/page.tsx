@@ -13,6 +13,9 @@ import React from "react";
 import PopoverDemo from "@/registry/components/ui/popover-demos/popover";
 import StickyMouseDemo from "@/registry/components/gesturs/sticky-mouse/button";
 import PopImagesParagraph from "@/registry/components/gesturs/pop-images/preview";
+import GooeyMenuDemo from "@/registry/components/gesturs/gooey-effect/menu";
+import GooeyShareDemo from "@/registry/components/gesturs/gooey-effect/share";
+import SwipeCardDemo from "@/registry/components/gesturs/swipe-cards/preview";
 
 export default function Home() {
   return (
@@ -30,6 +33,21 @@ export default function Home() {
       <LineSvg className="absolute -left-[9px] top-[-88px] col-start-10 hidden h-[calc(100%+88px+160px)] w-px xl:block" />
       <LineSvg className="absolute -left-[9px] top-[-88px] col-start-11 hidden h-[calc(100%+88px+160px)] w-px xl:block" />
       <LineSvg className="absolute -right-2 top-[-88px] col-start-3 h-[calc(100%+88px+160px)] w-px translate-x-1/2 sm:col-start-4 xl:col-start-[16]" />
+
+      <div className="relative xl:col-span-6">
+        <CardWrapper>
+          <div className="flex justify-center items-center flex-col gap-2">
+            <GooeyShareDemo />
+          </div>
+        </CardWrapper>
+      </div>
+      <div className="relative xl:col-span-9">
+        <CardWrapper>
+          <div className="flex gap-2">
+            <SwipeCardDemo />
+          </div>
+        </CardWrapper>
+      </div>
       <div className="relative xl:col-span-5">
         <CardWrapper>
           <div className="flex gap-2">
