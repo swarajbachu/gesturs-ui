@@ -13,7 +13,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
-export default function ShareDemo() {
+export default function GooeyShareDemo() {
   return (
     <div>
       <GooeyMenu>
