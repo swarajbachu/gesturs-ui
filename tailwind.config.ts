@@ -56,6 +56,11 @@ const config: Config = {
         none: "0 0 rgb(0, 0 / 0, 0)",
       },
       colors: {
+        active: '#275EFE',
+        'active-inner': '#FFFFFF',
+        default: '#D2D6E9',
+        'default-dark': '#C7CBDF',
+        black: '#1B1B22',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
