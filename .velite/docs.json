@@ -119,6 +119,181 @@
     "slugAsParams": "why-react-aria-components"
   },
   {
+    "slug": "docs/experimental/morph-navbar",
+    "title": "Morphing Navbar",
+    "description": "Morphing Navbar is a navbar that morphs into different utilities",
+    "date": "2024-08-01T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:c}=r;return c||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(c,{name:\"gesturs/gooey-effect/navbar\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "toc": [
+      {
+        "title": "Preview",
+        "url": "#preview",
+        "items": []
+      }
+    ],
+    "slugAsParams": "experimental/morph-navbar"
+  },
+  {
+    "slug": "docs/gesturs/compare-image",
+    "title": "Compare Image",
+    "description": "Compare two images side by side.",
+    "date": "2024-07-27T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:i,ComponentSource:c,Step:s,Steps:a}=r;return i||_missingMdxReference(\"ComponentPreview\",!0),c||_missingMdxReference(\"ComponentSource\",!0),s||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(i,{name:\"gesturs/compare-image/preview\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(s,{children:\"Copy and paste the following code into your project.\"}),n(c,{name:\"gesturs/compare-image\"}),n(s,{children:\"Update the import paths to match your project setup.\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      }
+    ],
+    "slugAsParams": "gesturs/compare-image"
+  },
+  {
+    "slug": "docs/gesturs/gooey-buttons",
+    "title": "Gooey Button",
+    "description": "Gooey Button is a button that expands and contracts with a gooey effect.",
+    "date": "2024-08-01T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:c}=r;return c||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(c,{name:\"gesturs/gooey-effect/button\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "toc": [
+      {
+        "title": "Preview",
+        "url": "#preview",
+        "items": []
+      }
+    ],
+    "slugAsParams": "gesturs/gooey-buttons"
+  },
+  {
+    "slug": "docs/gesturs/gooey-menu",
+    "title": "Gooey Menu",
+    "description": "Gooey Menu is a menu that expands and contracts with a gooey effect.",
+    "date": "2024-07-31T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:i,jsx:e,jsxs:n}=arguments[0];function _createMdxContent(s){const h={a:\"a\",code:\"code\",figure:\"figure\",h2:\"h2\",h3:\"h3\",p:\"p\",pre:\"pre\",span:\"span\",...s.components},{ComponentPreview:a,ComponentSource:r,Step:l,Steps:t}=h;return a||_missingMdxReference(\"ComponentPreview\",!0),r||_missingMdxReference(\"ComponentSource\",!0),l||_missingMdxReference(\"Step\",!0),t||_missingMdxReference(\"Steps\",!0),n(i,{children:[e(h.h2,{id:\"preview\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",e(a,{name:\"gesturs/gooey-effect/share\"}),\"\\n\",e(h.h2,{id:\"installation\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",n(t,{children:[e(l,{children:\"Copy and paste the following code into your project.\"}),e(r,{name:[\"gesturs/gooey/gooey-filter\",\"gesturs/gooey/gooey-menu\"]}),e(l,{children:\"Update the import paths to match your project setup.\"})]}),\"\\n\",e(h.h2,{id:\"usage\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#usage\",children:\"Usage\"})}),\"\\n\",e(h.figure,{\"data-rehype-pretty-code-figure\":\"\",children:e(h.pre,{style:{\"--shiki-light\":\"#24292e\",\"--shiki-dark\":\"#e1e4e8\",\"--shiki-light-bg\":\"#fff\",\"--shiki-dark-bg\":\"#24292e\"},tabIndex:\"0\",\"data-language\":\"tsx\",\"data-theme\":\"github-light github-dark\",children:n(h.code,{\"data-language\":\"tsx\",\"data-theme\":\"github-light github-dark\",style:{display:\"grid\"},children:[n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"<\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenu\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuBefore\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaLinkedin\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaInstagram\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  </\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuBefore\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuTrigger\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaShare\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  </\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuTrigger\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuAfter\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaFacebook\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaTwitter\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  </\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuAfter\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"</\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenu\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]})]})})}),\"\\n\",e(h.h2,{id:\"props\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#props\",children:\"Props\"})}),\"\\n\",e(h.h3,{id:\"direction\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#direction\",children:\"Direction\"})}),\"\\n\",n(h.p,{children:[\"direction can be \",e(h.code,{children:\"vertical\"}),\" or \",e(h.code,{children:\"horizontal\"}),\" and it will decide the direction of the menu. default is \",e(h.code,{children:\"horizontal\"}),\".\"]}),\"\\n\",n(h.p,{children:[\"make sure to add \",e(h.code,{children:\"id\"}),\" to \",e(h.code,{children:\"GooeyTrigger\"}),\" if you are using multiple \",e(h.code,{children:\"GooeyMenu\"}),\" in the same page.\"]}),\"\\n\",e(a,{name:\"gesturs/gooey-effect/menu\"})]})}return{default:function(i={}){const{wrapper:n}=i.components||{};return n?e(n,{...i,children:e(_createMdxContent,{...i})}):_createMdxContent(i)}};function _missingMdxReference(i,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+i+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Preview",
+        "url": "#preview",
+        "items": []
+      },
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      },
+      {
+        "title": "Usage",
+        "url": "#usage",
+        "items": []
+      },
+      {
+        "title": "Props",
+        "url": "#props",
+        "items": [
+          {
+            "title": "Direction",
+            "url": "#direction",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "slugAsParams": "gesturs/gooey-menu"
+  },
+  {
+    "slug": "docs/gesturs/link-image",
+    "title": "Link Image",
+    "description": "Link preview Images for your anchor tags",
+    "date": "2024-07-19T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:i,ComponentSource:s,Step:c,Steps:a}=r;return i||_missingMdxReference(\"ComponentPreview\",!0),s||_missingMdxReference(\"ComponentSource\",!0),c||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(i,{name:\"/gesturs/pop-images/preview\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(c,{children:\"Copy and paste the following code into your project.\"}),n(s,{name:\"gesturs/link-image\"}),n(c,{children:\"Update the import paths to match your project setup.\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      }
+    ],
+    "slugAsParams": "gesturs/link-image"
+  },
+  {
+    "slug": "docs/gesturs/sticky-mouse",
+    "title": "Sticky Mouse Wrapper",
+    "description": "Sticky Mouse Wrapper kinda makes components sticky to the mouse pointer.",
+    "date": "2024-07-27T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:i,ComponentSource:s,Step:c,Steps:a}=r;return i||_missingMdxReference(\"ComponentPreview\",!0),s||_missingMdxReference(\"ComponentSource\",!0),c||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(i,{name:\"gesturs/sticky-mouse/button\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(c,{children:\"Copy and paste the following code into your project.\"}),n(s,{name:\"gesturs/sticky-mouse\"}),n(c,{children:\"Update the import paths to match your project setup.\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      }
+    ],
+    "slugAsParams": "gesturs/sticky-mouse"
+  },
+  {
+    "slug": "docs/gesturs/swipe-cards",
+    "title": "Swipe Cards",
+    "description": "Swipe Cards is a component that allows you to swipe through a set of cards.",
+    "date": "2024-07-28T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:s,ComponentSource:i,Step:c,Steps:a}=r;return s||_missingMdxReference(\"ComponentPreview\",!0),i||_missingMdxReference(\"ComponentSource\",!0),c||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(s,{name:\"gesturs/swipe-cards/preview\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(c,{children:\"Copy and paste the following code into your project.\"}),n(i,{name:\"gesturs/swipe-cards\"}),n(c,{children:\"Update the import paths to match your project setup.\"}),n(c,{children:\"Also make sure adjust values for your own\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      }
+    ],
+    "slugAsParams": "gesturs/swipe-cards"
+  },
+  {
     "slug": "docs/components/avatar",
     "title": "Avatar",
     "description": "Displays an Avatar.",
@@ -725,180 +900,5 @@
       }
     ],
     "slugAsParams": "components/popover"
-  },
-  {
-    "slug": "docs/gesturs/compare-image",
-    "title": "Compare Image",
-    "description": "Compare two images side by side.",
-    "date": "2024-07-27T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:i,ComponentSource:c,Step:s,Steps:a}=r;return i||_missingMdxReference(\"ComponentPreview\",!0),c||_missingMdxReference(\"ComponentSource\",!0),s||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(i,{name:\"gesturs/compare-image/preview\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(s,{children:\"Copy and paste the following code into your project.\"}),n(c,{name:\"gesturs/compare-image\"}),n(s,{children:\"Update the import paths to match your project setup.\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
-    "toc": [
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      }
-    ],
-    "slugAsParams": "gesturs/compare-image"
-  },
-  {
-    "slug": "docs/gesturs/gooey-buttons",
-    "title": "Gooey Button",
-    "description": "Gooey Button is a button that expands and contracts with a gooey effect.",
-    "date": "2024-08-01T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:c}=r;return c||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(c,{name:\"gesturs/gooey-effect/button\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
-    "toc": [
-      {
-        "title": "Preview",
-        "url": "#preview",
-        "items": []
-      }
-    ],
-    "slugAsParams": "gesturs/gooey-buttons"
-  },
-  {
-    "slug": "docs/gesturs/gooey-menu",
-    "title": "Gooey Menu",
-    "description": "Gooey Menu is a menu that expands and contracts with a gooey effect.",
-    "date": "2024-07-31T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:i,jsx:e,jsxs:n}=arguments[0];function _createMdxContent(s){const h={a:\"a\",code:\"code\",figure:\"figure\",h2:\"h2\",h3:\"h3\",p:\"p\",pre:\"pre\",span:\"span\",...s.components},{ComponentPreview:a,ComponentSource:r,Step:l,Steps:t}=h;return a||_missingMdxReference(\"ComponentPreview\",!0),r||_missingMdxReference(\"ComponentSource\",!0),l||_missingMdxReference(\"Step\",!0),t||_missingMdxReference(\"Steps\",!0),n(i,{children:[e(h.h2,{id:\"preview\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",e(a,{name:\"gesturs/gooey-effect/share\"}),\"\\n\",e(h.h2,{id:\"installation\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",n(t,{children:[e(l,{children:\"Copy and paste the following code into your project.\"}),e(r,{name:[\"gesturs/gooey/gooey-filter\",\"gesturs/gooey/gooey-menu\"]}),e(l,{children:\"Update the import paths to match your project setup.\"})]}),\"\\n\",e(h.h2,{id:\"usage\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#usage\",children:\"Usage\"})}),\"\\n\",e(h.figure,{\"data-rehype-pretty-code-figure\":\"\",children:e(h.pre,{style:{\"--shiki-light\":\"#24292e\",\"--shiki-dark\":\"#e1e4e8\",\"--shiki-light-bg\":\"#fff\",\"--shiki-dark-bg\":\"#24292e\"},tabIndex:\"0\",\"data-language\":\"tsx\",\"data-theme\":\"github-light github-dark\",children:n(h.code,{\"data-language\":\"tsx\",\"data-theme\":\"github-light github-dark\",style:{display:\"grid\"},children:[n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"<\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenu\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuBefore\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaLinkedin\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaInstagram\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  </\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuBefore\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuTrigger\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaShare\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  </\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuTrigger\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuAfter\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaFacebook\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"    <\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"FaTwitter\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\" />\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"  </\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenuAfter\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]}),\"\\n\",n(h.span,{\"data-line\":\"\",children:[e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\"</\"}),e(h.span,{style:{\"--shiki-light\":\"#005CC5\",\"--shiki-dark\":\"#79B8FF\"},children:\"GooeyMenu\"}),e(h.span,{style:{\"--shiki-light\":\"#24292E\",\"--shiki-dark\":\"#E1E4E8\"},children:\">\"})]})]})})}),\"\\n\",e(h.h2,{id:\"props\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#props\",children:\"Props\"})}),\"\\n\",e(h.h3,{id:\"direction\",children:e(h.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#direction\",children:\"Direction\"})}),\"\\n\",n(h.p,{children:[\"direction can be \",e(h.code,{children:\"vertical\"}),\" or \",e(h.code,{children:\"horizontal\"}),\" and it will decide the direction of the menu. default is \",e(h.code,{children:\"horizontal\"}),\".\"]}),\"\\n\",n(h.p,{children:[\"make sure to add \",e(h.code,{children:\"id\"}),\" to \",e(h.code,{children:\"GooeyTrigger\"}),\" if you are using multiple \",e(h.code,{children:\"GooeyMenu\"}),\" in the same page.\"]}),\"\\n\",e(a,{name:\"gesturs/gooey-effect/menu\"})]})}return{default:function(i={}){const{wrapper:n}=i.components||{};return n?e(n,{...i,children:e(_createMdxContent,{...i})}):_createMdxContent(i)}};function _missingMdxReference(i,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+i+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
-    "toc": [
-      {
-        "title": "Preview",
-        "url": "#preview",
-        "items": []
-      },
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      },
-      {
-        "title": "Usage",
-        "url": "#usage",
-        "items": []
-      },
-      {
-        "title": "Props",
-        "url": "#props",
-        "items": [
-          {
-            "title": "Direction",
-            "url": "#direction",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "slugAsParams": "gesturs/gooey-menu"
-  },
-  {
-    "slug": "docs/gesturs/link-image",
-    "title": "Link Image",
-    "description": "Link preview Images for your anchor tags",
-    "date": "2024-07-19T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:i,ComponentSource:s,Step:c,Steps:a}=r;return i||_missingMdxReference(\"ComponentPreview\",!0),s||_missingMdxReference(\"ComponentSource\",!0),c||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(i,{name:\"/gesturs/pop-images/preview\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(c,{children:\"Copy and paste the following code into your project.\"}),n(s,{name:\"gesturs/link-image\"}),n(c,{children:\"Update the import paths to match your project setup.\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
-    "toc": [
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      }
-    ],
-    "slugAsParams": "gesturs/link-image"
-  },
-  {
-    "slug": "docs/gesturs/navbar",
-    "title": "Morphing Navbar",
-    "description": "Morphing Navbar is a navbar that morphs into different utilities",
-    "date": "2024-08-01T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:c}=r;return c||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(c,{name:\"gesturs/gooey-effect/navbar\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
-    "toc": [
-      {
-        "title": "Preview",
-        "url": "#preview",
-        "items": []
-      }
-    ],
-    "slugAsParams": "gesturs/navbar"
-  },
-  {
-    "slug": "docs/gesturs/sticky-mouse",
-    "title": "Sticky Mouse Wrapper",
-    "description": "Sticky Mouse Wrapper kinda makes components sticky to the mouse pointer.",
-    "date": "2024-07-27T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:i,ComponentSource:s,Step:c,Steps:a}=r;return i||_missingMdxReference(\"ComponentPreview\",!0),s||_missingMdxReference(\"ComponentSource\",!0),c||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(i,{name:\"gesturs/sticky-mouse/button\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(c,{children:\"Copy and paste the following code into your project.\"}),n(s,{name:\"gesturs/sticky-mouse\"}),n(c,{children:\"Update the import paths to match your project setup.\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
-    "toc": [
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      }
-    ],
-    "slugAsParams": "gesturs/sticky-mouse"
-  },
-  {
-    "slug": "docs/gesturs/swipe-cards",
-    "title": "Swipe Cards",
-    "description": "Swipe Cards is a component that allows you to swipe through a set of cards.",
-    "date": "2024-07-28T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:s,ComponentSource:i,Step:c,Steps:a}=r;return s||_missingMdxReference(\"ComponentPreview\",!0),i||_missingMdxReference(\"ComponentSource\",!0),c||_missingMdxReference(\"Step\",!0),a||_missingMdxReference(\"Steps\",!0),t(e,{children:[n(s,{name:\"gesturs/swipe-cards/preview\"}),\"\\n\",n(r.h2,{id:\"installation\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#installation\",children:\"Installation\"})}),\"\\n\",t(a,{children:[n(c,{children:\"Copy and paste the following code into your project.\"}),n(i,{name:\"gesturs/swipe-cards\"}),n(c,{children:\"Update the import paths to match your project setup.\"}),n(c,{children:\"Also make sure adjust values for your own\"})]})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
-    "toc": [
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      }
-    ],
-    "slugAsParams": "gesturs/swipe-cards"
   }
 ]

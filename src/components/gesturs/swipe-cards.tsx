@@ -39,7 +39,11 @@ function SwipeCard({
 
   return (
     <motion.div
-      className="absolute cursor-grab"
+      className="absolute cursor-grab left-1/2 top-1/2 "
+      initial={{
+        translateX: "-50%",
+        translateY: "-50%",
+      }}
       style={{
         x,
         y,
@@ -71,8 +75,7 @@ const testimonials = [
     testimonial:
       "I can't imagine working without Gesturs. It has streamlined our workflow and increased our team's collaboration.",
     personName: "Jane Smith",
-    image:
-      "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61",
+    image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61",
     profession: "Project Manager",
     companyName: "Innovatech Ltd.",
   },

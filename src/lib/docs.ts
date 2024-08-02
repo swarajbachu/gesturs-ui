@@ -105,12 +105,18 @@ export const docsConfig: DocsConfig = {
         //   title: "Gooey Button",
         //   href: "/docs/gesturs/gooey-buttons",
         // },
-        {
-          title: "Navbar",
-          href: "/docs/gesturs/navbar",
-        }
       ],
       label: "Cool Stuff",
     },
+    {
+      title: "Experimental",
+      items: [
+        {
+          title: "Morph Navbar",
+          href: "/docs/experimental/morph-navbar",
+        },
+      ],
+      label: "Alpha",
+    }
   ],
 };
