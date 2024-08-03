@@ -98,13 +98,13 @@ export const docsConfig: DocsConfig = {
           href: "/docs/gesturs/swipe-cards",
         },
         {
-          title: "Gooey Effect",
+          title: "Gooey Menu",
           href: "/docs/gesturs/gooey-menu",
         },
-        // {
-        //   title: "Gooey Button",
-        //   href: "/docs/gesturs/gooey-buttons",
-        // },
+        {
+          title: "Gooey Button",
+          href: "/docs/gesturs/gooey-buttons",
+        },
       ],
       label: "Cool Stuff",
     },
@@ -117,6 +117,6 @@ export const docsConfig: DocsConfig = {
         },
       ],
       label: "Alpha",
-    }
+    },
   ],
 };

@@ -28,7 +28,7 @@ let button = tv({
       secondary:
         "bg-secondary text-secondary-foreground hover:bg-secondary/80 pressed:bg-secondary/90 border-secondary/10",
       destructive:
-        "bg-destructive text-destructive-foreground hover:bg-destructive/90 border-destructive/10",
+        "bg-destructive text-destructive-foreground border-destructive/10",
       accent: "hover:bg-accent text-accent-foreground border-none",
       outline: "bg-transparent border hover:bg-foreground/5",
       ghost: "bg-transparent border-none hover:bg-foreground/5 !shadow-none",
