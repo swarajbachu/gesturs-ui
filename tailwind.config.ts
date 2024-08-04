@@ -56,6 +56,11 @@ const config: Config = {
         none: "0 0 rgb(0, 0 / 0, 0)",
       },
       colors: {
+        active: '#275EFE',
+        'active-inner': '#FFFFFF',
+        default: '#D2D6E9',
+        'default-dark': '#C7CBDF',
+        black: '#1B1B22',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -119,6 +124,9 @@ const config: Config = {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
+      transitionTimingFunction: {
+        "spring": "linear(0, 0.88117 15.492%, 1.09261 23.232%, 1.10421 28.713%, 0.99031 49.585%,0.99995)",
+      }
     },
   },
   plugins: [
