@@ -3,7 +3,7 @@
     "slug": "docs",
     "title": "Introduction",
     "description": "Create Super Accessible and Scalable Application using Gesturs UI",
-    "date": "2020-01-01T00:00:00.000Z",
+    "date": "2024-07-17T00:00:00.000Z",
     "references": [
       {
         "title": "Report Issue",
@@ -52,7 +52,7 @@
     "slug": "docs/introduction",
     "title": "Introduction",
     "description": "Create Super Accessible and Scalable Application using Gesturs UI",
-    "date": "2020-01-01T00:00:00.000Z",
+    "date": "2024-07-17T00:00:00.000Z",
     "references": [
       {
         "title": "Report Issue",
@@ -85,7 +85,7 @@
     "slug": "docs/why-react-aria-components",
     "title": "Introduction",
     "description": "This page discusses why React Aria exists, and the problems it solves.",
-    "date": "2020-01-01T00:00:00.000Z",
+    "date": "2024-07-17T00:00:00.000Z",
     "references": [
       {
         "title": "Report Issue",
@@ -117,28 +117,6 @@
       }
     ],
     "slugAsParams": "why-react-aria-components"
-  },
-  {
-    "slug": "docs/experimental/morph-navbar",
-    "title": "Morphing Navbar",
-    "description": "Morphing Navbar is a navbar that morphs into different utilities",
-    "date": "2024-08-01T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:c}=r;return c||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(c,{name:\"gesturs/gooey-effect/navbar\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
-    "toc": [
-      {
-        "title": "Preview",
-        "url": "#preview",
-        "items": []
-      }
-    ],
-    "slugAsParams": "experimental/morph-navbar"
   },
   {
     "slug": "docs/components/avatar",
@@ -747,6 +725,28 @@
       }
     ],
     "slugAsParams": "components/popover"
+  },
+  {
+    "slug": "docs/experimental/morph-navbar",
+    "title": "Morphing Navbar",
+    "description": "Morphing Navbar is a navbar that morphs into different utilities",
+    "date": "2024-08-01T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:c}=r;return c||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(c,{name:\"gesturs/gooey-effect/navbar\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "toc": [
+      {
+        "title": "Preview",
+        "url": "#preview",
+        "items": []
+      }
+    ],
+    "slugAsParams": "experimental/morph-navbar"
   },
   {
     "slug": "docs/gesturs/compare-image",
