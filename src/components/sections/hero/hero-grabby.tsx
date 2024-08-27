@@ -109,7 +109,7 @@ export default function GrabbyHero() {
             <h3 className="mb-2 font-semibold">Messages</h3>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <Avatar src="/static/batman.png" />
+                <Avatar src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
                 <div>
                   <p className="font-medium">John Doe</p>
                   <p className="text-sm text-muted-foreground">
@@ -118,7 +118,7 @@ export default function GrabbyHero() {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <Avatar src="/static/batman.png" />
+                <Avatar src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
 
                 <div>
                   <p className="font-medium">Jane Smith</p>
@@ -191,7 +191,7 @@ export default function GrabbyHero() {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <Avatar src="/static/batman.png" />
+                  <Avatar src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
 
                   <p className="font-medium">Alice Smith</p>
                 </div>
@@ -199,7 +199,7 @@ export default function GrabbyHero() {
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <Avatar src="/static/batman.png" />
+                  <Avatar src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
 
                   <p className="font-medium">Bob Johnson</p>
                 </div>
