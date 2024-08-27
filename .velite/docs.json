@@ -727,28 +727,6 @@
     "slugAsParams": "components/popover"
   },
   {
-    "slug": "docs/experimental/morph-navbar",
-    "title": "Morphing Navbar",
-    "description": "Morphing Navbar is a navbar that morphs into different utilities",
-    "date": "2024-08-01T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:c}=r;return c||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(c,{name:\"gesturs/gooey-effect/navbar\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
-    "toc": [
-      {
-        "title": "Preview",
-        "url": "#preview",
-        "items": []
-      }
-    ],
-    "slugAsParams": "experimental/morph-navbar"
-  },
-  {
     "slug": "docs/gesturs/compare-image",
     "title": "Compare Image",
     "description": "Compare two images side by side.",
@@ -900,5 +878,54 @@
       }
     ],
     "slugAsParams": "gesturs/swipe-cards"
+  },
+  {
+    "slug": "docs/sections/hero",
+    "title": "Hero Sections",
+    "description": "Hero sections are the first thing users see when they land on a page. They are designed to grab the user's attention and encourage them to take action.",
+    "date": "2024-08-27T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:o}=arguments[0];function _createMdxContent(r){const t={a:\"a\",h2:\"h2\",...r.components},{ComponentPreview:i,ComponentSource:s}=t;return i||_missingMdxReference(\"ComponentPreview\",!0),s||_missingMdxReference(\"ComponentSource\",!0),o(e,{children:[n(t.h2,{id:\"cool-moving-components-hero-section\",children:n(t.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#cool-moving-components-hero-section\",children:\"Cool Moving Components Hero Section\"})}),\"\\n\",n(i,{name:\"sections/herosections/grabby-preview\"}),\"\\n\",n(t.h2,{id:\"install\",children:n(t.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#install\",children:\"Install\"})}),\"\\n\",n(s,{name:[\"sections/hero/hero-grabby\",\"gesturs/wrappers/dragwrapper\",\"gesturs/wrappers/fade-in\"]})]})}return{default:function(e={}){const{wrapper:o}=e.components||{};return o?n(o,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Cool Moving Components Hero Section",
+        "url": "#cool-moving-components-hero-section",
+        "items": []
+      },
+      {
+        "title": "Install",
+        "url": "#install",
+        "items": []
+      }
+    ],
+    "slugAsParams": "sections/hero"
+  },
+  {
+    "slug": "docs/experimental/morph-navbar",
+    "title": "Morphing Navbar",
+    "description": "Morphing Navbar is a navbar that morphs into different utilities",
+    "date": "2024-08-01T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:c}=r;return c||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(c,{name:\"gesturs/gooey-effect/navbar\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "toc": [
+      {
+        "title": "Preview",
+        "url": "#preview",
+        "items": []
+      }
+    ],
+    "slugAsParams": "experimental/morph-navbar"
   }
 ]

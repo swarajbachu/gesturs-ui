@@ -19,7 +19,7 @@ export default function GooeyButtonDemo() {
   return (
     <GooeyFilter className="relative inline-block h-fit w-fit">
       <motion.button
-        className="relative w-28 h-10 z-10 bg-primary text-primary-foreground "
+        className="relative w-36  h-14 z-10 bg-primary text-primary-foreground "
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
         onClick={handleDelete}
       >
@@ -31,7 +31,7 @@ export default function GooeyButtonDemo() {
         transition={{
           type: "spring",
           stiffness: 100,
-          damping: 20,
+          damping: 10,
           duration: 0.5,
         }}
         onClick={() => setClicked(false)}

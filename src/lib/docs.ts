@@ -109,6 +109,15 @@ export const docsConfig: DocsConfig = {
       label: "Cool Stuff",
     },
     {
+      title: "Sections",
+      items: [
+        {
+          title: "Hero Section",
+          href: "/docs/sections/hero",
+        },
+      ],
+    },
+    {
       title: "Experimental",
       items: [
         {
