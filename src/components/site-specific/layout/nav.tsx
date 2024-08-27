@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaGithub } from "react-icons/fa";
 
 export function MainNav() {
   const pathname = usePathname();
@@ -23,11 +24,10 @@ export function MainNav() {
         <span className="hidden font-bold md:inline-block text-foreground">
           {siteConfig.name}
         </span>
-        <Badge color="sky">
-          Beta
-        </Badge>
+        <Badge color="sky">Beta</Badge>
       </Link>
       <nav className="hidden items-center space-x-6 text-sm font-medium xl:flex">
+       
         {docsConfig.mainNav.map((item) => (
           <Link
             key={item.href}

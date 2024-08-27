@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { ModeToggle } from "./toggle";
 import { Badge } from "@/components/ui/badge";
+import { FaGithub } from "react-icons/fa";
 
 export default function MarketingHeader() {
   return (
@@ -29,6 +30,12 @@ export default function MarketingHeader() {
             href="/docs"
           >
             Docs
+          </Link>
+          <Link
+            className="text-sm/6 font-medium text-zinc-700 outline-blue-500 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white"
+            href="https://github.com/swarajbachu/gesturs-ui"
+          >
+            <FaGithub className="text-xl" />
           </Link>
           <ModeToggle />
         </div>
