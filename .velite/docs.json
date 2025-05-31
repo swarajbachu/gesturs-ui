@@ -60,7 +60,7 @@
       }
     ],
     "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(i){const s={a:\"a\",em:\"em\",h1:\"h1\",h2:\"h2\",li:\"li\",p:\"p\",strong:\"strong\",ul:\"ul\",...i.components};return t(e,{children:[n(s.h1,{id:\"gesturs-ui\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#gesturs-ui\",children:\"Gesturs UI\"})}),\"\\n\",n(s.p,{children:\"Gesturs UI is a collection of reusable components that you can copy and paste into your web apps. It primarily features components, blocks, and templates geared towards creating landing pages and user-facing marketing materials.\"}),\"\\n\",n(s.h2,{id:\"philosophy\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#philosophy\",children:\"Philosophy\"})}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"I personally believe that good design contributes significant value to software. It's one of the main methods of establishing trust between you and an internet stranger.\"}),\" Trust is important for internet businesses because it is the first thing a visitor evaluates before pulling out their credit card and becoming a customer.\"]}),\"\\n\",n(s.p,{children:\"Some questions visitors might ask themselves are:\"}),\"\\n\",t(s.ul,{children:[\"\\n\",n(s.li,{children:'\"Is this company legit?\"'}),\"\\n\",n(s.li,{children:'\"Who else is using it?\"'}),\"\\n\",n(s.li,{children:'\"Can I trust them with my personal data?\"'}),\"\\n\"]}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"Poor design reflects poorly on your team.\"}),\" It comes off as lazy, unfinished, and unstable. It shows that the team doesn't care about user experience.\"]}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"Good design indicates that the team behind has their shit together.\"}),\" I can probably expect good things from them in the future.\"]}),\"\\n\",n(s.p,{children:'It makes me think, \"If they care so much about these tiny details, they must care a lot about other things in the company, including their customers!\"'}),\"\\n\",t(s.p,{children:[\"A great example of this in play is the \",n(s.a,{href:\"https://linear.app\",children:\"Linear\"}),\" landing page which I first came across in 2020. I didn't even need to try the product but I already knew that it \",n(s.em,{children:\"must\"}),\" be good.\"]}),\"\\n\",t(s.p,{children:[\"This library is heavily inspired by \",n(s.a,{href:\"https://ui.shadcn.com\",children:\"shadcn\"}),\".\"]}),\"\\n\",n(s.h2,{id:\"features\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#features\",children:\"Features\"})}),\"\\n\",n(s.p,{children:\"Gesturs UI components are built upon React Aria, making them super accessible and scalable.\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const s={a:\"a\",h1:\"h1\",h2:\"h2\",li:\"li\",p:\"p\",strong:\"strong\",ul:\"ul\",...o.components};return t(e,{children:[n(s.h1,{id:\"gesturs-ui\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#gesturs-ui\",children:\"Gesturs UI\"})}),\"\\n\",n(s.p,{children:\"Hey there! 👋 Welcome to Gesturs UI - my little playground of cool components that I've been building for fun. Think of it as your friendly neighborhood component library where you can just grab whatever catches your eye and drop it into your projects. I mainly focus on making stuff that'll make your landing pages look awesome!\"}),\"\\n\",t(s.p,{children:[\"Want a full website built? Hit me up at \",n(s.a,{href:\"https://x.com/swarajbachu\",children:\"x.com/swarajbachu\"}),\" - I'd love to chat!\"]}),\"\\n\",n(s.h2,{id:\"philosophy\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#philosophy\",children:\"Philosophy\"})}),\"\\n\",t(s.p,{children:[n(s.strong,{children:\"Look, here's the deal\"}),\" - I absolutely love tinkering with design and creating cool stuff! That's basically why Gesturs UI exists. I'm building these components using \",n(s.a,{href:\"https://ui.shadcn.com\",children:\"shadcn\"}),' (because it\\'s awesome), and thought \"hey, why not share these with everyone?\"']}),\"\\n\",n(s.p,{children:\"Here's what I'm all about:\"}),\"\\n\",t(s.ul,{children:[\"\\n\",t(s.li,{children:[n(s.strong,{children:\"Keep it Simple\"}),\" - No complicated stuff. Just copy, paste, and you're good to go!\"]}),\"\\n\",t(s.li,{children:[n(s.strong,{children:\"Make it Pretty\"}),\" - Because who doesn't love things that look nice? 🎨\"]}),\"\\n\",t(s.li,{children:[n(s.strong,{children:\"Everyone's Welcome\"}),\" - Built with accessibility in mind, because the web should be for everyone\"]}),\"\\n\",t(s.li,{children:[n(s.strong,{children:\"Actually Useful\"}),\" - No fancy-but-useless stuff here. Everything's battle-tested and ready to rock\"]}),\"\\n\"]}),\"\\n\",n(s.p,{children:\"The coolest part? You don't need to install a bunch of extra packages or deal with complex setups. Just grab what you like and boom - you're ready to roll! Think of it as borrowing ingredients from a friend's kitchen - take what you need, use it how you want!\"}),\"\\n\",n(s.h2,{id:\"features\",children:n(s.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#features\",children:\"Features\"})}),\"\\n\",n(s.p,{children:\"Everything here is built on top of shadcn components (because why reinvent the wheel, right?). Each component is like a little LEGO piece - well-tested, looks great, and plays nice with others. Just plug and play!\"}),\"\\n\",n(s.p,{children:\"Gesturs UI components are built using shadcn components, making them super accessible and scalable. Each component is carefully designed and tested to ensure it works seamlessly in your projects.\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
     "toc": [
       {
         "title": "Gesturs UI",
@@ -117,33 +117,6 @@
       }
     ],
     "slugAsParams": "why-react-aria-components"
-  },
-  {
-    "slug": "docs/sections/hero",
-    "title": "Hero Sections",
-    "description": "Hero sections are the first thing users see when they land on a page. They are designed to grab the user's attention and encourage them to take action.",
-    "date": "2024-08-27T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:o}=arguments[0];function _createMdxContent(r){const t={a:\"a\",h2:\"h2\",...r.components},{ComponentPreview:i,ComponentSource:s}=t;return i||_missingMdxReference(\"ComponentPreview\",!0),s||_missingMdxReference(\"ComponentSource\",!0),o(e,{children:[n(t.h2,{id:\"cool-moving-components-hero-section\",children:n(t.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#cool-moving-components-hero-section\",children:\"Cool Moving Components Hero Section\"})}),\"\\n\",n(i,{name:\"sections/herosections/grabby-preview\"}),\"\\n\",n(t.h2,{id:\"install\",children:n(t.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#install\",children:\"Install\"})}),\"\\n\",n(s,{name:[\"sections/hero/hero-grabby\",\"gesturs/wrappers/dragwrapper\",\"gesturs/wrappers/fade-in\"]})]})}return{default:function(e={}){const{wrapper:o}=e.components||{};return o?n(o,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
-    "toc": [
-      {
-        "title": "Cool Moving Components Hero Section",
-        "url": "#cool-moving-components-hero-section",
-        "items": []
-      },
-      {
-        "title": "Install",
-        "url": "#install",
-        "items": []
-      }
-    ],
-    "slugAsParams": "sections/hero"
   },
   {
     "slug": "docs/components/compare-image",
@@ -353,5 +326,32 @@
       }
     ],
     "slugAsParams": "components/swipe-cards"
+  },
+  {
+    "slug": "docs/sections/hero",
+    "title": "Hero Sections",
+    "description": "Hero sections are the first thing users see when they land on a page. They are designed to grab the user's attention and encourage them to take action.",
+    "date": "2024-08-27T00:00:00.000Z",
+    "references": [
+      {
+        "title": "Report Issue",
+        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
+      }
+    ],
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:o}=arguments[0];function _createMdxContent(r){const t={a:\"a\",h2:\"h2\",...r.components},{ComponentPreview:i,ComponentSource:s}=t;return i||_missingMdxReference(\"ComponentPreview\",!0),s||_missingMdxReference(\"ComponentSource\",!0),o(e,{children:[n(t.h2,{id:\"cool-moving-components-hero-section\",children:n(t.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#cool-moving-components-hero-section\",children:\"Cool Moving Components Hero Section\"})}),\"\\n\",n(i,{name:\"sections/herosections/grabby-preview\"}),\"\\n\",n(t.h2,{id:\"install\",children:n(t.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#install\",children:\"Install\"})}),\"\\n\",n(s,{name:[\"sections/hero/hero-grabby\",\"gesturs/wrappers/dragwrapper\",\"gesturs/wrappers/fade-in\"]})]})}return{default:function(e={}){const{wrapper:o}=e.components||{};return o?n(o,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};function _missingMdxReference(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}",
+    "toc": [
+      {
+        "title": "Cool Moving Components Hero Section",
+        "url": "#cool-moving-components-hero-section",
+        "items": []
+      },
+      {
+        "title": "Install",
+        "url": "#install",
+        "items": []
+      }
+    ],
+    "slugAsParams": "sections/hero"
   }
 ]
