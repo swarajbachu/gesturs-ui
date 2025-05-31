@@ -10,26 +10,46 @@ date: 2025-05-31
 
 ## Installation
 
-<Steps>
-  <Step>Install the required dependencies:</Step>
-  ```bash
-  npm install chrono-node date-fns @radix-ui/react-popover lucide-react
-  # or
-  yarn add chrono-node date-fns @radix-ui/react-popover lucide-react
-  # or
-  pnpm add chrono-node date-fns @radix-ui/react-popover lucide-react
-  ```
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">
+    <Steps>
+      <Step>Run the following command:</Step>
+      <PackageManagerTabs
+        pnpmCommand="pnpm dlx shadcn@latest add 'https://ui.gesturs.com/r/date-time-picker'"
+        npmCommand="npx shadcn@latest add 'https://ui.gesturs.com/r/date-time-picker'"
+        yarnCommand="yarn dlx shadcn@latest add 'https://ui.gesturs.com/r/date-time-picker'"
+        bunCommand="bunx shadcn@latest add 'https://ui.gesturs.com/r/date-time-picker'"
+      />
+    </Steps>
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Install the required dependencies:</Step>
+      <PackageManagerTabs
+        pnpmCommand="pnpm add chrono-node date-fns @radix-ui/react-popover lucide-react"
+        npmCommand="npm install chrono-node date-fns @radix-ui/react-popover lucide-react"
+        yarnCommand="yarn add chrono-node date-fns @radix-ui/react-popover lucide-react"
+        bunCommand="bun add chrono-node date-fns @radix-ui/react-popover lucide-react"
+      />
 
-{" "}
+      <Step>Install the required components:</Step>
+      <PackageManagerTabs
+        pnpmCommand="pnpm dlx shadcn@latest add button calendar input popover"
+        npmCommand="npx shadcn@latest add button calendar input popover"
+        yarnCommand="yarn dlx shadcn@latest add button calendar input popover"
+        bunCommand="bunx shadcn@latest add button calendar input popover"
+      />
 
-<Step>Install the component directly using shadcn-ui:</Step>
-```bash pnpm dlx shadcn@latest add "https://ui.gesturs.com/r/date-time-picker" ```
+      <Step>Copy and paste the following code into your project:</Step>
+      <ComponentSource name="gesturs-components/date-time-picker" />
+    </Steps>
 
-  <Step>Make sure you have the required components installed:</Step>
-  ```bash
-  pnpm dlx shadcn@latest add button calendar input popover
-  ```
-</Steps>
+  </TabsContent>
+</Tabs>
 
 ## Usage
 

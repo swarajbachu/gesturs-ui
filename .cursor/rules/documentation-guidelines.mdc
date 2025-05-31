@@ -26,27 +26,58 @@ date: YYYY-MM-DD
 <ComponentPreview name="gesturs/component-name" />
 
 ## Installation
-<Steps>
-  <Step>Required dependencies</Step>
-  <Step>Installation command</Step>
-  <Step>Additional setup if needed</Step>
-</Steps>
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">
+    <Steps>
+      <Step>Run the following command:</Step>
+      <PackageManagerTabs>
+        <TabsList>
+          <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+          <TabsTrigger value="npm">npm</TabsTrigger>
+          <TabsTrigger value="yarn">yarn</TabsTrigger>
+          <TabsTrigger value="bun">bun</TabsTrigger>
+        </TabsList>
+        <TabsContent value="pnpm">
+          <Code>pnpm dlx shadcn@latest add "https://ui.gesturs.com/r/component-name"</Code>
+        </TabsContent>
+        <!-- Repeat for other package managers -->
+      </PackageManagerTabs>
+    </Steps>
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Install dependencies</Step>
+      <PackageManagerTabs>
+        <!-- Package manager specific installation commands -->
+      </PackageManagerTabs>
+      <Step>Copy component code</Step>
+      <ComponentSource name="gesturs-components/component-name" />
+    </Steps>
+  </TabsContent>
+</Tabs>
 
 ## Usage
-Basic usage example with TypeScript code
+<Code>
+// TypeScript example code
+</Code>
 
 ## Features
 List of key features with emojis
 
 ## API Reference
-Props table with the following columns:
-- Name
-- Type
-- Default
-- Description
+| Name | Type | Default | Description |
+|------|------|---------|-------------|
+| prop | type | default | description |
 
 ## Examples
-Common use cases with code examples
+### Example Name
+<Code>
+// Example code
+</Code>
 
 ## Styling (if applicable)
 Styling guidelines and customization options
@@ -54,6 +85,28 @@ Styling guidelines and customization options
 ## Accessibility (if applicable)
 Accessibility features and considerations
 ```
+
+## Component Usage Guidelines
+
+1. Always use the `<Code>` component for code blocks instead of markdown backticks
+2. Use `<PackageManagerTabs>` for package manager specific commands
+3. Use `<Tabs>` for organizing installation methods and other tabbed content
+4. Use `<ComponentPreview>` for live component demonstrations
+5. Use `<ComponentSource>` for showing component source code
+6. Use `<Steps>` for sequential instructions
+
+## Best Practices
+
+1. Always include TypeScript examples
+2. Document all props and their types
+3. Provide real-world usage examples
+4. Include accessibility considerations
+5. Keep documentation up to date with component changes
+6. Use proper markdown formatting
+7. Include installation steps with all required dependencies
+8. Use emoji icons for feature lists
+9. Ensure all code examples are properly formatted and indented
+10. Include package manager commands for pnpm, npm, yarn, and bun
 
 ## Registry JSON Format
 
@@ -80,12 +133,10 @@ Registry files should follow this structure:
 }
 ```
 
-## Best Practices
+## Component Preview Guidelines
 
-1. Always include TypeScript examples
-2. Document all props and their types
-3. Provide real-world usage examples
-4. Include accessibility considerations
-5. Keep documentation up to date with component changes
-6. Use proper markdown formatting
-7. Include installation steps with all required dependencies
+1. Always test the component preview before committing
+2. Ensure the preview demonstrates the main features
+3. Include examples of different prop combinations
+4. Add interactive elements where applicable
+5. Show responsive behavior if relevant

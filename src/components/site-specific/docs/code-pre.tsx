@@ -18,11 +18,9 @@ export default async function CodePre({
     },
   });
   return (
-    <div className={cn("relative dark:bg-zinc-950 dark:text-zinc-100 ", className)}>
-      <div
-        className="code-block-preview dark:[&_pre]:bg-[#0d1117] dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e]"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </div>
+    <div
+      className="dark:[&_pre]:bg-[#0d1117] py-4 overflow-x-scroll dark:[&_span]:text-[#c9d1d9] light:[&_pre]:bg-[#ffffff] light:[&_span]:text-[#24292e]"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   );
 }
