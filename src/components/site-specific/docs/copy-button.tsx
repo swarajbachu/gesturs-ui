@@ -34,10 +34,10 @@ export function CopyButton({
       variant="ghost"
       size={size}
       className={cn(
-        "relative z-10  text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:size-8",
+        "relative z-10  text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:size-4",
         className
       )}
-      onPress={() => {
+      onClick={() => {
         copyToClipboardWithMeta(value);
         setHasCopied(true);
       }}

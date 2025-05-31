@@ -4,8 +4,11 @@ import { cn } from "@/lib/utils";
 import { ComponentPreview } from "./site-specific/docs/component-preview";
 import * as React from "react";
 import { ComponentSource } from "./site-specific/docs/component-source";
-import { CopyButton } from "./site-specific/docs/copy-button";
 import { parseChildren } from "@/lib/extract-code";
+import { PackageManagerTabs } from "./site-specific/docs/package-manager-tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
+import CodePre from "./site-specific/docs/code-pre";
+import CodeMultiline from "./site-specific/docs/code-multline";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -16,6 +19,11 @@ const components = {
   Image,
   ComponentPreview,
   ComponentSource,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+  PackageManagerTabs,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
@@ -151,11 +159,11 @@ const components = {
   ),
   Steps: ({ ...props }) => (
     <div
-      className="[&>h3]:step steps mb-12 ml-4 border-l border-muted-foreground pl-8 [counter-reset:step]"
+      className="[&>h3]:step steps mb-12 ml-4 border-l border-border pl-8 [counter-reset:step]"
       {...props}
     />
   ),
-  pre: ({
+  pre: function Pre({
     className,
     __rawString__,
     __npmCommand__,
@@ -164,11 +172,9 @@ const components = {
     __bunCommand__,
     __withMeta__,
     __src__,
-    // __style__,
     __name__,
     ...props
   }: React.HTMLAttributes<HTMLPreElement> & {
-    // __style__?: Style["name"]
     __rawString__?: string;
     __npmCommand__?: string;
     __pnpmCommand__?: string;
@@ -177,25 +183,22 @@ const components = {
     __withMeta__?: boolean;
     __src__?: string;
     __name__?: string;
-  }) => {
+  }) {
     const value = parseChildren(props.children);
+
+    const isCommand =
+      value.code.includes("npm") ||
+      value.code.includes("pnpm") ||
+      value.code.includes("yarn") ||
+      value.code.includes("bun");
+
+    if (isCommand) {
+      return <CodePre code={value.code} />;
+    }
+
     return (
-      <div className="relative">
-        <pre
-          className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-muted py-3 bg-zinc-950 text-zinc-100 dark:bg-zinc-800  ",
-            className
-          )}
-          {...props}
-        />
-        <CopyButton
-          value={value.code}
-          src={__src__}
-          className={cn(
-            "absolute right-4 top-3 size-8",
-            __withMeta__ && "top-16"
-          )}
-        />
+      <div className="group relative my-4">
+        <CodeMultiline code={value.code} />
       </div>
     );
   },
@@ -212,6 +215,7 @@ const components = {
 
 interface MdxProps {
   code: string;
+  components?: Record<string, React.ComponentType>;
 }
 
 export function MDXContent({ code }: MdxProps) {

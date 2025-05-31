@@ -5,7 +5,14 @@ import { notFound } from "next/navigation";
 import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
-import { Breadcrumb, Breadcrumbs } from "@/components/ui/breadcrumbs";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { TableOfContents } from "@/components/site-specific/docs/toc";
 import { ScrollArea } from "@/components/site-specific/ui/scroll-area";
 
@@ -14,7 +21,6 @@ interface PostPageProps {
     slug: string[];
   };
 }
-
 
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
@@ -77,18 +83,29 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <article className="relative py-6 max-w-7xl lg:gap-10 lg:py-8 xl:grid text-foreground  xl:grid-cols-[1fr_300px]">
       <div className="w-full min-w-0 mx-auto">
-        <Breadcrumbs>
-          {doc.slug.split("/").map((slug, index, arr) => (
-            <Breadcrumb
-              key={slug}
-              href={`/${arr.slice(0, index + 1).join("/")}`}
-              className="capitalize"
-            >
-              {slug}
-            </Breadcrumb>
-          ))}
-        </Breadcrumbs>
-        <h1 className="capitalize my-2 text-3xl font-semibold mt-4 mb-0">{doc.title}</h1>
+        <Breadcrumb>
+          <BreadcrumbList>
+            {doc.slug.split("/").map((slug, index, arr) => (
+              <>
+                <BreadcrumbItem key={`item-${slug}`}>
+                  {index === arr.length - 1 ? (
+                    <BreadcrumbPage>{slug}</BreadcrumbPage>
+                  ) : (
+                    <BreadcrumbLink
+                      href={`/${arr.slice(0, index + 1).join("/")}`}
+                    >
+                      {slug}
+                    </BreadcrumbLink>
+                  )}
+                </BreadcrumbItem>
+                {index < arr.length - 1 && <BreadcrumbSeparator />}
+              </>
+            ))}
+          </BreadcrumbList>
+        </Breadcrumb>
+        <h1 className="capitalize my-2 text-3xl font-semibold mt-4 mb-0">
+          {doc.title}
+        </h1>
         <h4 className="text-muted-foreground my-0">{doc.description}</h4>
         <br />
         <MDXContent code={doc.body} />

@@ -1,19 +1,10 @@
 import LineSvg from "@/components/site-specific/layout/line-svg";
 import CardWrapper from "@/components/site-specific/pages/hero/card-wrapper";
-import { Breadcrumb, Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { TextField } from "@/components/ui/text-field";
-import AvatarDemo3 from "@/registry/components/ui/avatar-demos/avatar-dot";
-import AvatarDemo from "@/registry/components/ui/avatar-demos/avatar-border";
-import AvatarDemo2 from "@/registry/components/ui/avatar-demos/avatar-shape";
-import BadgeDemo from "@/registry/components/ui/badge-demos/badge-colors";
-import { ArrowRightIcon, Search } from "lucide-react";
+
 import React from "react";
-import PopoverDemo from "@/registry/components/ui/popover-demos/popover";
 import StickyMouseDemo from "@/registry/components/gesturs/sticky-mouse/button";
-import PopImagesParagraph from "@/registry/components/gesturs/pop-images/preview";
-import GooeyMenuDemo from "@/registry/components/gesturs/gooey-effect/menu";
+
 import GooeyShareDemo from "@/registry/components/gesturs/gooey-effect/share";
 import SwipeCardDemo from "@/registry/components/gesturs/swipe-cards/preview";
 
@@ -58,57 +49,59 @@ export default function Home() {
       </div>
       <div className="relative xl:col-span-5">
         <CardWrapper>
-          <div className="flex gap-2">
+          {/* <div className="flex gap-2">
             <Breadcrumbs>
               <Breadcrumb href="#">Home</Breadcrumb>
               <Breadcrumb href="#">Components</Breadcrumb>
               <Breadcrumb href="#">Breadcrumbs</Breadcrumb>
             </Breadcrumbs>
-          </div>
+          </div> */}
+          gg
         </CardWrapper>
       </div>
       <div className="relative xl:col-span-5">
-        <CardWrapper>
+        {/* <CardWrapper>
           <div className="w-full flex justify-start flex-col gap-2">
             <h3 className="text-xl font-bold">Welcome to the site</h3>
             <Input placeholder="Search" leftSection={<Search />} />
           </div>
-        </CardWrapper>
+        </CardWrapper> */}
       </div>
       <div className="relative xl:col-span-6">
         <CardWrapper>
-          <div className="w-full flex justify-start flex-col gap-4">
+          {/* <div className="w-full flex justify-start flex-col gap-4">
             <h3 className="text-base font-bold">Sign In</h3>
             <TextField label="Email" placeholder="email" />
             <TextField label="Password" placeholder="password" />
             <Button fullWidth rightSection={<ArrowRightIcon />}>
               Sign In
             </Button>
-          </div>
+          </div> */}
+          gg
         </CardWrapper>
       </div>
       <div className="relative xl:col-span-9">
         <CardWrapper>
           <div className="w-full flex justify-center flex-col gap-4">
-            <BadgeDemo />
+            {/* <BadgeDemo /> */}
           </div>
         </CardWrapper>
       </div>
       <div className="relative xl:col-span-6">
         <CardWrapper>
           <div className="w-full flex justify-center flex-col gap-4 items-center">
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               <AvatarDemo2 />
               <AvatarDemo />
             </div>
-            <AvatarDemo3 />
+            <AvatarDemo3 /> */}
           </div>
         </CardWrapper>
       </div>
       <div className="relative xl:col-span-4">
         <CardWrapper>
           <div className="w-full flex justify-center items-center flex-col gap-4">
-            <PopoverDemo />
+            {/* <PopoverDemo /> */}
           </div>
         </CardWrapper>
       </div>

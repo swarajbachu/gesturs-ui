@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import GooeyFilter from "@/components/gesturs/gooey/gooey-filter";
+import GooeyFilter from "@/components/gesturs-components/gooey/gooey-filter";
 import { Button } from "@/components/ui/button";
 import { XIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function GooeyButtonDemo() {
   const [clicked, setClicked] = React.useState(false);

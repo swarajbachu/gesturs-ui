@@ -1,7 +1,8 @@
 import { codeToHtml } from "shiki";
 import type { BundledLanguage } from "shiki";
 import { CopyButton } from "./copy-button";
-import { Tab, TabList, TabPanel, Tabs } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
 
 interface CodeBlockProps {
   files: {
@@ -61,37 +62,32 @@ const CodeWrapper = async ({
     })
   );
   let currentCodeString = "";
+
   return (
     <div {...props}>
       {preview}
-      <Tabs className="rounded-md bg-zinc-800 p-2 relative">
-        <TabList>
+      <Tabs
+        className="rounded-md bg-zinc-800 p-6 relative"
+        defaultValue={files[0].fileName}
+      >
+        <TabsList className={cn(files.length < 2 && "hidden")}>
           {files.map(({ fileName, codeStr }) => {
             currentCodeString = codeStr;
-
             return (
-              <Tab
-                key={fileName}
-                id={fileName}
-                className="relative h-9 justify-between rounded-sm border-b-2 border-b-transparent bg-transparent px-4  font-semibold text-sky-200  flex items-center  shadow-none transition-none data-[selected]:!bg-sky-700/50  data-[state=active]:shadow-none"
-              >
+              <TabsTrigger key={fileName} value={fileName}>
                 {fileName}
-              </Tab>
+              </TabsTrigger>
             );
           })}
-        </TabList>
+        </TabsList>
         <CopyButton
           value={currentCodeString}
-          className="z-10 absolute right-3 top-2"
+          className="z-10 absolute right-1 top-1"
         />
         {files.map(({ fileName, code }) => (
-          <TabPanel
-            id={fileName}
-            key={fileName}
-            className="relative  bg-zinc-900 dark:[&_span]:text-[#c9d1d9] [&_pre]:bg-transparent light:[&_span]:text-[#24292e] p-4 rounded-md"
-          >
+          <TabsContent value={fileName} key={fileName}>
             {code}
-          </TabPanel>
+          </TabsContent>
         ))}
       </Tabs>
     </div>

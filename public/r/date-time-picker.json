@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-time-picker",
+  "type": "registry:ui",
+  "title": "Date Time Picker",
+  "description": "A versatile date and time picker component that supports both direct input and calendar-based selection.",
+  "files": [
+    {
+      "path": "components/ui/date-time-picker.tsx",
+      "content": "import * as React from \"react\";\nimport { format } from \"date-fns\";\nimport { Calendar as CalendarIcon } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\nimport { Button } from \"@/components/ui/button\";\nimport { Calendar } from \"@/components/ui/calendar\";\nimport { Popover, PopoverContent, PopoverTrigger } from \"@/components/ui/popover\";\nimport { Input } from \"@/components/ui/input\";\nimport { parse } from \"chrono-node\";\n\ninterface DateTimePickerProps {\n  date: Date;\n  setDate: (date: Date) => void;\n  format?: string;\n  className?: string;\n  popoverContentClassName?: string;\n  disabled?: boolean;\n  clearable?: boolean;\n  onClear?: () => void;\n}\n\nexport function DateTimePicker({\n  date,\n  setDate,\n  format = \"PPP\",\n  className,\n  popoverContentClassName,\n  disabled = false,\n  clearable = false,\n  onClear,\n}: DateTimePickerProps) {\n  const [inputValue, setInputValue] = React.useState(\"\");\n\n  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    setInputValue(e.target.value);\n    const parsed = parse(e.target.value);\n    if (parsed.length > 0) {\n      setDate(parsed[0].start.date());\n    }\n  };\n\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button\n          variant={\"outline\"}\n          className={cn(\n            \"w-full justify-start text-left font-normal\",\n            !date && \"text-muted-foreground\",\n            className\n          )}\n          disabled={disabled}\n        >\n          <CalendarIcon className=\"mr-2 h-4 w-4\" />\n          {date ? format(date, format) : <span>Pick a date</span>}\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className={cn(\"w-auto p-0\", popoverContentClassName)}>\n        <Calendar\n          mode=\"single\"\n          selected={date}\n          onSelect={setDate}\n          initialFocus\n        />\n        <div className=\"p-3 border-t\">\n          <Input\n            placeholder=\"Type a date...\"\n            value={inputValue}\n            onChange={handleInputChange}\n          />\n        </div>\n      </PopoverContent>\n    </Popover>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/date-time-picker.tsx"
+    }
+  ],
+  "dependencies": [
+    "chrono-node",
+    "@radix-ui/react-popover",
+    "date-fns",
+    "lucide-react"
+  ]
+}

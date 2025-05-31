@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import DraggableWrapper from "@/components/gesturs/wrappers/dragwrapper";
+import DraggableWrapper from "@/components/gesturs-components/wrappers/dragwrapper";
 import {
   BoltIcon,
   Camera,
@@ -15,9 +15,9 @@ import {
   ThumbsUp,
   Video,
 } from "lucide-react";
-import FadeIn from "@/components/gesturs/wrappers/fade-in";
+import FadeIn from "@/components/gesturs-components/wrappers/fade-in";
 import { Input } from "@/components/ui/input";
-import { Avatar } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 
 export default function GrabbyHero() {
@@ -109,7 +109,9 @@ export default function GrabbyHero() {
             <h3 className="mb-2 font-semibold">Messages</h3>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <Avatar src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
+                <Avatar>
+                  <AvatarImage src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
+                </Avatar>
                 <div>
                   <p className="font-medium">John Doe</p>
                   <p className="text-sm text-muted-foreground">
@@ -118,7 +120,9 @@ export default function GrabbyHero() {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <Avatar src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
+                <Avatar>
+                  <AvatarImage src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
+                </Avatar>
 
                 <div>
                   <p className="font-medium">Jane Smith</p>
@@ -191,7 +195,9 @@ export default function GrabbyHero() {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <Avatar src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
+                  <Avatar>
+                    <AvatarImage src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
+                  </Avatar>
 
                   <p className="font-medium">Alice Smith</p>
                 </div>
@@ -199,7 +205,9 @@ export default function GrabbyHero() {
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <Avatar src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
+                  <Avatar>
+                    <AvatarImage src="https://images.unsplash.com/photo-1569913486515-b74bf7751574" />
+                  </Avatar>
 
                   <p className="font-medium">Bob Johnson</p>
                 </div>

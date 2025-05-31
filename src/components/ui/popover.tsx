@@ -1,63 +1,33 @@
-import {
-  OverlayArrow,
-  Popover as RACPopover,
-  PopoverProps as RACPopoverProps,
-  composeRenderProps,
-  PopoverContext,
-  useSlottedContext,
-} from "react-aria-components";
-import React from "react";
-import { tv } from "tailwind-variants";
-import { Dialog } from "./dialog";
+"use client"
 
-export interface PopoverProps extends Omit<RACPopoverProps, "children"> {
-  showArrow?: boolean;
-  children: React.ReactNode;
-}
+import * as React from "react"
+import * as PopoverPrimitive from "@radix-ui/react-popover"
 
-const popoverStyles = tv({
-  base: "group focus-none bg-popover text-popover-foreground dark:backdrop-blur-2xl dark:backdrop-saturate-200  shadow rounded-xl bg-clip-padding border border-black/10 dark:border-white/[15%]",
-  variants: {
-    isEntering: {
-      true: "animate-in fade-in placement-bottom:slide-in-from-top-1 placement-top:slide-in-from-bottom-1 placement-left:slide-in-from-right-1 placement-right:slide-in-from-left-1 ease-out duration-200",
-    },
-    isExiting: {
-      true: "animate-out fade-out placement-bottom:slide-out-to-top-1 placement-top:slide-out-to-bottom-1 placement-left:slide-out-to-right-1 placement-right:slide-out-to-left-1 ease-in duration-150",
-    },
-  },
-});
+import { cn } from "@/lib/utils"
 
-export function Popover({
-  children,
-  showArrow,
-  className,
-  ...props
-}: PopoverProps) {
-  let popoverContext = useSlottedContext(PopoverContext)!;
-  let isSubmenu = popoverContext?.trigger === "SubmenuTrigger";
-  let offset = showArrow ? 12 : 8;
-  offset = isSubmenu ? offset - 6 : offset;
-  return (
-    <RACPopover
-      offset={offset}
+const Popover = PopoverPrimitive.Root
+
+const PopoverTrigger = PopoverPrimitive.Trigger
+
+const PopoverAnchor = PopoverPrimitive.Anchor
+
+const PopoverContent = React.forwardRef<
+  React.ElementRef<typeof PopoverPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+  <PopoverPrimitive.Portal>
+    <PopoverPrimitive.Content
+      ref={ref}
+      align={align}
+      sideOffset={sideOffset}
+      className={cn(
+        "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-popover-content-transform-origin]",
+        className
+      )}
       {...props}
-      className={composeRenderProps(className, (className, renderProps) =>
-        popoverStyles({ ...renderProps, className })
-      )}
-    >
-      {showArrow && (
-        <OverlayArrow className="group">
-          <svg
-            width={12}
-            height={12}
-            viewBox="0 0 12 12"
-            className="block fill-popover forced-colors:fill-[Canvas] stroke-1 stroke-black/10 dark:stroke-white/[15%]  forced-colors:stroke-[ButtonBorder] group-placement-bottom:rotate-180 group-placement-left:-rotate-90 group-placement-right:rotate-90"
-          >
-            <path d="M0 0 L6 6 L12 0" />
-          </svg>
-        </OverlayArrow>
-      )}
-      <Dialog>{children}</Dialog>
-    </RACPopover>
-  );
-}
+    />
+  </PopoverPrimitive.Portal>
+))
+PopoverContent.displayName = PopoverPrimitive.Content.displayName
+
+export { Popover, PopoverTrigger, PopoverContent, PopoverAnchor }

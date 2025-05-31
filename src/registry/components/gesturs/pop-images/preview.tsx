@@ -1,4 +1,4 @@
-import PopImage from "@/components/gesturs/link-image";
+import PopImage from "@/components/gesturs-components/link-image";
 
 export default function PopImagesParagraph() {
   return (

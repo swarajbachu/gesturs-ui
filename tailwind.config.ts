@@ -8,23 +8,7 @@ const config: Config = {
     ".src/content/**/*.mdx",
     ".src/registry/**/*.{ts,tsx}",
   ],
-  safelist: [
-    {
-      pattern:
-        /bg-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|700\/10|300|500\/15|800|200|500|700)/,
-      variants: ["dark", "hover", "focus", "dark:hover", "dark:focus"],
-    },
-    {
-      pattern:
-        /text-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|700|300|800)/,
-      variants: ["dark", "hover", "focus", "dark:hover", "dark:focus"],
-    },
-    {
-      pattern: /bg-(primary|secondary|destructive|accent)\/10/,
-      variants: ["dark", "hover", "focus", "dark:hover", "dark:focus"],
-    },
-  ],
-  darkMode: "class",
+  darkMode: ["class"],
   theme: {
     container: {
       center: true,
@@ -44,7 +28,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       boxShadow: {
-        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+        input:
+          "`0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`",
         sm: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
         DEFAULT:
           "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
@@ -56,11 +41,11 @@ const config: Config = {
         none: "0 0 rgb(0, 0 / 0, 0)",
       },
       colors: {
-        active: '#275EFE',
-        'active-inner': '#FFFFFF',
-        default: '#D2D6E9',
-        'default-dark': '#C7CBDF',
-        black: '#1B1B22',
+        active: "#275EFE",
+        "active-inner": "#FFFFFF",
+        default: "#D2D6E9",
+        "default-dark": "#C7CBDF",
+        black: "#1B1B22",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -94,6 +79,23 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -102,20 +104,36 @@ const config: Config = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
         marquee: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+          from: {
+            transform: "translateX(0)",
+          },
+          to: {
+            transform: "translateX(calc(-100% - var(--gap)))",
+          },
         },
         "marquee-vertical": {
-          from: { transform: "translateY(0)" },
-          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+          from: {
+            transform: "translateY(0)",
+          },
+          to: {
+            transform: "translateY(calc(-100% - var(--gap)))",
+          },
         },
       },
       animation: {
@@ -125,13 +143,11 @@ const config: Config = {
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
       transitionTimingFunction: {
-        "spring": "linear(0, 0.88117 15.492%, 1.09261 23.232%, 1.10421 28.713%, 0.99031 49.585%,0.99995)",
-      }
+        spring:
+          "linear(0, 0.88117 15.492%, 1.09261 23.232%, 1.10421 28.713%, 0.99031 49.585%,0.99995)",
+      },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("tailwindcss-react-aria-components"),
-  ],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;

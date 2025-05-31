@@ -1,8 +1,7 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-import { Docs } from "#site/content";
-import { Metadata } from "next/types";
 import { env } from "@/app/env";
+import { clsx, type ClassValue } from "clsx";
+import { Metadata } from "next/types";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -84,4 +83,3 @@ export function baseMetaData({
     ...props,
   };
 }
-

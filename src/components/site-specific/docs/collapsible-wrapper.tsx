@@ -24,7 +24,10 @@ export function CodeBlockCollapsible({
 
   return (
     <Collapsible open={isOpened} onOpenChange={setIsOpened}>
-      <div className={cn("relative overflow-hidden rounded-md", className)} {...props}>
+      <div
+        className={cn("relative overflow-hidden rounded-md", className)}
+        {...props}
+      >
         <CollapsibleContent
           forceMount
           className={cn("overflow-hidden", !isOpened && "max-h-72 ")}
@@ -44,7 +47,7 @@ export function CodeBlockCollapsible({
           )}
         >
           <CollapsibleTrigger asChild>
-            <Button variant="primary" className="mb-8 h-8 text-xs">
+            <Button variant="default" className="mb-8 h-8 text-xs">
               {isOpened ? "Collapse" : expandButtonTitle}
             </Button>
           </CollapsibleTrigger>

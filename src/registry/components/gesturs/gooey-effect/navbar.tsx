@@ -1,7 +1,7 @@
 "use client";
 
-import GooeyFilter from "@/components/gesturs/gooey/gooey-filter";
-import { motion } from "framer-motion";
+import GooeyFilter from "@/components/gesturs-components/gooey/gooey-filter";
+import { motion } from "motion/react";
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -10,7 +10,6 @@ const links = ["Home", "About", "Contact"];
 
 export default function Navbar() {
   const [morph, setMorph] = React.useState(0);
-  console.log(morph);
   const [currentLinkIndex, setCurrentLinkIndex] = React.useState<number | null>(
     null
   );

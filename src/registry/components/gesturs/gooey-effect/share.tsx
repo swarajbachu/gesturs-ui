@@ -3,7 +3,7 @@ import {
   GooeyMenuTrigger,
   GooeyMenuBefore,
   GooeyMenuAfter,
-} from "@/components/gesturs/gooey/gooey-menu";
+} from "@/components/gesturs-components/gooey/gooey-menu";
 import React from "react";
 import {
   FaFacebook,

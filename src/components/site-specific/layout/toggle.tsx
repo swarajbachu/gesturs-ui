@@ -14,7 +14,7 @@ export function ModeToggle() {
     <Button
       variant="outline"
       size="icon"
-      onPress={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? (
         <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />

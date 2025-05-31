@@ -1,0 +1,135 @@
+---
+title: Date Time Picker
+description: A versatile date and time picker component that supports both direct input and calendar-based selection with natural language parsing.
+date: 2025-05-31
+---
+
+## Preview
+
+<ComponentPreview name="gesturs/date-time-picker" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">
+    <Steps>
+      <Step>Run the following command:</Step>
+      <PackageManagerTabs
+        pnpmCommand="pnpm dlx shadcn@latest add 'https://ui.gesturs.com/r/date-time-picker'"
+        npmCommand="npx shadcn@latest add 'https://ui.gesturs.com/r/date-time-picker'"
+        yarnCommand="yarn dlx shadcn@latest add 'https://ui.gesturs.com/r/date-time-picker'"
+        bunCommand="bunx shadcn@latest add 'https://ui.gesturs.com/r/date-time-picker'"
+      />
+    </Steps>
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Install the required dependencies:</Step>
+      <PackageManagerTabs
+        pnpmCommand="pnpm add chrono-node date-fns @radix-ui/react-popover lucide-react"
+        npmCommand="npm install chrono-node date-fns @radix-ui/react-popover lucide-react"
+        yarnCommand="yarn add chrono-node date-fns @radix-ui/react-popover lucide-react"
+        bunCommand="bun add chrono-node date-fns @radix-ui/react-popover lucide-react"
+      />
+
+      <Step>Install the required components:</Step>
+      <PackageManagerTabs
+        pnpmCommand="pnpm dlx shadcn@latest add button calendar input popover"
+        npmCommand="npx shadcn@latest add button calendar input popover"
+        yarnCommand="yarn dlx shadcn@latest add button calendar input popover"
+        bunCommand="bunx shadcn@latest add button calendar input popover"
+      />
+
+      <Step>Copy and paste the following code into your project:</Step>
+      <ComponentSource name="gesturs-components/date-time-picker" />
+    </Steps>
+
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx
+import { DateTimePicker } from "@/components/ui/date-time-picker";
+import { useState } from "react";
+
+export default function Demo() {
+  const [date, setDate] = useState<Date>(new Date());
+
+  return <DateTimePicker date={date} setDate={setDate} />;
+}
+```
+
+## Features
+
+- 📅 Calendar-based date selection
+- ⌨️ Direct text input with natural language parsing
+- 🎨 Fully customizable styling
+- ♿ Keyboard navigation and screen reader support
+- 🌍 Internationalization support through date-fns
+- 📝 Natural language date parsing (e.g., "next friday at 3pm")
+
+## API Reference
+
+| Name                    | Type                   | Default  | Description                                        |
+| ----------------------- | ---------------------- | -------- | -------------------------------------------------- |
+| date                    | `Date`                 | Required | The currently selected date                        |
+| setDate                 | `(date: Date) => void` | Required | Callback function to update the selected date      |
+| format                  | `string`               | "PPP"    | The date format string using date-fns format       |
+| className               | `string`               | —        | Optional CSS class name for the root element       |
+| popoverContentClassName | `string`               | —        | Optional CSS class name for the popover content    |
+| disabled                | `boolean`              | `false`  | Whether the date picker is disabled                |
+| clearable               | `boolean`              | `false`  | Whether to show a clear button                     |
+| onClear                 | `() => void`           | —        | Callback function when the clear button is clicked |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<DateTimePicker date={date} setDate={setDate} />
+```
+
+### Custom Format
+
+```tsx
+<DateTimePicker
+  date={date}
+  format="PP p" /* Will display date and time*/
+  setDate={setDate}
+/>
+```
+
+### With Clear Button
+
+```tsx
+<DateTimePicker
+  date={date}
+  setDate={setDate}
+  clearable
+  onClear={() => setDate(new Date())}
+/>
+```
+
+### Disabled State
+
+```tsx
+<DateTimePicker date={date} setDate={setDate} disabled />
+```
+
+## Styling
+
+The component uses Tailwind CSS for styling and can be customized using the `className` and `popoverContentClassName` props. The default styling follows your application's theme and can be overridden using Tailwind classes.
+
+## Accessibility
+
+The date picker is built with accessibility in mind:
+
+- Full keyboard navigation support
+- ARIA labels and roles
+- Screen reader announcements for selected dates
+- Focus management
