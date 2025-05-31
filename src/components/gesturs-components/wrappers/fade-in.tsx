@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, MotionProps } from "framer-motion";
+import { motion, MotionProps } from "motion/react";
 
 type FadeInProps = Omit<MotionProps, "animate"> & {
   children: React.ReactNode;

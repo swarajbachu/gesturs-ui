@@ -1,8 +1,6 @@
-import SwipeableStackCards from '@/components/gesturs/swipe-cards'
-import React from 'react'
+import SwipeableStackCards from "@/components/gesturs-components/swipe-cards";
+import React from "react";
 
 export default function SwipeCardDemo() {
-  return (
-    <SwipeableStackCards />
-  )
+  return <SwipeableStackCards />;
 }

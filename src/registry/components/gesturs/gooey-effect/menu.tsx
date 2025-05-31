@@ -2,7 +2,7 @@ import {
   GooeyMenu,
   GooeyMenuTrigger,
   GooeyMenuBefore,
-} from "@/components/gesturs/gooey/gooey-menu";
+} from "@/components/gesturs-components/gooey/gooey-menu";
 import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaGear, FaQuestion } from "react-icons/fa6";

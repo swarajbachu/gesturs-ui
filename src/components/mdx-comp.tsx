@@ -151,7 +151,7 @@ const components = {
   ),
   Steps: ({ ...props }) => (
     <div
-      className="[&>h3]:step steps mb-12 ml-4 border-l border-muted-foreground pl-8 [counter-reset:step]"
+      className="[&>h3]:step steps mb-12 ml-4 border-l border-border pl-8 [counter-reset:step]"
       {...props}
     />
   ),
@@ -183,7 +183,7 @@ const components = {
       <div className="relative">
         <pre
           className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-muted py-3 bg-zinc-950 text-zinc-100 dark:bg-zinc-800  ",
+            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-border py-3 bg-zinc-950 text-zinc-100 dark:bg-zinc-800  ",
             className
           )}
           {...props}

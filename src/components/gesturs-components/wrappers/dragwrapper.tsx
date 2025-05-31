@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion, animate, MotionProps } from "framer-motion";
+import { motion, animate, MotionProps } from "motion/react";
 import React, { ReactNode } from "react";
 
 interface DraggableWrapperProps extends MotionProps {

@@ -1,7 +1,7 @@
 "use client";
 
-import GooeyFilter from "@/components/gesturs/gooey/gooey-filter";
-import { motion } from "framer-motion";
+import GooeyFilter from "@/components/gesturs-components/gooey/gooey-filter";
+import { motion } from "motion/react";
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";

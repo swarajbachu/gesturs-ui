@@ -1,4 +1,4 @@
-import CompareImage from "@/components/gesturs/compare-image";
+import CompareImage from "@/components/gesturs-components/compare-image";
 import React from "react";
 
 export default function CompareImageDemo() {

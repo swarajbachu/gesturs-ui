@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import DraggableWrapper from "@/components/gesturs/wrappers/dragwrapper";
+import DraggableWrapper from "@/components/gesturs-components/wrappers/dragwrapper";
 import {
   BoltIcon,
   Camera,
@@ -15,7 +15,7 @@ import {
   ThumbsUp,
   Video,
 } from "lucide-react";
-import FadeIn from "@/components/gesturs/wrappers/fade-in";
+import FadeIn from "@/components/gesturs-components/wrappers/fade-in";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
