@@ -212,6 +212,7 @@ const components = {
 
 interface MdxProps {
   code: string;
+  components?: Record<string, React.ComponentType>;
 }
 
 export function MDXContent({ code }: MdxProps) {
