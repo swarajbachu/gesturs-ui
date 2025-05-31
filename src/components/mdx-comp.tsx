@@ -6,6 +6,7 @@ import * as React from "react";
 import { ComponentSource } from "./site-specific/docs/component-source";
 import { CopyButton } from "./site-specific/docs/copy-button";
 import { parseChildren } from "@/lib/extract-code";
+import CodePre from "./site-specific/docs/code-pre";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -155,6 +156,13 @@ const components = {
       {...props}
     />
   ),
+  CodeComponent: ({
+    className,
+    code,
+  }: {
+    className?: string;
+    code: string;
+  }) => <CodePre code={code} className={className} />,
   pre: ({
     className,
     __rawString__,
@@ -183,7 +191,7 @@ const components = {
       <div className="relative">
         <pre
           className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-border py-3 bg-zinc-950 text-zinc-100 dark:bg-zinc-800  ",
+            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border border-border py-4 bg-zinc-950 text-zinc-100 dark:bg-zinc-800  ",
             className
           )}
           {...props}
@@ -192,7 +200,7 @@ const components = {
           value={value.code}
           src={__src__}
           className={cn(
-            "absolute right-4 top-3 size-8",
+            "absolute right-2 top-2 size-4",
             __withMeta__ && "top-16"
           )}
         />

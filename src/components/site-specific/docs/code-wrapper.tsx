@@ -67,7 +67,7 @@ const CodeWrapper = async ({
     <div {...props}>
       {preview}
       <Tabs
-        className="rounded-md bg-zinc-800 p-2 relative"
+        className="rounded-md bg-zinc-800 p-6 relative"
         defaultValue={files[0].fileName}
       >
         <TabsList className={cn(files.length < 2 && "hidden")}>
@@ -82,7 +82,7 @@ const CodeWrapper = async ({
         </TabsList>
         <CopyButton
           value={currentCodeString}
-          className="z-10 absolute right-3 top-2"
+          className="z-10 absolute right-1 top-1"
         />
         {files.map(({ fileName, code }) => (
           <TabsContent value={fileName} key={fileName}>

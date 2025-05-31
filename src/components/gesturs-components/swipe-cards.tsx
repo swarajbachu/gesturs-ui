@@ -2,7 +2,12 @@
 
 import { motion, useMotionValue, useTransform, PanInfo } from "motion/react";
 import React, { useState } from "react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import Image from "next/image";
 
 interface CardRotateProps {
@@ -148,9 +153,9 @@ export default function SwipeableStackCards() {
               transition={{ type: "spring", stiffness: 160, damping: 8 }}
             >
               <Card className="h-72 w-72">
-                <CardContent>
+                <CardHeader>
                   <h2 className="text-lg">{card.companyName}</h2>
-                </CardContent>
+                </CardHeader>
                 <CardContent>
                   <p className="text-base">{card.testimonial}</p>
                 </CardContent>

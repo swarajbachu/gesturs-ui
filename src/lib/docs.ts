@@ -56,8 +56,8 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/gooey-menu",
         },
         {
-          title: "Gooey Button",
-          href: "/docs/components/gooey-buttons",
+          title: "Date Time Picker",
+          href: "/docs/components/date-time-picker",
         },
       ],
       label: "Cool Stuff",

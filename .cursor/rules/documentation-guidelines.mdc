@@ -1,0 +1,91 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Documentation Guidelines
+
+## File Structure
+
+1. Documentation files should be placed in `src/content/docs/components/`
+2. File names should match the component name in kebab-case (e.g., `date-time-picker.mdx`)
+3. Registry files should be placed in `public/r/` with the same name (e.g., `date-time-picker.json`)
+
+## Documentation Format
+
+Each component documentation should follow this structure:
+
+```mdx
+---
+title: Component Name
+description: A concise description of the component's purpose and main features
+date: YYYY-MM-DD
+---
+
+## Preview
+<ComponentPreview name="gesturs/component-name" />
+
+## Installation
+<Steps>
+  <Step>Required dependencies</Step>
+  <Step>Installation command</Step>
+  <Step>Additional setup if needed</Step>
+</Steps>
+
+## Usage
+Basic usage example with TypeScript code
+
+## Features
+List of key features with emojis
+
+## API Reference
+Props table with the following columns:
+- Name
+- Type
+- Default
+- Description
+
+## Examples
+Common use cases with code examples
+
+## Styling (if applicable)
+Styling guidelines and customization options
+
+## Accessibility (if applicable)
+Accessibility features and considerations
+```
+
+## Registry JSON Format
+
+Registry files should follow this structure:
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "component-name",
+  "type": "registry:ui",
+  "title": "Component Title",
+  "description": "Component description",
+  "files": [
+    {
+      "path": "components/ui/component-name.tsx",
+      "content": "// Component code",
+      "type": "registry:ui",
+      "target": "components/ui/component-name.tsx"
+    }
+  ],
+  "dependencies": [
+    // List of required npm packages
+  ]
+}
+```
+
+## Best Practices
+
+1. Always include TypeScript examples
+2. Document all props and their types
+3. Provide real-world usage examples
+4. Include accessibility considerations
+5. Keep documentation up to date with component changes
+6. Use proper markdown formatting
+7. Include installation steps with all required dependencies

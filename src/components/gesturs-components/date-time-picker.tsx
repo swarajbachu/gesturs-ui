@@ -69,7 +69,7 @@ interface NaturalDatePickerProps {
   timezone?: string; // Optional timezone, defaults to user's local timezone
 }
 
-export function NaturalDatePicker({
+export function DateTimePicker({
   value,
   onChange,
   placeholder = "Pick a date and time...",

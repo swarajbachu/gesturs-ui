@@ -41,8 +41,9 @@ export default function StickyMouseWrapper({
       animate={{ x, y }}
       transition={{
         type: "spring",
-        stiffness: 250,
-        damping: 10,
+        stiffness: 180,
+        damping: 12,
+        mass: 1.2,
       }}
       className={cn("relative", className)}
     >
