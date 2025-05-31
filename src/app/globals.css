@@ -75,13 +75,10 @@
   }
 }
 
-
 .shiki,
 .shiki span {
   background-color: transparent !important;
 }
-
-
 
 .section > :first-child {
   margin-top: 0;
@@ -132,8 +129,6 @@ body {
     rotate: 360deg;
   }
 }
-
-
 
 @layer base {
   * {

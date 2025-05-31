@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import { ComponentPreview } from "./site-specific/docs/component-preview";
 import * as React from "react";
 import { ComponentSource } from "./site-specific/docs/component-source";
-import { CopyButton } from "./site-specific/docs/copy-button";
 import { parseChildren } from "@/lib/extract-code";
 import { PackageManagerTabs } from "./site-specific/docs/package-manager-tabs";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
