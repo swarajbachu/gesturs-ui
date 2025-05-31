@@ -3,7 +3,7 @@ import { RotateCcw } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabList, TabPanel, Tab } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
 import ComponentWrapper from "./component-wrapper";
 import { Icons } from "@/components/site-specific/icons";
 import { previews } from "@/registry/previews";
@@ -70,28 +70,26 @@ export function ComponentPreview({
             className="flex items-center justify-between pb-3"
             defaultValue="preview"
           >
-            <TabList className="w-full justify-start rounded-none border-b bg-transparent p-0">
-              <Tab
-                id="preview"
+            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
+              <TabsTrigger
+                value="preview"
                 className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[selected=true]:!border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
               >
                 Preview
-              </Tab>
-              <Tab
-                id="code"
+              </TabsTrigger>
+              <TabsTrigger
+                value="code"
                 className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[selected=true]:!border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
               >
                 Code
-              </Tab>
-            </TabList>
+              </TabsTrigger>
+            </TabsList>
           </div>
         )}
-        <TabPanel id="preview" className="relative rounded-md">
-          <ComponentWrapper>
-            {Preview}
-          </ComponentWrapper>
-        </TabPanel>
-        <TabPanel id="code">
+        <TabsContent value="preview" className="relative rounded-md">
+          <ComponentWrapper>{Preview}</ComponentWrapper>
+        </TabsContent>
+        <TabsContent value="code">
           {/* <div className="flex flex-col space-y-4">
             <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
               {code}
@@ -104,7 +102,7 @@ export function ComponentPreview({
               lang: "tsx",
             }))}
           />
-        </TabPanel>
+        </TabsContent>
       </Tabs>
     </div>
   );
