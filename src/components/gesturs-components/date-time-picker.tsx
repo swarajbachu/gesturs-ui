@@ -72,7 +72,7 @@ interface NaturalDatePickerProps {
 export function DateTimePicker({
   value,
   onChange,
-  placeholder = "Pick a date and time...",
+  placeholder = "on sunday at 10:00 am",
   className,
   customSuggestions,
   dayPickerProps,
@@ -80,6 +80,11 @@ export function DateTimePicker({
 }: NaturalDatePickerProps) {
   const [calendarOpen, setCalendarOpen] = React.useState(false);
   const [showSuggestions, setShowSuggestions] = React.useState(false);
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] =
+    React.useState(-1);
+  const [filteredSuggestions, setFilteredSuggestions] = React.useState<
+    Suggestion[]
+  >([]);
 
   const [inputValue, setInputValue] = React.useState(
     value ? formatInTimeZone(value, timezone, "PPP p") : ""
@@ -99,6 +104,17 @@ export function DateTimePicker({
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const currentSuggestions = customSuggestions || defaultSuggestions;
+
+  const filterSuggestions = (input: string) => {
+    if (!input.trim()) {
+      return currentSuggestions;
+    }
+    return currentSuggestions.filter(
+      (suggestion) =>
+        suggestion.label.toLowerCase().includes(input.toLowerCase()) ||
+        suggestion.value.toLowerCase().includes(input.toLowerCase())
+    );
+  };
 
   React.useEffect(() => {
     if (value) {
@@ -173,35 +189,62 @@ export function DateTimePicker({
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-    if (e.target.value.trim() === "") {
+    const newValue = e.target.value;
+    setInputValue(newValue);
+    const filtered = filterSuggestions(newValue);
+    setFilteredSuggestions(filtered);
+    setShowSuggestions(true);
+    setSelectedSuggestionIndex(-1);
+
+    if (newValue.trim() === "") {
       onChange?.(undefined);
       setSelectedDate(undefined);
     }
   };
 
   const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    if (e.key === "ArrowDown") {
       e.preventDefault();
-      const parsedDate = chrono.parseDate(inputValue, { timezone });
-      if (parsedDate) {
-        const newHour24 = getHours(parsedDate);
-        const newMinute = getMinutes(parsedDate);
-        setHour12(convertTo12Hour(newHour24));
-        setMinute(newMinute);
-        setIsPM(newHour24 >= 12);
-        updateDateTime(
-          parsedDate,
-          convertTo12Hour(newHour24),
-          newMinute,
-          newHour24 >= 12
+      setShowSuggestions(true);
+      setSelectedSuggestionIndex((prev) =>
+        prev < filteredSuggestions.length - 1 ? prev + 1 : prev
+      );
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setSelectedSuggestionIndex((prev) => (prev > -1 ? prev - 1 : -1));
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (
+        selectedSuggestionIndex >= 0 &&
+        filteredSuggestions[selectedSuggestionIndex]
+      ) {
+        handleSuggestionSelect(
+          filteredSuggestions[selectedSuggestionIndex].value
         );
-        setShowSuggestions(false);
+      } else if (filteredSuggestions.length > 0) {
+        handleSuggestionSelect(filteredSuggestions[0].value);
       } else {
-        onChange?.(undefined);
+        const parsedDate = chrono.parseDate(inputValue, { timezone });
+        if (parsedDate) {
+          const newHour24 = getHours(parsedDate);
+          const newMinute = getMinutes(parsedDate);
+          setHour12(convertTo12Hour(newHour24));
+          setMinute(newMinute);
+          setIsPM(newHour24 >= 12);
+          updateDateTime(
+            parsedDate,
+            convertTo12Hour(newHour24),
+            newMinute,
+            newHour24 >= 12
+          );
+          setShowSuggestions(false);
+        } else {
+          onChange?.(undefined);
+        }
       }
     } else if (e.key === "Escape") {
       setShowSuggestions(false);
+      setSelectedSuggestionIndex(-1);
     }
   };
 
@@ -332,11 +375,14 @@ export function DateTimePicker({
           >
             <Command>
               <CommandGroup>
-                {currentSuggestions.map((suggestion) => (
+                {filteredSuggestions.map((suggestion, index) => (
                   <CommandItem
                     key={suggestion.value}
                     onSelect={() => handleSuggestionSelect(suggestion.value)}
-                    className="cursor-pointer"
+                    className={cn(
+                      "cursor-pointer",
+                      selectedSuggestionIndex === index && "bg-accent"
+                    )}
                   >
                     {suggestion.label}
                   </CommandItem>
