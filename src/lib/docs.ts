@@ -26,10 +26,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Why React Aria Components?",
-          href: "/docs/why-react-aria-components",
-        },
-        {
           title: "Installation",
           href: "/docs/installation",
           items: [],
@@ -40,73 +36,32 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
-          title: "Button",
-          href: "/docs/components/button",
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Breadcrumb",
-          href: "/docs/components/breadcrumbs",
-          items: [],
-        },
-        {
-          title: "Card",
-          href: "/docs/components/card",
-          items: [],
-        },
-        {
-          title: "Input",
-          href: "/docs/components/input",
-        },
-        {
-          title: "Badge",
-          href: "/docs/components/badge",
-        },
-        {
-          title: "Kbd",
-          href: "/docs/components/kbd",
-        },
-        {
-          title: "Popover",
-          href: "/docs/components/popover",
-        },
-        {
-          title: "Avatar",
-          href: "/docs/components/avatar",
-        },
-      ],
-      href: "/docs/components",
-    },
-    {
-      title: "Gesturs",
-      items: [
-        {
           title: "Link Image",
-          href: "/docs/gesturs/link-image",
+          href: "/docs/components/link-image",
         },
         {
           title: "Sticky Mouse",
-          href: "/docs/gesturs/sticky-mouse",
+          href: "/docs/components/sticky-mouse",
         },
         {
           title: "Compare Images",
-          href: "/docs/gesturs/compare-image",
+          href: "/docs/components/compare-image",
         },
         {
           title: "Swipe Cards",
-          href: "/docs/gesturs/swipe-cards",
+          href: "/docs/components/swipe-cards",
         },
         {
           title: "Gooey Menu",
-          href: "/docs/gesturs/gooey-menu",
+          href: "/docs/components/gooey-menu",
         },
         {
           title: "Gooey Button",
-          href: "/docs/gesturs/gooey-buttons",
+          href: "/docs/components/gooey-buttons",
         },
       ],
       label: "Cool Stuff",
+      href: "/docs/components/",
     },
     {
       title: "Sections",
@@ -116,16 +71,6 @@ export const docsConfig: DocsConfig = {
           href: "/docs/sections/hero",
         },
       ],
-    },
-    {
-      title: "Experimental",
-      items: [
-        {
-          title: "Morph Navbar",
-          href: "/docs/experimental/morph-navbar",
-        },
-      ],
-      label: "Alpha",
     },
   ],
 };

@@ -119,7 +119,7 @@
     "slugAsParams": "why-react-aria-components"
   },
   {
-    "slug": "docs/gesturs/compare-image",
+    "slug": "docs/components/compare-image",
     "title": "Compare Image",
     "description": "Compare two images side by side.",
     "date": "2024-07-27T00:00:00.000Z",
@@ -138,10 +138,10 @@
         "items": []
       }
     ],
-    "slugAsParams": "gesturs/compare-image"
+    "slugAsParams": "components/compare-image"
   },
   {
-    "slug": "docs/gesturs/gooey-buttons",
+    "slug": "docs/components/gooey-buttons",
     "title": "Gooey Button",
     "description": "Gooey Button is a button that expands and contracts with a gooey effect.",
     "date": "2024-08-01T00:00:00.000Z",
@@ -160,10 +160,10 @@
         "items": []
       }
     ],
-    "slugAsParams": "gesturs/gooey-buttons"
+    "slugAsParams": "components/gooey-buttons"
   },
   {
-    "slug": "docs/gesturs/gooey-menu",
+    "slug": "docs/components/gooey-menu",
     "title": "Gooey Menu",
     "description": "Gooey Menu is a menu that expands and contracts with a gooey effect.",
     "date": "2024-07-31T00:00:00.000Z",
@@ -203,10 +203,10 @@
         ]
       }
     ],
-    "slugAsParams": "gesturs/gooey-menu"
+    "slugAsParams": "components/gooey-menu"
   },
   {
-    "slug": "docs/gesturs/link-image",
+    "slug": "docs/components/link-image",
     "title": "Link Image",
     "description": "Link preview Images for your anchor tags",
     "date": "2024-07-19T00:00:00.000Z",
@@ -225,10 +225,10 @@
         "items": []
       }
     ],
-    "slugAsParams": "gesturs/link-image"
+    "slugAsParams": "components/link-image"
   },
   {
-    "slug": "docs/gesturs/sticky-mouse",
+    "slug": "docs/components/sticky-mouse",
     "title": "Sticky Mouse Wrapper",
     "description": "Sticky Mouse Wrapper kinda makes components sticky to the mouse pointer.",
     "date": "2024-07-27T00:00:00.000Z",
@@ -247,10 +247,10 @@
         "items": []
       }
     ],
-    "slugAsParams": "gesturs/sticky-mouse"
+    "slugAsParams": "components/sticky-mouse"
   },
   {
-    "slug": "docs/gesturs/swipe-cards",
+    "slug": "docs/components/swipe-cards",
     "title": "Swipe Cards",
     "description": "Swipe Cards is a component that allows you to swipe through a set of cards.",
     "date": "2024-07-28T00:00:00.000Z",
@@ -269,29 +269,7 @@
         "items": []
       }
     ],
-    "slugAsParams": "gesturs/swipe-cards"
-  },
-  {
-    "slug": "docs/experimental/morph-navbar",
-    "title": "Morphing Navbar",
-    "description": "Morphing Navbar is a navbar that morphs into different utilities",
-    "date": "2024-08-01T00:00:00.000Z",
-    "references": [
-      {
-        "title": "Report Issue",
-        "url": "https://github.com/swarajbachu/gesturs-ui/issues/new"
-      }
-    ],
-    "published": true,
-    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(o){const r={a:\"a\",h2:\"h2\",...o.components},{ComponentPreview:c}=r;return c||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"ComponentPreview\",!0),t(e,{children:[n(r.h2,{id:\"preview\",children:n(r.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#preview\",children:\"Preview\"})}),\"\\n\",n(c,{name:\"gesturs/gooey-effect/navbar\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
-    "toc": [
-      {
-        "title": "Preview",
-        "url": "#preview",
-        "items": []
-      }
-    ],
-    "slugAsParams": "experimental/morph-navbar"
+    "slugAsParams": "components/swipe-cards"
   },
   {
     "slug": "docs/sections/hero",
