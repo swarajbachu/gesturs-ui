@@ -26,7 +26,7 @@ export const ComponentSource = ({
   }
 
   return (
-    <CodeBlockCollapsible className={cn(className,'my-4')}>
+    <CodeBlockCollapsible className={cn(className, "my-4")}>
       <CodeWrapper
         files={code.map((file) => ({
           fileName: file.title,

@@ -37,6 +37,6 @@ export const previews = {
     },
     "sections/herosections/grabby-preview": {
       component: React.lazy<React.FC>(() => import("@/registry/components/sections/herosections/grabby-preview")),
-      code : [{"title":"grabby-preview.tsx","code":"import { Button } from \"@/components/ui/button\";\nimport React from \"react\";\n\nexport default function GoToGrabby() {\n  return (\n    <div className=\"flex items-center justify-center flex-col gap-2\">\n      <h1 className=\"text-lg font-bold text-center\">\n        Visit the page to see the Hero Section\n      </h1>\n      <Button href=\"/sections/hero/grabby\">Hero Section</Button>\n    </div>\n  );\n}\n"}]
+      code : [{"title":"grabby-preview.tsx","code":"import { Button } from \"@/components/ui/button\";\nimport Link from \"next/link\";\nimport React from \"react\";\n\nexport default function GoToGrabby() {\n  return (\n    <div className=\"flex items-center justify-center flex-col gap-2\">\n      <h1 className=\"text-lg font-bold text-center\">\n        Visit the page to see the Hero Section\n      </h1>\n      <Button asChild>\n        <Link href=\"/sections/hero/grabby\">Hero Section</Link>\n      </Button>\n    </div>\n  );\n}\n"}]
     },
   }

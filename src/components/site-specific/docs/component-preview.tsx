@@ -64,7 +64,7 @@ export function ComponentPreview({
       )}
       {...props}
     >
-      <Tabs className="relative mr-auto w-full">
+      <Tabs className="relative mr-auto w-full" defaultValue="preview">
         {!preview && (
           <div
             className="flex items-center justify-between pb-3"
@@ -90,11 +90,6 @@ export function ComponentPreview({
           <ComponentWrapper>{Preview}</ComponentWrapper>
         </TabsContent>
         <TabsContent value="code">
-          {/* <div className="flex flex-col space-y-4">
-            <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-              {code}
-            </div>
-          </div> */}
           <CodeWrapper
             files={code.map((file) => ({
               fileName: file.title,

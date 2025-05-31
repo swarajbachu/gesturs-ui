@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import React from "react";
 
 export default function GoToGrabby() {
@@ -7,7 +8,9 @@ export default function GoToGrabby() {
       <h1 className="text-lg font-bold text-center">
         Visit the page to see the Hero Section
       </h1>
-      <Button href="/sections/hero/grabby">Hero Section</Button>
+      <Button asChild>
+        <Link href="/sections/hero/grabby">Hero Section</Link>
+      </Button>
     </div>
   );
 }

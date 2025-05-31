@@ -10,7 +10,6 @@ const links = ["Home", "About", "Contact"];
 
 export default function Navbar() {
   const [morph, setMorph] = React.useState(0);
-  console.log(morph);
   const [currentLinkIndex, setCurrentLinkIndex] = React.useState<number | null>(
     null
   );
